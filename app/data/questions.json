@@ -1,18 +1,248 @@
-[{
-	display: 'mosaic',
-	title: "Si l'on faisait un film de votre vie professonnelle, quel serait-il ?",
-	answers: [{
-		val: 'A',
-		title: "<strong>La vie est un long fleuve tranquille,</strong> un échelon l'un après l'autre, sans vague ni remous."
+{
+	"constante": [{
+		"value": 8.27033030364684
 	}, {
-		val: 'B',
-		title: "<strong>There Will Be Blood</strong> embûches, coups de sang, ça s'en va et ça revient."
+		"value": 6.91477506253345
+	}],
+	"questions": [{
+		"title": "Quelle est votre situation de famille ?",
+		"reponses": [{
+			"name": "C'est compliqué",
+			"coord1": 0.985477614611856,
+			"coord2": 0.67517195982398
+		}, {
+			"name": "Casé",
+			"coord1": 0.939781683395668,
+			"coord2": -0.0889756043824558
+		}, {
+			"name": "Célibataire",
+			"coord1": -0.399721014058959,
+			"coord2": 0.541455485381235
+		}, {
+			"name": "Marié",
+			"coord1": -0.432968221667239,
+			"coord2": -0.467367132095883
+		}]
+	}, {
+		"title": "Quel est votre rapport à la hiérarchie ?",
+		"reponses": [{
+			"name": "Ca dépend",
+			"coord1": 0.320225332863628,
+			"coord2": -0.574872717457689
+		}, {
+			"name": "Chef, oui chef",
+			"coord1": -0.40752602519454,
+			"coord2": -0.271613418978893
+		}, {
+			"name": "Moi c'est Zlatan, t'es qui toi ?",
+			"coord1": 1.10656614705903,
+			"coord2": 0.643672596573737
+		}, {
+			"name": "Quelqu'un m'a parlé ?",
+			"coord1": -1.24261968319628,
+			"coord2": 1.3990662350659
+		}]
+	}, {
+		"title": "Si votre carrière était un film, quel serait-il ?",
+		"reponses": [{
+			"name": "Fast and Furious",
+			"coord1": -0.236672562223995,
+			"coord2": 0.5847971315677
+		}, {
+			"name": "La vie est un long fleuve tranquille",
+			"coord1": -0.485567757812152,
+			"coord2": -0.914061451451017
+		}, {
+			"name": "Tanguy",
+			"coord1": 0.377787499693312,
+			"coord2": -0.523472496439865
+		}, {
+			"name": "There Will Be Blood",
+			"coord1": 0.612237424264157,
+			"coord2": 0.396068190914016
+		}]
+	}, {
+		"title": "Quelle est la B.O. de votre enfance ?",
+		"reponses": [{
+			"name": "Dans ma rue",
+			"coord1": -0.551879578737133,
+			"coord2": -0.376552277370474
+		}, {
+			"name": "Famille heureuse",
+			"coord1": -0.0563597611382612,
+			"coord2": -0.676300887931896
+		}, {
+			"name": "Jeune et con",
+			"coord1": 1.55699613096393,
+			"coord2": 0.635240474602717
+		}, {
+			"name": "La petite bourgeoisie",
+			"coord1": -0.592269755985143,
+			"coord2": 1.08570149596571
+		}]
+	}, {
+		"title": "Quel titre donneriez-vous à votre autobiographie ?",
+		"reponses": [{
+			"name": "C'est dans les vieux pots qu'on fait les meilleures confitures",
+			"coord1": 0.623125814774031,
+			"coord2": 0.116453842055618
+		}, {
+			"name": "C'est en forgeant qu'on devient forgeron",
+			"coord1": -0.69838084494192,
+			"coord2": 0.23562333605002
+		}, {
+			"name": "La chance sourit aux débutants",
+			"coord1": 0.867461418874294,
+			"coord2": -0.373195927709381
+		}, {
+			"name": "Pas né de la dernière pluie",
+			"coord1": -0.431187927784264,
+			"coord2": -0.0885256225423301
+		}]
+	}, {
+		"title": "Quel style de vêtements vous sied le mieux ?",
+		"reponses": [{
+			"name": "Dolce & Gabbana",
+			"coord1": -0.155628117251534,
+			"coord2": -0.474151629432774
+		}, {
+			"name": "H & M",
+			"coord1": -0.631057691778118,
+			"coord2": 0.733828806603571
+		}, {
+			"name": "Ralph Lauren",
+			"coord1": -0.427540141058268,
+			"coord2": -0.459573940723224
+		}, {
+			"name": "Sergio Tacchini",
+			"coord1": 1.55215705501082,
+			"coord2": -0.00171997094435628
+		}]
+	}, {
+		"title": "Quel est votre plat régional préféré ?",
+		"reponses": [{
+			"name": "C'est tout ce qu'il y a au menu ?",
+			"coord1": -0.716517906949827,
+			"coord2": 0.351827527364079
+		}, {
+			"name": "Confit",
+			"coord1": -0.0497956306043382,
+			"coord2": -0.969267952503807
+		}, {
+			"name": "Croque-monsieur",
+			"coord1": -0.23980104889518,
+			"coord2": 0.309717107642417
+		}, {
+			"name": "Flamiche",
+			"coord1": -0.0623496257273546,
+			"coord2": 0.126828044792673
+		}, {
+			"name": "Petit salé",
+			"coord1": 1.20081364427537,
+			"coord2": 0.268353707009382
+		}]
+	}, {
+		"title": "A quoi votre surnom fait-il référence ?",
+		"reponses": [{
+			"name": "Bouboule ou Poil de carotte",
+			"coord1": 0.686438644525832,
+			"coord2": 0.051435524210842
+		}, {
+			"name": "Gilles Dupont",
+			"coord1": -1.06560661682831,
+			"coord2": 0.546606861376229
+		}, {
+			"name": "Le magnifique ou El Matador",
+			"coord1": -0.0853429558232829,
+			"coord2": 0.148085198519488
+		}, {
+			"name": "Momo ou Patoche",
+			"coord1": -0.182113014102386,
+			"coord2": -1.26086440911585
+		}]
+	}, {
+		"title": "Pour vous, quel est le détail qui tue ?",
+		"reponses": [{
+			"name": "Bijou",
+			"coord1": -0.537852537750645,
+			"coord2": -0.0552173437955266
+		}, {
+			"name": "Coiffure",
+			"coord1": -0.153731094051243,
+			"coord2": -0.789239301199205
+		}, {
+			"name": "Rien",
+			"coord1": -0.865414764117993,
+			"coord2": 0.906117707935642
+		}, {
+			"name": "Tatouage",
+			"coord1": 0.154537028130858,
+			"coord2": -0.438218863000103
+		}, {
+			"name": "Voiture",
+			"coord1": 1.77757116243598,
+			"coord2": 0.304314260742093
+		}]
+	}, {
+		"title": "Comment gérez-vous votre argent ?",
+		"reponses": [{
+			"name": "hey, oh, ca me regarde",
+			"coord1": -0.20961443951421,
+			"coord2": 0.598882141474335
+		}, {
+			"name": "Mécène",
+			"coord1": -0.8487122035494,
+			"coord2": -0.512650924892766
+		}, {
+			"name": "Père de famille",
+			"coord1": 0.0105363676583302,
+			"coord2": -0.0554233189209369
+		}, {
+			"name": "Vrai flambeur",
+			"coord1": 1.25734833048634,
+			"coord2": -0.0369694771927584
+		}]
+	}, {
+		"title": "Enfant, quel métier rêviez-vous de faire ?",
+		"reponses": [{
+			"name": "Acteur",
+			"coord1": 1.23903035940437,
+			"coord2": 0.098305422817623
+		}, {
+			"name": "Bénévole",
+			"coord1": -0.843465878194932,
+			"coord2": -0.304116377364763
+		}, {
+			"name": "Militaire",
+			"coord1": 0.00314814876139835,
+			"coord2": -0.709281134458935
+		}, {
+			"name": "Scientifique",
+			"coord1": 0.0899971055820018,
+			"coord2": 0.796421407110955
+		}]
+	}, {
+		"title": "Où passez-vous votre temps libre ?",
+		"reponses": [{
+			"name": "Jeux-vidéo",
+			"coord1": 0.28265217450572,
+			"coord2": 0.347587608133005
+		}, {
+			"name": "Macumba",
+			"coord1": 0.5896925173645,
+			"coord2": 0.0963936262611076
+		}, {
+			"name": "Restaurant",
+			"coord1": -0.142106951932725,
+			"coord2": -0.783441098328954
+		}, {
+			"name": "Square",
+			"coord1": -0.154830825069565,
+			"coord2": -0.812893046631033
+		}, {
+			"name": "Théâtre",
+			"coord1": -1.10059790025936,
+			"coord2": 1.5435786154558
+		}]
 	}]
-}, {
-	display: 'list',
-	title: "Pour vous le détail qui tue, c'est ...",
-	answers: [{
-		val: 'A',
-		title: "<strong>Une grosse voiture,</strong> ses ailerons, son bas de caisse et sa sono à 300 décibels"
-	}]
-}]
+}
