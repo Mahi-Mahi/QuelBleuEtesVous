@@ -1,0 +1,18 @@
+<p>This is the play view.</p>
+
+
+<div id="field"></div>
+
+<div id="question" class="animate {{showQuestion && 'visible' || ''}}">
+	<span class="index">{{currentQuestion+1}}</span><h2 data-ng-bind-html="questions[currentQuestion].title"></h2>
+	<ul class="answers">
+		<li ng-repeat="answer in questions[currentQuestion].answers" data-answer="{{answer.val}}" data-ng-bind-html="answer.title" ng-click="selectAnswer(answer)" ng-class="answerClass(answer)"></li>
+	</ul>
+	<a ng-if="selectedAnswer" ng-click="setAnswer()">Question Suivante</a>
+
+	<ul class="progress">
+		<li ng-repeat="question in questions" class="{{currentQuestion==$index && 'active' || '' }}">{{$index+1}}</li>
+	</ul>
+
+</div>
+
