@@ -1,6 +1,7 @@
 {
 	"players": [{
-		"name": "Lloris",
+		"name": "Hugo Lloris",
+		"slug": "hugo-lloris", 
 		"coord1": -0.985189495724773,
 		"coord2": 0.901850295058762
 	}, {
