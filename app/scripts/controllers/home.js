@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('HomeCtrl', function($scope, $timeout, $location) {
+	.controller('HomeCtrl', function(debug, $scope, $timeout, $location) {
 
-		$timeout(function() {
-			$location.url('/jouer');
-		}, 100);
+		if (debug) {
+			$timeout(function() {
+				$location.url('/jouer');
+			}, 100);
+		}
 
 	});

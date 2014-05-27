@@ -8,6 +8,7 @@ angular
 		'ngRoute',
 		'ngAnimate'
 	])
+	.constant('debug', true)
 	.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
@@ -31,6 +32,10 @@ angular
 						return dataService.load('players');
 					}
 				}
+			})
+			.when('/optin', {
+				templateUrl: 'views/optin.html',
+				controller: 'OptinCtrl'
 			})
 			.otherwise({
 				redirectTo: '/'

@@ -1,1 +1,5 @@
-<p>This is the result view.</p>
+<h2>Vous êtes <span>{{nearest.name}}</span></h2>
+
+<img ng-src="/images/players/large/{{nearest.slug}}.jpg" alt="">
+
+<div data-ng-bind-html="nearest.bio"></div>

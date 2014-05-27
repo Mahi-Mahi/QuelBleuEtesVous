@@ -1,10 +1,13 @@
 {
 	"players": [{
-		"name": "Lloris",
+		"name": "Hugo Lloris",
+		"slug": "hugo-lloris",
 		"coord1": -0.985189495724773,
-		"coord2": 0.901850295058762
+		"coord2": 0.901850295058762,
+		"bio": "Le <strong>Niçois</strong> s’est imposé en capitaine des Bleus, comme une évidence, <strong>sans le revendiquer</strong>, fidèle à la philosophie qu’il s’efforce d’appliquer depuis le début de sa carrière, au sortir d’une <strong>enfance confortable</strong> (père banquier, mère avocate d’affaires). Titulaire dans les buts de l’OGC Nice <strong>à 19 ans</strong> une fois son Bac S en poche, immédiatement propulsé sur le devant de la scène, <strong>il s’est étoffé</strong> en gardant les buts lyonnais pendant cinq saisons. Talentueux mais discret, combatif mais <strong>respectueux des règles de la vie en groupe</strong>, ce n’est certainement pas de lui que viendront les problèmes. Même relégué sur le banc lors de son arrivée à Tottenham, à la grande indignation des médias français, il a patienté. <strong>Sobre, il l’est aussi dans la vie de tous les jours</strong> : aucun signe distinctif, pas d’écarts, <strong>une vie familiale rangée</strong>, une famille qu’il aime emmener pour des <strong>sorties culturelles londoniennes</strong>."
 	}, {
-		"name": "Sagna",
+		"name": "Bacary Sagna",
+		"slug": "bacary-sagna",
 		"coord1": -0.521117615569173,
 		"coord2": -0.826524152619222
 	}, {

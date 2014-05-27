@@ -1,14 +1,12 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('ResultCtrl', function($rootScope, $scope, $location, dataService) {
+	.controller('ResultCtrl', function(debug, $rootScope, $scope, $location, dataService) {
 
 		if (!$rootScope.userAnswers) {
 			$location.path('/');
 			return;
 		}
-
-		$scope.players = dataService.data.players.players;
 
 		var sumCoord1 = 0,
 			sumCoord2 = 0;
@@ -26,7 +24,7 @@ angular.module('quelBleuEtesVousApp')
 
 		var minDistance = null;
 		var nearest;
-		angular.forEach($scope.players, function(player) {
+		angular.forEach(dataService.data.players.players, function(player) {
 			// console.log(player);
 			var distance = Math.sqrt(Math.pow(player.coord1 - user.coord1, 2) + Math.pow(player.coord2 - user.coord2, 2));
 			// console.log(distance);
@@ -36,5 +34,12 @@ angular.module('quelBleuEtesVousApp')
 			}
 		});
 		console.log(nearest, minDistance);
+
+		$scope.nearest = nearest;
+
+		if (debug) {
+			console.log(dataService.data.players.players);
+			$scope.nearest = dataService.data.players.players[0];
+		}
 
 	});
