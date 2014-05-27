@@ -1,5 +1,5 @@
 <h2>Vous êtes <span>{{nearest.name}}</span></h2>
 
-<img ng-src="/images/players/large/{{nearest.slug}}.png" alt="">
+<img ng-src="/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
 
 <div data-ng-bind-html="nearest.bio"></div>

@@ -2,9 +2,9 @@
 
 <p>Souhaitez-vous être tenu au courant des actualités et des jeux de France Info ?</p>
 
-<form action="">
-	<input type="text" name="email" placeholder="Mon adresse e-mail..." />
-	<button>
+<form>
+	<input type="text" name="email" placeholder="Mon adresse e-mail..." ng-model="email" />
+	<button ng-click="optin()">
 		<strong>Oui merci,</strong> voir le résultat.
 	</button>
 </form>

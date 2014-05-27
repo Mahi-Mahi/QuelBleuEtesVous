@@ -25,9 +25,7 @@ angular.module('quelBleuEtesVousApp')
 		var minDistance = null;
 		var nearest;
 		angular.forEach(dataService.data.players.players, function(player) {
-			// console.log(player);
 			var distance = Math.sqrt(Math.pow(player.coord1 - user.coord1, 2) + Math.pow(player.coord2 - user.coord2, 2));
-			// console.log(distance);
 			if (minDistance === null || distance < minDistance) {
 				minDistance = distance;
 				nearest = player;
@@ -38,8 +36,7 @@ angular.module('quelBleuEtesVousApp')
 		$scope.nearest = nearest;
 
 		if (debug) {
-			console.log(dataService.data.players.players);
-			$scope.nearest = dataService.data.players.players[0];
+			// $scope.nearest = dataService.data.players.players[2];
 		}
 
 	});
