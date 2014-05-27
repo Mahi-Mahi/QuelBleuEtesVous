@@ -3,16 +3,18 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('ResultCtrl', function($rootScope, $scope, $location) {
 
-		$scope.awesomeThings = [
-			'HTML5 Boilerplate',
-			'AngularJS',
-			'Karma'
-		];
-
 		if (!$rootScope.userAnswers) {
 			$location.path('/');
 		}
 
-		console.log($rootScope.userAnswers);
+		var sumCoord1 = 0,
+			sumCoord2 = 0;
+		angular.forEach($rootScope.userAnswers, function(answer, key) {
+			console.log(answer);
+			sumCoord1 += answer.coord1;
+			sumCoord2 += answer.coord2;
+		});
+
+		console.log(sumCoord1, sumCoord2);
 
 	});

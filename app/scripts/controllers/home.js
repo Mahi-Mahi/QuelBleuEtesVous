@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('HomeCtrl', function($scope) {
-		$scope.awesomeThings = [
-			'HTML5 Boilerplate',
-			'AngularJS',
-			'Karma'
-		];
+	.controller('HomeCtrl', function($scope, $timeout, $location) {
+
+		$timeout(function() {
+			$location.url('/jouer');
+		}, 100);
+
 	});

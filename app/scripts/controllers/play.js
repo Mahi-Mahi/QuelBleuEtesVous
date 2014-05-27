@@ -24,29 +24,34 @@ angular.module('quelBleuEtesVousApp')
 		};
 
 		$scope.animateField = function() {
-			$timeout($scope.nextQuestion, 1000);
+			$timeout($scope.nextQuestion, 100);
 		};
 
 		$scope.nextQuestion = function() {
 
 			$rootScope.userAnswers.push($scope.selectedAnswer);
 
-			console.log($rootScope.userAnswers);
-
 			$scope.currentQuestion++;
 			if ($scope.currentQuestion >= $scope.questions.length) {
 				$location.url('/resultat');
 			} else {
 				//
+				$scope.showQuestion = true;
+
+				fakeAnswer();
 			}
 
-			$scope.showQuestion = true;
-
-			$timeout(function() {
-				answers = document.querySelector('#id');
-				nb_answer = angular.element(answers).find('li').length;
-			}, 1000);
-
 		};
+
+		function fakeAnswer() {
+			$timeout(function() {
+				var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
+				$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[rand];
+				$scope.setAnswer();
+			}, 100);
+
+		}
+
+		fakeAnswer();
 
 	});
