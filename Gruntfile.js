@@ -303,7 +303,10 @@ module.exports = function(grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'images/*',
+            'fonts/*',
+            'data/*',
+            'backend/*'
           ]
         }, {
           expand: true,
@@ -361,6 +364,40 @@ module.exports = function(grunt) {
     //   dist: {}
     // },
 
+    uglify: {
+      options: {
+        mangle: false
+      }
+    },
+
+    rsync: {
+      options: {
+        args: ["--verbose"],
+        exclude: [".git*", "*.scss", "node_modules", ".svn"],
+        recursive: true
+      },
+      staging: {
+        options: {
+          src: "./dist/",
+          dest: "/home/askmedia/QuelBleuEtesVous",
+          host: "root@vps.mahi-mahi.fr",
+          syncDestIgnoreExcl: true
+        }
+      },
+      prod: {
+        options: {
+          src: "../dist/",
+          dest: "/var/www/site",
+          host: "user@live-host",
+          syncDestIgnoreExcl: true
+        }
+      }
+    }
+
+  });
+
+  grunt.registerTask('createConfig', function(target) {
+    grunt.file.write("./app/scripts/services/config.js", '"use strict";' + "\n" + 'angular.module("quelBleuEtesVousApp").constant("debug", ' + ((target === 'dist') ? 'false' : 'true') + ');');
   });
 
   grunt.registerTask('serve', function(target) {
@@ -369,6 +406,7 @@ module.exports = function(grunt) {
     }
 
     grunt.task.run([
+      'createConfig',
       'clean:server',
       'bowerInstall',
       'concurrent:server',
@@ -391,6 +429,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'createConfig:dist',
     'clean:dist',
     'bowerInstall',
     'useminPrepare',
@@ -404,7 +443,9 @@ module.exports = function(grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'rsync:staging',
+    'createConfig:dev'
   ]);
 
   grunt.registerTask('default', [

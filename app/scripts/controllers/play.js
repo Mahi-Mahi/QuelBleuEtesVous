@@ -7,7 +7,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.currentQuestion = 0;
 
-		$scope.questions = dataService.data.questions.questions;
+		$scope.questions = dataService.data.questions.questions.slice(0, 2);
 
 		$scope.showQuestion = true;
 

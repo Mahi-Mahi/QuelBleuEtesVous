@@ -8,7 +8,6 @@ angular
 		'ngRoute',
 		'ngAnimate'
 	])
-	.constant('debug', true)
 	.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
