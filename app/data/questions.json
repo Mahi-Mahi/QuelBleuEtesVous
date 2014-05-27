@@ -6,6 +6,7 @@
 	}],
 	"questions": [{
 		"title": "Quelle est votre situation de famille ?",
+		"display": "list",
 		"answers": [{
 			"title": "C'est compliqué",
 			"coord1": 0.985477614611856,
@@ -25,6 +26,7 @@
 		}]
 	}, {
 		"title": "Quel est votre rapport à la hiérarchie ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "Ca dépend",
 			"coord1": 0.320225332863628,
