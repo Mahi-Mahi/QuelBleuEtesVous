@@ -25,7 +25,12 @@ angular
 			})
 			.when('/resultat', {
 				templateUrl: 'views/result.html',
-				controller: 'ResultCtrl'
+				controller: 'ResultCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('players');
+					}
+				}
 			})
 			.otherwise({
 				redirectTo: '/'

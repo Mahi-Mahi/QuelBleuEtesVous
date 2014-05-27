@@ -1,9 +1,8 @@
 {
-	"constante": [{
-		"value": 8.27033030364684
-	}, {
-		"value": 6.91477506253345
-	}],
+	"constants": {
+		"coord1": 8.27033030364684,
+		"coord2": 6.91477506253345
+	},
 	"questions": [{
 		"title": "Quelle est votre situation de famille ?",
 		"display": "mosaic",

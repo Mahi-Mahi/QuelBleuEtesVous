@@ -34,12 +34,12 @@ angular.module('quelBleuEtesVousApp')
 			$scope.currentQuestion++;
 			if ($scope.currentQuestion >= $scope.questions.length) {
 				$location.url('/resultat');
-			} else {
-				//
-				$scope.showQuestion = true;
-
-				fakeAnswer();
+				return;
 			}
+
+			$scope.showQuestion = true;
+
+			fakeAnswer();
 
 		};
 
