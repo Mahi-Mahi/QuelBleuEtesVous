@@ -16,7 +16,12 @@ angular
 			})
 			.when('/jouer', {
 				templateUrl: 'views/play.html',
-				controller: 'PlayCtrl'
+				controller: 'PlayCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('questions');
+					}
+				}
 			})
 			.when('/resultat', {
 				templateUrl: 'views/result.html',

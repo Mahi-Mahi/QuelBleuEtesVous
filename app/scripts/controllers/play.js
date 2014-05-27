@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('PlayCtrl', function($rootScope, $scope, $location, $timeout) {
+	.controller('PlayCtrl', function($rootScope, $scope, $location, $timeout, dataService) {
 
 		$rootScope.userAnswers = $rootScope.userAnswers || [];
 
 		$scope.currentQuestion = 0;
 
-		$scope.questions = [];
+		$scope.questions = dataService.data.questions.questions;
 
 		$scope.showQuestion = true;
 
@@ -28,14 +28,25 @@ angular.module('quelBleuEtesVousApp')
 		};
 
 		$scope.nextQuestion = function() {
-			$scope.showQuestion = true;
+
 			$rootScope.userAnswers.push($scope.selectedAnswer);
+
+			console.log($rootScope.userAnswers);
+
 			$scope.currentQuestion++;
 			if ($scope.currentQuestion >= $scope.questions.length) {
 				$location.url('/resultat');
 			} else {
 				//
 			}
+
+			$scope.showQuestion = true;
+
+			$timeout(function() {
+				answers = document.querySelector('#id');
+				nb_answer = angular.element(answers).find('li').length;
+			}, 1000);
+
 		};
 
 	});
