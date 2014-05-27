@@ -6,7 +6,7 @@
 	}],
 	"questions": [{
 		"title": "Quelle est votre situation de famille ?",
-		"display": "list",
+		"display": "mosaic",
 		"answers": [{
 			"title": "C'est compliqué",
 			"coord1": 0.985477614611856,
@@ -46,6 +46,7 @@
 		}]
 	}, {
 		"title": "Si votre carrière était un film, quel serait-il ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "Fast and Furious",
 			"coord1": -0.236672562223995,
@@ -65,6 +66,7 @@
 		}]
 	}, {
 		"title": "Quelle est la B.O. de votre enfance ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "Dans ma rue",
 			"coord1": -0.551879578737133,
@@ -84,6 +86,7 @@
 		}]
 	}, {
 		"title": "Quel titre donneriez-vous à votre autobiographie ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "C'est dans les vieux pots qu'on fait les meilleures confitures",
 			"coord1": 0.623125814774031,
@@ -103,6 +106,7 @@
 		}]
 	}, {
 		"title": "Quel style de vêtements vous sied le mieux ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "Dolce & Gabbana",
 			"coord1": -0.155628117251534,
@@ -122,6 +126,7 @@
 		}]
 	}, {
 		"title": "Quel est votre plat régional préféré ?",
+		"display": "list",
 		"answers": [{
 			"title": "C'est tout ce qu'il y a au menu ?",
 			"coord1": -0.716517906949827,
@@ -145,6 +150,7 @@
 		}]
 	}, {
 		"title": "A quoi votre surnom fait-il référence ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "Bouboule ou Poil de carotte",
 			"coord1": 0.686438644525832,
@@ -164,6 +170,7 @@
 		}]
 	}, {
 		"title": "Pour vous, quel est le détail qui tue ?",
+		"display": "list",
 		"answers": [{
 			"title": "Bijou",
 			"coord1": -0.537852537750645,
@@ -187,6 +194,7 @@
 		}]
 	}, {
 		"title": "Comment gérez-vous votre argent ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "hey, oh, ca me regarde",
 			"coord1": -0.20961443951421,
@@ -206,6 +214,7 @@
 		}]
 	}, {
 		"title": "Enfant, quel métier rêviez-vous de faire ?",
+		"display": "mosaic",
 		"answers": [{
 			"title": "Acteur",
 			"coord1": 1.23903035940437,
@@ -225,6 +234,7 @@
 		}]
 	}, {
 		"title": "Où passez-vous votre temps libre ?",
+		"display": "list",
 		"answers": [{
 			"title": "Jeux-vidéo",
 			"coord1": 0.28265217450572,
