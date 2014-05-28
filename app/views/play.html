@@ -1,9 +1,51 @@
 <p>This is the play view.</p>
 
 
-<div id="field"></div>
+<div id="field">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="100%" height="100%" preserveAspectRatio="xMidYMin">
+		<g>
+			<rect x="28.899" y="0.101" opacity="0.15" fill="#93D06D" width="30" height="455"/>
+			<rect x="88.899" y="0.101" opacity="0.15" fill="#93D06D" width="30" height="455"/>
+			<rect x="147.899" y="0.101" opacity="0.15" fill="#93D06D" width="30" height="455"/>
+			<rect x="206.899" y="0.101" opacity="0.15" fill="#93D06D" width="30" height="455"/>
+			<rect x="266.899" y="0.101" opacity="0.15" fill="#93D06D" width="29" height="455"/>
+			<rect x="325.899" y="0.101" opacity="0.15" fill="#93D06D" width="29" height="455"/>
+			<rect x="385.899" y="0.101" opacity="0.15" fill="#93D06D" width="29" height="455"/>
+			<rect x="446.899" y="0.101" opacity="0.15" fill="#93D06D" width="29" height="455"/>
+			<rect x="502.899" y="0.101" opacity="0.15" fill="#93D06D" width="31" height="455"/>
+			<rect x="562.898" y="0.101" opacity="0.15" fill="#93D06D" width="29" height="455"/>
+			<rect x="621.898" y="0.101" opacity="0.15" fill="#93D06D" width="29" height="455"/>
+			<rect x="681.898" y="0.101" opacity="0.15" fill="#93D06D" width="29" height="455"/>
 
-<div id="question" class="animate {{showQuestion && 'visible' || ''}}">
+			<rect x="6.399" y="7.601" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" width="728" height="443"/>
+
+			<path fill="none" stroke="#FFFFFF" stroke-width="0.918" stroke-miterlimit="10" d="M12.607,6.465c0,3.394-2.751,6.146-6.144,6.146 "/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="0.918" stroke-miterlimit="10" d="M727.922,6.465 c0,3.394,2.751,6.146,6.144,6.146"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="0.918" stroke-miterlimit="10" d="M12.607,448.684 c0-3.394-2.751-6.146-6.144-6.146"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="0.918" stroke-miterlimit="10" d="M727.922,448.684 c0-3.394,2.751-6.146,6.144-6.146"/>
+			<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="369.399" y1="8.101" x2="369.399" y2="450.101"/>
+
+			<ellipse fill="none" stroke="#FFFFFF" stroke-width="0.918" stroke-miterlimit="10" cx="369.543" cy="228.027" rx="65.808" ry="65.83"/>
+
+			<path fill="none" stroke="#FFFFFF" stroke-width="0.918" stroke-miterlimit="10" d="M118.094,180.786 c12.321,11.963,19.978,28.708,19.978,47.241c0,18.178-7.366,34.636-19.275,46.549"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="0.918" stroke-miterlimit="10" d="M622.169,276.385 c-13.009-12.026-21.156-29.24-21.156-48.357c0-19.116,8.146-36.33,21.154-48.356"/>
+
+			<circle fill="#FFFFFF" cx="369.543" cy="228.027" r="2.344"/>
+
+			<polyline fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="6.899,119.601 118.399,119.601 118.399,338.601 6.899,338.601 "/>
+			<polyline fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="5.899,164.601 44.399,164.601 44.399,294.601 5.899,294.601 	"/>
+			<polyline fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="733.898,119.601 622.398,119.601 622.398,338.601 734.898,338.601 	"/>
+			<polyline fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="734.898,164.601 695.398,164.601 695.398,294.601 735.898,294.601 	"/>
+		</g>
+
+		<g class="players">
+			<g id="player-1"></g>
+		</g>
+
+	</svg>
+</div>
+
+<div id="question" ng-show="showQuestion" class="animate-show">
 	<span class="index">{{currentQuestion+1}}</span><h2 data-ng-bind-html="questions[currentQuestion].title"></h2>
 	<ul class="answers" id="answers">
 		<li ng-repeat="answer in questions[currentQuestion].answers" data-answer="{{answer.val}}" data-ng-bind-html="answer.title" ng-click="selectAnswer(answer)" ng-class="answerClass(answer)"></li>
