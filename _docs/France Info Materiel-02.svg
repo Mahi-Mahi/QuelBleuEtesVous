@@ -19,7 +19,7 @@
 		<polygon opacity="0.25" fill="#EFF3F3" points="42.738,4.667 57.68,20.692 56.758,8.541 61.886,13.187 63.19,6.851 55.024,4.667 "/>
 		<polygon class="stripe" fill="#F3F4E4" points="34.914,8.573 42.14,7.015 41.267,10.2 35.494,11.293 "/>
 		<polygon class="stripe" fill="#F3F4E4" points="62.826,8.448 55.914,7.015 56.787,10.2 62.247,11.168 "/>
-		<polygon opacity="0.25" fill="#EFF3F3" points="40.553,12.825 34.914,8.573 34.572,6.923 42.738,4.795 "/>
+		<polygon class="shadow" opacity="0.25" fill="#EFF3F3" points="40.553,12.825 34.914,8.573 34.572,6.923 42.738,4.795 "/>
 		<polygon class="stripe" fill="#F3F4E4" points="42.015,30.667 44.961,4.667 47,4.667 45.75,30.667 "/>
 		<polygon class="stripe" fill="#F3F4E4" points="56,30.667 53.055,4.667 51.015,4.667 52.265,30.667 "/>
 	</g>
