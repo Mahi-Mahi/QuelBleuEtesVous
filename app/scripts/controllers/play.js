@@ -30,19 +30,19 @@ angular.module('quelBleuEtesVousApp')
 			pos: "110,50"
 		}, {
 			id: "player-7",
-			pos: "200,100"
+			pos: "430,80"
 		}, {
 			id: "player-8",
-			pos: "200,100"
+			pos: "300,100"
 		}, {
 			id: "player-9",
-			pos: "200,100"
+			pos: "580,50"
 		}, {
 			id: "player-10",
-			pos: "200,100"
+			pos: "620,370"
 		}, {
 			id: "player-11",
-			pos: "200,100"
+			pos: "530,190"
 		}];
 
 		$rootScope.userAnswers = $rootScope.userAnswers || [];
