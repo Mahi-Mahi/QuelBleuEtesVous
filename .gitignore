@@ -7,3 +7,5 @@ NOT app/bower_components
 
 app/.DS_Store
 app/backend/config.php
+
+.DS_Store

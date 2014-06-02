@@ -5,6 +5,16 @@ angular.module('quelBleuEtesVousApp')
 
 		debug = false;
 
+		$scope.players = [{
+			id: "player-1",
+			x: 100,
+			y: 100
+		}, {
+			id: "player-2",
+			x: 200,
+			y: 200
+		}];
+
 		$rootScope.userAnswers = $rootScope.userAnswers || [];
 
 		$scope.currentQuestion = -1;

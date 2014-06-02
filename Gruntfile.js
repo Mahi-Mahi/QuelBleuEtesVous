@@ -392,6 +392,18 @@ module.exports = function(grunt) {
           syncDestIgnoreExcl: true
         }
       }
+    },
+
+    exec: {
+      removeMissingFiles: {
+        cmd: "svn rm $( svn status | sed -e '/^!/!d' -e 's/^!//' )"
+      },
+      addFiles: {
+        cmd: "svn add $( svn status )"
+      },
+      commitFiles: {
+        cmd: "svn commit -m ''"
+      }
     }
 
   });
@@ -445,6 +457,7 @@ module.exports = function(grunt) {
     'usemin',
     'htmlmin',
     'rsync:staging',
+    // 'commit',
     'createConfig:dev'
   ]);
 
