@@ -10,7 +10,10 @@
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
     "angular-animate": "~1.2.15",
-    "css-modal": "~1.0.4"
+    "css-modal": "~1.0.4",
+    "flexslider": "*",
+    "jquery": "~2.1.1",
+    "jquery-migrate": "~1.2.1"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",
