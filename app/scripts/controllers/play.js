@@ -3,53 +3,148 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(debug, $rootScope, $scope, $location, $timeout, dataService) {
 
-		debug = false;
+		debug = true;
 
 		$scope.players = [{
 			id: "player-ref",
-			pos: "350,188",
-			class: "referee"
+			x: 350,
+			y: 188,
+			class: "referee",
+			Ac: {
+				x: 365,
+				y: 235
+			},
+			Bc: {
+				x: 365,
+				y: 235
+			}
 		}, {
 			id: "player-1",
-			pos: "320,220"
+			x: 320,
+			y: 220
 		}, {
 			id: "player-2",
-			pos: "440,360"
+			x: 440,
+			y: 360
 		}, {
 			id: "player-3",
-			pos: "140,380"
+			x: 140,
+			y: 380
 		}, {
 			id: "player-4",
 			class: "goalkeeper",
-			pos: "40,210"
+			x: 40,
+			y: 210
 		}, {
 			id: "player-5",
-			pos: "190,200"
+			x: 190,
+			y: 200
 		}, {
 			id: "player-6",
-			pos: "110,50"
+			x: 110,
+			y: 50,
+			Ac: {
+				x: 280,
+				y: 40
+			},
+			Bc: {
+				x: 320,
+				y: 40
+			}
 		}, {
 			id: "player-7",
-			pos: "430,80"
+			x: 430,
+			y: 80
 		}, {
 			id: "player-8",
-			pos: "300,100"
+			x: 300,
+			y: 100,
+			Ac: {
+				x: 450,
+				y: 135
+			},
+			Bc: {
+				x: 490,
+				y: 130
+			}
 		}, {
 			id: "player-9",
-			pos: "580,50"
+			x: 590,
+			y: 50,
+			Ac: {
+				x: 635,
+				y: 160
+			},
+			Bc: {
+				x: 650,
+				y: 200
+			}
 		}, {
 			id: "player-10",
-			pos: "620,370"
+			x: 620,
+			y: 370
 		}, {
 			id: "player-11",
-			pos: "530,190"
+			x: 530,
+			y: 190
+		}, {
+			id: "goal",
+			class: "goal",
+			x: 710,
+			y: 210
 		}];
+
+		$scope.lines = [];
+		for (var i = 0; i < $scope.players.length - 1; i++) {
+			var p = [],
+				path = '';
+			var h = 18;
+			var w = 18;
+			var Ac, Bc;
+			var A = {
+				x: $scope.players[i].x + h,
+				y: $scope.players[i].y + w,
+			};
+			var B = {
+				x: $scope.players[i + 1].x + h,
+				y: $scope.players[i + 1].y + w
+			};
+			if ($scope.players[i].Ac) {
+				Ac = $scope.players[i].Ac;
+				Bc = $scope.players[i].Bc;
+			} else {
+				Ac = {
+					x: A.x,
+					y: A.y
+				};
+				Bc = {
+					x: B.x,
+					y: B.y
+				};
+			}
+			p.push("M" + A.x + "," + A.y);
+			p.push("C" + Ac.x + "," + Ac.y);
+			p.push("," + Bc.x + "," + Bc.y);
+			p.push("," + B.x + "," + B.y);
+			path = p.join('');
+			console.log(path);
+			$scope.lines.push({
+				id: (i + 1),
+				d: path
+			});
+		}
+
+		// $scope.lines = [{
+		// 	id: 'line-1',
+		// 	path: "M350,188C100,100,100,100,320,220"
+		// }];
 
 		$rootScope.userAnswers = $rootScope.userAnswers || [];
 
 		$scope.currentQuestion = -1;
+		$scope.state = '';
 
-		$scope.questions = dataService.data.questions.questions.slice(0, 3);
+		$scope.questions = dataService.data.questions.questions; //.slice(0, debug);
 
 		$scope.showQuestion = false;
 
@@ -60,7 +155,12 @@ angular.module('quelBleuEtesVousApp')
 		};
 
 		$scope.animateField = function() {
-			$timeout($scope.nextQuestion, debug ? 50 : 1000);
+			$scope.state = 'play_anim';
+
+			$timeout(function() {
+				$scope.state = '';
+				$scope.nextQuestion();
+			}, debug ? 50 : 1000);
 		};
 
 		$scope.selectAnswer = function(answer) {
@@ -77,7 +177,9 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.nextQuestion = function() {
 
-			$rootScope.userAnswers.push($scope.selectedAnswer);
+			if ($scope.selectedAnswer) {
+				$rootScope.userAnswers.push($scope.selectedAnswer);
+			}
 
 			$scope.currentQuestion++;
 			if ($scope.currentQuestion >= $scope.questions.length) {
@@ -94,15 +196,17 @@ angular.module('quelBleuEtesVousApp')
 		function fakeAnswer() {
 			if (debug) {
 				$timeout(function() {
-					var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
-					$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[rand];
-					$scope.setAnswer();
+					if ($scope.questions[$scope.currentQuestion]) {
+						var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
+						$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[rand];
+						$scope.setAnswer();
+					}
 				}, 50);
 			}
 
 		}
 
-		// $scope.initField();
+		$scope.initField();
 
 		fakeAnswer();
 

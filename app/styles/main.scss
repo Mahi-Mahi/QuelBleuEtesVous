@@ -39,23 +39,56 @@
 	.color2 {
 		fill: #03638F;
 	}
+
+	&.goalkeeper {
+		.color1 {
+			fill: #F7941D;
+		}
+		.color2 {
+			fill: #E8D84D;
+		}
+	}
+
+	&.referee {
+		.stripe, .opacity, .shadow {
+			display: block;
+		}
+		.color1 {
+			fill: #333132;
+		}
+		.color2 {
+			fill: #333132;
+		}
+	}
+
+	&.goal {
+		display: none;
+	}
 }
-.goalkeeper {
-	.color1 {
-		fill: #F7941D;
-	}
-	.color2 {
-		fill: #E8D84D;
-	}
+
+
+
+.line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  display: none;
+  &.show {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+  	display: block;
+  }
 }
-.referee {
-	.stripe, .opacity, .shadow {
-		display: block;
-	}
-	.color1 {
-		fill: #333132;
-	}
-	.color2 {
-		fill: #333132;
-	}
+
+.play_anim .line.anim {
+	display: block;
+	animation: dash 3s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
