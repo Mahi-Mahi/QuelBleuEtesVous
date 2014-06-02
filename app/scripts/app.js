@@ -36,6 +36,15 @@ angular
 				templateUrl: 'views/optin.html',
 				controller: 'OptinCtrl'
 			})
+			.when('/tous-les-joueurs', {
+				templateUrl: 'views/players.html',
+				controller: 'PlayersCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('players');
+					}
+				}
+			})
 			.otherwise({
 				redirectTo: '/'
 			});

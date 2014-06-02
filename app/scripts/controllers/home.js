@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('HomeCtrl', function(debug, $scope, $timeout, $location) {
 
-		debug = true;
+		// debug = true;
 
 		$scope.rand = Math.ceil(Math.random() * 4);
 
