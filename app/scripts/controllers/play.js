@@ -6,13 +6,43 @@ angular.module('quelBleuEtesVousApp')
 		debug = false;
 
 		$scope.players = [{
+			id: "player-ref",
+			pos: "350,188",
+			class: "referee"
+		}, {
 			id: "player-1",
-			x: 100,
-			y: 100
+			pos: "320,220"
 		}, {
 			id: "player-2",
-			x: 200,
-			y: 200
+			pos: "440,360"
+		}, {
+			id: "player-3",
+			pos: "140,380"
+		}, {
+			id: "player-4",
+			class: "goalkeeper",
+			pos: "40,210"
+		}, {
+			id: "player-5",
+			pos: "190,200"
+		}, {
+			id: "player-6",
+			pos: "110,50"
+		}, {
+			id: "player-7",
+			pos: "200,100"
+		}, {
+			id: "player-8",
+			pos: "200,100"
+		}, {
+			id: "player-9",
+			pos: "200,100"
+		}, {
+			id: "player-10",
+			pos: "200,100"
+		}, {
+			id: "player-11",
+			pos: "200,100"
 		}];
 
 		$rootScope.userAnswers = $rootScope.userAnswers || [];
@@ -72,7 +102,7 @@ angular.module('quelBleuEtesVousApp')
 
 		}
 
-		$scope.initField();
+		// $scope.initField();
 
 		fakeAnswer();
 

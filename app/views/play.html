@@ -40,12 +40,12 @@
 
 		<g class="players">
 
-			<g ng-repeat="player in players" id="{{player.id}}" class="{{player.class}}" ng-x="{{player.x}}" ng-y="{{player.y}}">
+			<g ng-repeat="player in players" id="{{player.id}}" class="{{player.class}}" ng-translate="{{player.pos}}">
 				<polygon fill="#DDDDDD" points="20.724,6.667 11.227,6.667 12.228,2.667 19.723,2.667"/>
 				<polygon fill="#F0F0F0" points="19.99,8.667 11.961,8.667 12.807,4.667 19.143,4.667"/>
-				<polygon fill="#F7941D" points="22.024,4.667 30.19,6.859 28.886,13.171 24.209,12.686 25.284,30.667 6.478,30.667 7.553,12.702 2.876,13.142 1.572,6.828 9.738,4.667 "/>
-				<polygon fill="#E8D84D" points="9.738,4.667 24.68,20.692 23.758,8.541 28.886,13.187 30.19,6.851 22.024,4.667 "/>
-				<polygon fill="#E8D84D" points="7.553,12.825 1.914,8.573 1.572,6.923 9.738,4.795 "/>
+				<polygon class="color1" fill="#A5A5A5" points="22.024,4.667 30.19,6.859 28.886,13.171 24.209,12.686 25.284,30.667 6.478,30.667 7.553,12.702 2.876,13.142 1.572,6.828 9.738,4.667 "/>
+				<polygon class="color2" fill="#CECECE" points="9.738,4.667 24.68,20.692 23.758,8.541 28.886,13.187 30.19,6.851 22.024,4.667 "/>
+				<polygon class="color2" fill="#CECECE" points="7.553,12.825 1.914,8.573 1.572,6.923 9.738,4.795 "/>
 			</g>
 
 		</g>
