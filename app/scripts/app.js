@@ -6,7 +6,8 @@ angular
 		'ngResource',
 		'ngSanitize',
 		'ngRoute',
-		'ngAnimate'
+		'ngAnimate',
+		'angular-flexslider'
 	])
 	.config(function($routeProvider) {
 		$routeProvider

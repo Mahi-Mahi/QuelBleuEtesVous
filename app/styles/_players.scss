@@ -6,6 +6,13 @@
 		float: left;
 	}
 }
-.playersDetail {
+
+
+.flex-viewport {
 	display: none;
+	position: absolute !important;
+	z-index: 20;
+}
+.opened .flex-viewport {
+	display: block;
 }

@@ -127,7 +127,6 @@ angular.module('quelBleuEtesVousApp')
 			p.push("," + Bc.x + "," + Bc.y);
 			p.push("," + B.x + "," + B.y);
 			path = p.join('');
-			console.log(path);
 			$scope.lines.push({
 				id: (i + 1),
 				d: path
@@ -198,6 +197,7 @@ angular.module('quelBleuEtesVousApp')
 				$timeout(function() {
 					if ($scope.questions[$scope.currentQuestion]) {
 						var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
+						console.log('answer :' + rand);
 						$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[rand];
 						$scope.setAnswer();
 					}

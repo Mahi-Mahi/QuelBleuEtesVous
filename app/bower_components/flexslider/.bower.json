@@ -9,6 +9,5 @@
   },
   "_source": "git://github.com/woothemes/FlexSlider.git",
   "_target": "*",
-  "_originalSource": "flexslider",
-  "_direct": true
+  "_originalSource": "flexslider"
 }
