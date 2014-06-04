@@ -68,7 +68,7 @@
 
 <div id="question" ng-show="showQuestion" class="animate-show">
 	<span class="index">{{currentQuestion+1}}</span><h2 data-ng-bind-html="questions[currentQuestion].title"></h2>
-	<ul class="answers" id="answers">
+	<ul ng-class="['answers', questions[currentQuestion].display]" id="answers">
 		<li ng-repeat="answer in questions[currentQuestion].answers" data-answer="{{answer.val}}" data-ng-bind-html="answer.title" ng-click="selectAnswer(answer)" ng-class="answerClass(answer)"></li>
 	</ul>
 	<a ng-if="selectedAnswer" ng-click="setAnswer()">Question Suivante</a>
