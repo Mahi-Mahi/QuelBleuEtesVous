@@ -131,26 +131,32 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 // HEADER
 
 .header {
+	text-align: center;
 }
 
 .entry-title {
 	border-bottom:1px solid #fff;
 	border-top:1px solid #fff;
 	color:#fff;
-	display: block;
+	display: inline-block;
 	font:normal em(77px) 'InterstateBold', serif;
 	margin: 0;
 	padding:10px 0;
 	text-align: center;
 	text-transform: uppercase;
+	vertical-align: top;
 	strong {
 		display: block;
 		font-size: em(102px,77px);
 		margin: 0;
 		padding: 0;
 	}
-	.header & {
-
+	.header-single & {
+		font-size: em(51px);
+		margin:0 0 20px 0;
+		strong {
+			font-size: em(38px,51px);
+		}
 	}
 }
 
@@ -186,7 +192,7 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 .container {
 	display: block;
 	margin: 0 auto;
-	padding:0;
+	padding:20px 0 0 0;
 	position: relative;
 	z-index:1;
 	width:940px;
