@@ -180,6 +180,8 @@ angular.module('quelBleuEtesVousApp')
 				$rootScope.userAnswers.push($scope.selectedAnswer);
 			}
 
+			$scope.selectedAnswer = null;
+
 			$scope.currentQuestion++;
 			if ($scope.currentQuestion >= $scope.questions.length) {
 				$location.url('/optin');
