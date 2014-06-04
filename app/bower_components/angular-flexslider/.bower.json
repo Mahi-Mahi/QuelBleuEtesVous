@@ -22,6 +22,5 @@
   },
   "_source": "git://github.com/thenikso/angular-flexslider.git",
   "_target": "~1.2.8",
-  "_originalSource": "angular-flexslider",
-  "_direct": true
+  "_originalSource": "angular-flexslider"
 }
