@@ -15,6 +15,8 @@ module.exports = function(grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  grunt.loadNpmTasks('grunt-html-snapshot');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -403,6 +405,23 @@ module.exports = function(grunt) {
       },
       commitFiles: {
         cmd: "svn commit -m ''"
+      }
+    },
+
+    htmlSnapshot: {
+      debug: {
+        options: {
+          snapshotPath: 'dist/',
+          sitePath: 'http://127.0.0.1:9000/',
+          msWaitForPages: 1000,
+          urls: [
+            '/',
+            '/resultat/blaise-matuidi'
+          ]
+        }
+      },
+      prod: {
+        options: {}
       }
     }
 

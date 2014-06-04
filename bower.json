@@ -13,7 +13,8 @@
     "css-modal": "~1.0.4",
     "jquery": "~2.1.1",
     "jquery-migrate": "~1.2.1",
-    "angular-flexslider": "~1.2.8"
+    "angular-flexslider": "~1.2.8",
+    "flexslider": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

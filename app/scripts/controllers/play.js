@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(debug, $rootScope, $scope, $location, $timeout, dataService) {
 
-		debug = false;
+		debug = true;
 
 		$scope.players = [{
 			id: "player-ref",
