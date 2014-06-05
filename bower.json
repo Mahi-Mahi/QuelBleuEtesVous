@@ -14,7 +14,8 @@
     "jquery": "1.11.1",
     "flexslider": "*",
     "vd42-flexslider": "~2.2.2",
-    "angular-flexslider": "git://github.com/Mahi-Mahi/angular-flexslider.git#~1.2.8"
+    "angular-flexslider": "git://github.com/Mahi-Mahi/angular-flexslider.git#~1.2.8",
+    "xtcore": "git://github.com/Mahi-Mahi/XTCore.git"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

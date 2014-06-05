@@ -1,0 +1,20 @@
+{
+  "name": "xtcore",
+  "main": "./xtcore.js",
+  "description": "XTCore.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mahi-Mahi/XTCore.git"
+  },
+  "homepage": "https://github.com/Mahi-Mahi/XTCore",
+  "_release": "ba779061bd",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ba779061bde70e119416376607933054640434a5"
+  },
+  "_source": "git://github.com/Mahi-Mahi/XTCore.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/Mahi-Mahi/XTCore.git",
+  "_direct": true
+}

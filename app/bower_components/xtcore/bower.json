@@ -1,0 +1,10 @@
+{
+	"name": "xtcore",
+	"version": "4.2.002",
+	"main": "./xtcore.js",
+	"description": "XTCore.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Mahi-Mahi/XTCore.git"
+	}
+}
