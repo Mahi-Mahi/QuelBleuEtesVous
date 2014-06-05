@@ -9,16 +9,7 @@
 			<a ng-click="slider.close()" ng-if="slider.opened">Tous les joueurs</a>
 			<flex-slider slide="player in slider.players track by player.slug" slideshow="false" animation="slide" control-nav="thumbnails" before="slider.before()">
 				<li data-thumb="{{baseurl}}/images/players/small/{{player.slug}}.png">
-					<div class="result-block">
-						<div class="media">
-							<div class="result-sidebar">
-								<img ng-src="{{baseurl}}/images/players/large/{{player.slug}}.png" ng-if="player.slug">
-							</div>
-							<div class="media result-body">
-								<div class="bio" data-ng-bind-html="player.bio"></div>
-							</div>
-						</div><!-- .media -->
-					</div><!-- .result-block -->
+					{{player.slug}}
 				</li>
 			</flex-slider>
 		</div>

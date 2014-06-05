@@ -7,6 +7,8 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.baseurl = config.baseurl;
 
+		console.log(dataService.data.players.players);
+
 		$scope.slider = {
 			players: dataService.data.players.players,
 			opened: false,

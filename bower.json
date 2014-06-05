@@ -11,11 +11,10 @@
     "angular-route": "1.2.16",
     "angular-animate": "~1.2.16",
     "css-modal": "~1.0.4",
-    "jquery": "~2.1.1",
-    "jquery-migrate": "~1.2.1",
-    "angular-flexslider": "~1.2.8",
+    "jquery": "1.11.1",
     "flexslider": "*",
-    "vd42-flexslider": "~2.2.2"
+    "vd42-flexslider": "~2.2.2",
+    "angular-flexslider": "git://github.com/Mahi-Mahi/angular-flexslider.git#~1.2.8"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

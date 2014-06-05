@@ -136,6 +136,7 @@
               for (i = _l = 0, _len3 = collection.length; _l < _len3; i = ++_l) {
                 c = collection[i];
                 addSlide(c, i, function(item) {
+                  console.log(item);
                   return slides.append(item.element);
                 });
               }
@@ -171,7 +172,6 @@
                 options[attrKey] = attrVal;
               }
               return $timeout((function() {
-                console.log(flexsliderDiv);
                 return flexsliderDiv.flexslider(options);
               }), 0);
             });

@@ -17,21 +17,21 @@ angular.module('quelBleuEtesVousApp')
 			}, 100);
 		}
 
-		$scope.optinUrl = config.optin_url;
+		$scope.optinUrl = config.optinUrl;
 		$scope.optin = function() {
 
 			$http.post($scope.optinUrl, {
 				email: $scope.email
 			})
 				.success(function(data, status) {
-					console.log(data);
+					// console.log(data);
 					$scope.status = status;
 					$scope.data = data;
 					$scope.result = data;
 					$scope.goToResult();
 				})
 				.error(function(data, status) {
-					console.log(data);
+					// console.log(data);
 					$scope.data = data || "Request failed";
 					$scope.status = status;
 					$scope.goToResult();

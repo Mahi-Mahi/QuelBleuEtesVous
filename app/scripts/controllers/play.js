@@ -11,7 +11,7 @@ angular.module('quelBleuEtesVousApp')
 			id: "player-ref",
 			x: 350,
 			y: 188,
-			class: "referee",
+			'class': "referee",
 			Ac: {
 				x: 365,
 				y: 235
@@ -34,7 +34,7 @@ angular.module('quelBleuEtesVousApp')
 			y: 380
 		}, {
 			id: "player-4",
-			class: "goalkeeper",
+			'class': "goalkeeper",
 			x: 40,
 			y: 210
 		}, {
@@ -91,7 +91,7 @@ angular.module('quelBleuEtesVousApp')
 			y: 190
 		}, {
 			id: "goal",
-			class: "goal",
+			'class': "goal",
 			x: 710,
 			y: 210
 		}];
@@ -207,7 +207,6 @@ angular.module('quelBleuEtesVousApp')
 				$timeout(function() {
 					if ($scope.questions[$scope.currentQuestion]) {
 						var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
-						console.log('answer :' + rand);
 						$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[rand];
 						$scope.setAnswer();
 					}
