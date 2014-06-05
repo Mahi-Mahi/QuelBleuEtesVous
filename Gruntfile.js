@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: {
-          open: true,
+          // open: true,
           base: [
             '.tmp',
             '<%= yeoman.app %>'
@@ -97,6 +97,9 @@ module.exports = function(grunt) {
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
+        ignores: [
+          '*xtcore.js'
+        ],
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },

@@ -1,9 +1,10 @@
 'use strict';
+/* global ga */
 
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, dataService) {
 
-		$scope.debug = true && !prod;
+		$scope.debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
 

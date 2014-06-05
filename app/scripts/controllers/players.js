@@ -1,13 +1,13 @@
 'use strict';
+/* global jQuery */
 
 angular.module('quelBleuEtesVousApp')
-	.controller('PlayersCtrl', function(prod, config, $scope, dataService) {
+	.controller('PlayersCtrl', function(prod, config, $scope, dataService, $timeout) {
 
-		var debug = false && !prod;
+		var debug;
+		debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
-
-		console.log(dataService.data.players.players);
 
 		$scope.slider = {
 			players: dataService.data.players.players,
@@ -21,5 +21,12 @@ angular.module('quelBleuEtesVousApp')
 				// jQuery('.flex-viewport').hide();
 			}
 		};
+
+		$timeout(function() {
+			jQuery('.flex-control-thumbs').on('click', 'li', function() {
+				$scope.slider.opened = true;
+				$scope.$apply();
+			});
+		}, 500);
 
 	});

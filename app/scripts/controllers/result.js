@@ -1,4 +1,6 @@
 'use strict';
+/* global jQuery */
+/* global ga */
 
 angular.module('quelBleuEtesVousApp')
 	.controller('ResultCtrl', function(prod, config, $rootScope, $scope, $location, dataService, $routeParams) {
