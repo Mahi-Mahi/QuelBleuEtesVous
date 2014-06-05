@@ -612,6 +612,13 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 			padding: 0;
 		}
 	}
+	.slides & {
+		width:100%;
+	}
+}
+
+.result-block--inner {
+	padding:0 100px;
 }
 
 .result-sidebar {
@@ -649,11 +656,27 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 	}
 }
 
+.players-title {
+	color:#fff;
+	display: block;
+	font-size:em(26px);
+	margin: 0;
+	padding: 0 0 20px 0;
+	text-align: center;
+	text-transform: uppercase;
+	.opened & {
+		display: none;
+	}
+}
+
 .result-body {
 	font-size: em(13px);
 	height:290px;
 	line-height: 1.3;
 	overflow:auto;
+	.slides & {
+		padding:5px 25px 5px 0;
+	}
 }
 
 .main-result {

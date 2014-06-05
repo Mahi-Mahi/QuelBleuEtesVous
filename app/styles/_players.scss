@@ -7,12 +7,29 @@
 	}
 }
 
+.flexslider-container {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:3;
+}
 
 .flex-viewport {
 	display: none;
 	position: absolute !important;
 	z-index: 5;
+	.opened & {
+		background: #7CA105;
+		display: block;		
+	}
 }
-.opened .flex-viewport {
-	display: block;
+
+.bt-see-all-players {
+	cursor:pointer;
+	display: none;
+	position:absolute;
+	z-index:10;
+	.opened & {
+		display: block;
+	}
 }
