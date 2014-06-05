@@ -1,13 +1,24 @@
-
-<h2>Vous êtes <span>{{nearest.name}}</span></h2>
-
-<img ng-src="/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
-
-<a ng-href="{{shareLink}}" class="facebook" ng-share-popup>Annoncez-le sur <strong>Facebook</strong></a>
-
-<div data-ng-bind-html="nearest.bio"></div>
-
-
-<a href="#/jouer">Rejouer</a>
-
-<a href="#/tous-les-joueurs">Voir tous les joueurs</a>
+<header class="header header-single">
+	<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
+</header>
+<div class="main main-result">
+	<div class="main-inner">
+		<div class="result-block">
+			<h2 class="result-title">Vous êtes <strong>{{nearest.name}}</strong></h2>
+			<div class="media">
+				<div class="result-sidebar">
+					<img ng-src="/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
+					<div class="share-facebook"><a ng-href="{{shareLink}}" class="facebook" ng-share-popup>Annoncez-le sur <strong>Facebook</strong></a></div>
+				</div>
+				<div class="media result-body">
+					<div data-ng-bind-html="nearest.bio"></div>
+				</div>
+			</div><!-- .media -->
+		</div><!-- .result-block -->
+</div><!-- .main -->
+<div class="main-footer clearfix">
+	<ul>
+		<li><a href="#/jouer">Rejouer</a></li>
+		<li><a href="#/tous-les-joueurs">Voir tous les joueurs</a></li>
+	</ul>
+</div>

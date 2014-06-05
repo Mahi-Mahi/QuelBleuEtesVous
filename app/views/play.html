@@ -3,7 +3,7 @@
 </header>
 <div class="main">
 	<div id="field" ng-class="[state]">
-		<div class="main-inner">
+		<div class="main-inner main-inner-play">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="100%" height="100%" preserveAspectRatio="xMidYMin">
 			<g>
 				<rect x="28.899" y="0.101" opacity="0.15" fill="#93D06D" width="30" height="455"></rect>
@@ -73,15 +73,18 @@
 
 	<div id="question" ng-show="showQuestion" class="animate-show">
 		<div class="main-inner">
-			<span class="index">{{currentQuestion+1}}</span><h2 data-ng-bind-html="questions[currentQuestion].title"></h2>
+			<header class="question-header">
+				<span class="index">{{currentQuestion+1}}</span><h2 data-ng-bind-html="questions[currentQuestion].title"></h2>
+			</header>
 			<ul ng-class="['answers', questions[currentQuestion].display]" id="answers">
-				<li ng-repeat="answer in questions[currentQuestion].answers" data-answer="{{answer.val}}" data-ng-bind-html="answer.title" ng-click="selectAnswer(answer)" ng-class="answerClass(answer)"></li>
+				<li ng-repeat="answer in questions[currentQuestion].answers" data-answer="{{answer.val}}" ng-click="selectAnswer(answer)" ng-class="answerClass(answer)"><div class="question-body"><p class="question-body--inner" data-ng-bind-html="answer.title"></p></div></li>
 			</ul>
-			<a ng-if="selectedAnswer" ng-click="setAnswer()">Question Suivante</a>
-
+			<footer class="question-footer">
 			<ul class="progress">
 				<li ng-repeat="question in questions" class="{{currentQuestion==$index && 'active' || '' }}">{{$index+1}}</li>
 			</ul>
+			<a ng-if="selectedAnswer" ng-click="setAnswer()">Question Suivante</a>
+			</footer>
 		</div>
 	</div>
 </div>

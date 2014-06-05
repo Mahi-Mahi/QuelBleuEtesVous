@@ -1,17 +1,30 @@
-
-<div ng-class="['container', slider.opened ? 'opened' : '']">
-
-	<a ng-click="slider.close()" ng-if="slider.opened">Tous les joueurs</a>
-
-	<flex-slider slide="player in slider.players track by player.slug" slideshow="false" animation="slide" control-nav="thumbnails" before="slider.before()">
-		<li data-thumb="/images/players/small/{{player.slug}}.png">
-			<img ng-src="/images/players/large/{{player.slug}}.png" ng-if="player.slug">
-			<div class="bio" data-ng-bind-html="player.bio"></div>
-		</li>
-	</flex-slider>
-
-
-	<a href="#/jouer">Rejouer</a>
-	<a href="#/resultat">Revenir à mon résultat</a>
-
+<header class="header header-single">
+	<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
+</header>
+<div class="main main-result">
+	<div class="main-inner">
+		<div ng-class="['container', slider.opened ? 'opened' : '']">
+			<a ng-click="slider.close()" ng-if="slider.opened">Tous les joueurs</a>
+			<flex-slider slide="player in slider.players track by player.slug" slideshow="false" animation="slide" control-nav="thumbnails" before="slider.before()">
+				<li data-thumb="/images/players/small/{{player.slug}}.png">
+					<div class="result-block">
+						<div class="media">
+							<div class="result-sidebar">
+								<img ng-src="/images/players/large/{{player.slug}}.png" ng-if="player.slug">
+							</div>
+							<div class="media result-body">
+								<div class="bio" data-ng-bind-html="player.bio"></div>
+							</div>
+						</div><!-- .media -->
+					</div><!-- .result-block -->
+				</li>
+			</flex-slider>
+		</div>
+</div><!-- .main -->
+<div class="main-footer clearfix">
+	<ul>
+		<li><a href="#/jouer">Rejouer</a></li>
+		<li><a href="#/resultat">Revenir à mon résultat</a></li>
+	</ul>
 </div>
+
