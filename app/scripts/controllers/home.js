@@ -7,7 +7,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.baseurl = baseurl;
 
-		$scope.rand = Math.ceil(Math.random() * 4);
+		$scope.rand = Math.ceil(Math.random() * 8);
 
 		if (debug) {
 			$timeout(function() {

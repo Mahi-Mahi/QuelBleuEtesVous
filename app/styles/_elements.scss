@@ -1,0 +1,103 @@
+// VARIABLES
+
+// DEFAULT FONT-SIZE
+$base-font-size:16px;
+
+// DEFAULT
+$default-color:#fff;
+
+/// DEFAULT LINK 
+$default-link-color:#fff;
+
+// HIGHLIGHT COLOR
+$highlight-color:#235800;
+
+/// BACKGROUND COLOR 
+$background-color:#7FA505 ;
+
+// OPACITY
+@mixin opacity($value) {
+  opacity: $value / 100;
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value});
+}
+
+// BOX-SIZING
+@mixin border-box-sizing() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// PLACEHOLDER
+@mixin placeholder($color: $input-color-placeholder) {
+  &::-moz-placeholder           { color: $color; opacity: 1; }
+  &:-ms-input-placeholder       { color: $color; }
+  &::-webkit-input-placeholder  { color: $color; }
+}
+
+// TEXT OVERFLOW
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// CSS TRANSITION
+@mixin transition($transition) {
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  -ms-transition:$transition;
+  transition:$transition;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);      
+}
+
+// CSS ANIMATION
+@mixin animation($transition) {
+  -webkit-animation:$transition;
+  -moz-animation:$transition;
+  -o-animation:$transition;
+  -ms-animation:$transition;
+  animation:$transition;
+  -webkit-transform: translateZ(0);    
+}
+
+// BOX SHADOW
+@mixin box-shadow ($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// RETINA
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    background-image: image-url($image);
+    background-size: $width $height;
+    background-position:0 0;
+  }
+}
+
+// EM CONVERSION
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+// INLINE BLOCK LIST
+@mixin inline-block-list() {
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;  
+}
+
+// INLINE BLOCK ITEM
+@mixin inline-block-item() {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
