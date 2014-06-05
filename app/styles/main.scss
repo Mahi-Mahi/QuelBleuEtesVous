@@ -36,7 +36,7 @@
   box-sizing: border-box;
 }
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-html, button, input, select, textarea { font-family:'Interstate', serif; color:$default-color; }
+html, button, input, select, textarea { font-family:'Interstate', serif; color:$default-color; outline:none; }
 body {
 	background:#252932;
 	font-family:'Interstate', serif;
@@ -263,6 +263,22 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 		padding: 10px;
 		text-transform: uppercase;
 		vertical-align: top;
+	}
+}
+
+.bt-form {
+	border:1px solid #fff;
+	display: inline-block;
+	font:normal em(20px) 'Interstate', serif;
+	line-height: 1;
+	margin: 0;
+	padding: 10px;
+	vertical-align: top;
+	strong {
+		font-family:'InterstateBold', serif;
+	}
+	&:hover {
+		color:#235800;
 	}
 }
 
@@ -679,6 +695,42 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 		&:hover {
 			color:$highlight-color;
 		}
+	}
+}
+
+// OPTIN
+
+.main-optin {
+	padding:35px 60px 0 60px;
+	text-align: center;
+	form {
+		padding:0 0 60px 0;
+	}
+	h2 {
+		display: block;
+		font:normal em(42px) 'InterstateBold', serif;
+		margin: 0;
+		padding: 0;
+	}
+	p {
+		display: block;
+		font:normal em(22px) 'Interstate', serif;
+		line-height:1.6;
+		margin: 0;
+		padding: 50px 0;		
+	}
+	input {
+		@include placeholder($color: #235800);
+		background:#fff;
+		border:none;
+		color:#235800;
+		display: inline-block;
+		font:normal em(22px) 'InterstateBold', serif;
+		height:42px;
+		margin:0 10px 0 0;
+		padding:0 10px;
+		vertical-align: top;
+		width:320px;
 	}
 }
 
