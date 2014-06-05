@@ -125,7 +125,12 @@
 	.clearfix { zoom:1; }
 	.clearfix:before, .clearfix:after { content:""; display:table; }
 	.clearfix:after { clear:both; }
-	.media { overflow:hidden; zoom:1; }
+	.media {
+		overflow:hidden; zoom:1;
+		@media (max-width: $break-desktop) {
+			overflow:inherit;
+		}
+	}
 	.img-responsive { display: block; max-width: 100%; width: auto; height: auto; -ms-interpolation-mode: bicubic; }
 	article, header, footer { display: block; margin: 0; padding: 0; }
 
@@ -137,7 +142,7 @@
 	.topnav-france-info {
 		background:#2e2e2d;
 		margin: 0;
-		padding:10px 0;
+		padding:14px 0 10px 0;
 		text-align: center;
 		li {
 			display: inline-block;
@@ -146,6 +151,9 @@
 			padding:0 5px;
 			vertical-align: top;
 		}
+		@media (max-width: $break-desktop) {
+			display: none;
+	  	}
 	}
 
 	.header {
@@ -194,11 +202,17 @@
 		text-align: center;
 		text-transform: uppercase;
 		vertical-align: top;
+		@media (max-width: $break-desktop) {
+			font-size: em(51px);
+	  	}
 		strong {
 			display: block;
 			font-size: em(102px,77px);
 			margin: 0;
 			padding: 0;
+			@media (max-width: $break-desktop) {
+				font-size: em(38px,51px);
+		  	}
 		}
 		.header-single & {
 			font-size: em(51px);
@@ -324,6 +338,10 @@
 		&:hover {
 			color:#235800;
 		}
+		@media (max-width: $break-desktop) {
+			margin:1em 0 0 0;
+			width: 100%;
+	  	}
 	}
 
 	.container, .footer {
@@ -333,6 +351,14 @@
 		position: relative;
 		z-index:1;
 		width:940px;
+		@media (max-width: $break-desktop) {
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 10px;
+			padding-right: 10px;
+			min-width:320px;
+			width:auto;
+	  	}
 		.main-inner & {
 			width:auto;
 		}
@@ -414,6 +440,10 @@
 		left:0;
 		top:0;
 		z-index: 1;
+		@media (max-width: $break-desktop) {
+			height:auto;
+			width:100%;
+	  	}
 	}
 
 	#field {
@@ -428,6 +458,10 @@
 		#question & {
 			padding:20px;
 		}
+		@media (max-width: $break-desktop) {
+			height:auto;
+			width:100%;
+	  	}
 	}
 
 	// QUESTION
@@ -445,6 +479,9 @@
 
 	.question-header {
 		clear:both;
+		@media (max-width: $break-desktop) {
+			padding: 1em 0 0 0;
+	  	}
 		span, h2 {
 			display: inline-block;
 			font:normal em(22px) 'InterstateBold', serif;
@@ -463,6 +500,9 @@
 			text-align: center;
 			letter-spacing:-2px;
 			width:45px;
+			@media (max-width: $break-desktop) {
+				display: none;
+		  	}
 		}
 	}
 
@@ -482,14 +522,20 @@
 			&:hover {
 				background-color:#bfd186;
 			}
+			@media (max-width: $break-desktop) {
+				float: none;
+		  	}
 		}
-
 	}
 
 	.answers {
 		@include inline-block-list();
 		height: 330px;
 		margin:0 0 0 -14px;
+		@media (max-width: $break-desktop) {
+			height:auto;
+			margin:0;
+	  	}
 		li {
 			@include transition(all .25s ease-in);
 			@include inline-block-item();
@@ -505,6 +551,11 @@
 			&:hover {
 				color:$highlight-color;
 			}
+			@media (max-width: $break-desktop) {
+				height:auto;
+				margin-left:0;
+				width: 100%;
+		  	}
 		}
 		.active {
 			background:#bfd186;
@@ -522,11 +573,15 @@
 			margin: 0;
 			padding: 0;
 			vertical-align: middle;
+			@media (max-width: $break-desktop) {
+				height:auto;
+		  	}
 		}
 	}
 
 	.list {
 		margin:0;
+		padding:25px 0 0 0;
 		li {
 			display: block;
 			height:auto;
@@ -549,9 +604,9 @@
 
 	.progress {
 		background:image-url("bg-progress-list.png") left center repeat-x;
-		display: block;
 		float: left;
 		height: 24px;
+		overflow: hidden;
 		position:relative;
 		z-index:1;
 		padding: 0 18px 0 0;
@@ -581,6 +636,18 @@
 			background:image-url("bg-progress-item-active.png") center center no-repeat;
 			text-indent: 0;
 			width: 25px;
+		}
+		.question-header & {
+			display: none;
+			@media (max-width: $break-desktop) {
+				display: block;
+		  	}
+		}
+		.question-footer & {
+			display: block;
+			@media (max-width: $break-desktop) {
+				display: none;
+		  	}
 		}
 	}
 
@@ -647,11 +714,21 @@
 		margin: 0 auto;
 		padding:40px 0 0 0;
 		width:540px;
+		@media (max-width: $break-desktop) {
+			clear: both;
+			float: none;
+			height:auto;
+			padding:0 20px 20px 20px;
+			width:100%;
+	  	}
 		img {
 			clear:both;
 			display: block;
 			position:relative;
 			z-index:3;
+			@media (max-width: $break-desktop) {
+				margin:0 auto;
+		  	}
 		}
 		.facebook {
 			background:#191C21;
@@ -674,6 +751,9 @@
 
 	.result-block--inner {
 		padding:0 100px;
+		@media (max-width: $break-desktop) {
+			padding:0;
+	  	}
 	}
 
 	.result-sidebar {
@@ -683,7 +763,15 @@
 		padding:0 25px 0 0;
 		position:relative;
 		height: 340px;
+		@media (max-width: $break-desktop) {
+			clear: both;
+			float: none;
+			height:auto;
+			padding:0 0 1em 0;
+			width:100%;
+	  	}
 	}
+
 
 	.share-facebook {
 		display: block;
@@ -705,6 +793,12 @@
 		text-align: center;
 		text-transform: uppercase;
 		white-space: nowrap;
+		@media (max-width: $break-desktop) {
+			font-size:em(22px);
+			padding:0 0 20px 0;
+			text-transform: none;
+			white-space: normal;
+	  	}
 		strong {
 			color:#000;
 			font:normal 1em 'InterstateBold', serif;
@@ -729,6 +823,13 @@
 		height:290px;
 		line-height: 1.3;
 		overflow:auto;
+		@media (max-width: $break-desktop) {
+			clear: both;
+			font-size: em(16px);
+			height:auto;
+			overflow:inherit;
+			width: 100%;
+	  	}
 		.slides & {
 			padding:5px 25px 5px 0;
 		}
@@ -736,6 +837,9 @@
 
 	.main-result {
 		margin: 0 auto 40px auto;
+		@media (max-width: $break-desktop) {
+			padding:0 0 20px 0;
+	  	}
 	}
 
 	.main-empty-field {
@@ -795,8 +899,14 @@
 	.main-optin {
 		padding:35px 60px 0 60px;
 		text-align: center;
+		@media (max-width: $break-desktop) {
+			padding:35px 20px 0 20px;
+	  	}
 		form {
 			padding:0 0 60px 0;
+			@media (max-width: $break-desktop) {
+				padding:0 0 1em 0;
+		  	}
 		}
 		h2 {
 			display: block;
@@ -823,6 +933,9 @@
 			padding:0 10px;
 			vertical-align: top;
 			width:320px;
+			@media (max-width: $break-desktop) {
+				width: 100%;
+		  	}
 		}
 	}
 

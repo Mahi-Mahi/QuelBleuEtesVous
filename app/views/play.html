@@ -76,6 +76,9 @@
 	<div id="question" ng-show="showQuestion" class="animate-show">
 		<div class="main-inner">
 			<header class="question-header">
+				<ul class="progress">
+					<li ng-repeat="question in questions" class="{{currentQuestion==$index && 'active' || '' }}">{{$index+1}}</li>
+				</ul>
 				<span class="index">{{currentQuestion+1}}</span><h2 data-ng-bind-html="questions[currentQuestion].title"></h2>
 			</header>
 			<ul ng-class="['answers', questions[currentQuestion].display]" id="answers">
