@@ -86,6 +86,7 @@
 				<li ng-repeat="question in questions" class="{{currentQuestion==$index && 'active' || '' }}">{{$index+1}}</li>
 			</ul>
 			<a ng-if="selectedAnswer" ng-click="setAnswer()">Question Suivante</a>
+			<label for="debug" class="debug">debug <input type="checkbox" name="debug" id="debug" ng-model="debug"></label>
 			</footer>
 		</div>
 	</div>

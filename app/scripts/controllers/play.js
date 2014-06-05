@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, dataService) {
 
-		var debug = true && prod;
+		$scope.debug = false && prod;
 
 		$scope.baseurl = config.baseurl;
 
@@ -145,14 +145,14 @@ angular.module('quelBleuEtesVousApp')
 		$scope.currentQuestion = -1;
 		$scope.state = '';
 
-		$scope.questions = dataService.data.questions.questions; //.slice(0, debug);
+		$scope.questions = dataService.data.questions.questions;
 
 		$scope.showQuestion = false;
 
 		$scope.initField = function() {
 			$timeout(function() {
 				$scope.animateField();
-			}, debug ? 50 : 1000);
+			}, $scope.debug ? 50 : 1000);
 		};
 
 		$scope.animateField = function() {
@@ -161,7 +161,7 @@ angular.module('quelBleuEtesVousApp')
 			$timeout(function() {
 				$scope.state = '';
 				$scope.nextQuestion();
-			}, debug ? 50 : 1000);
+			}, $scope.debug ? 50 : 1000);
 		};
 
 		$scope.selectAnswer = function(answer) {
@@ -203,7 +203,7 @@ angular.module('quelBleuEtesVousApp')
 		};
 
 		function fakeAnswer() {
-			if (debug) {
+			if ($scope.debug) {
 				$timeout(function() {
 					if ($scope.questions[$scope.currentQuestion]) {
 						var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
