@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('OptinCtrl', function(debug, $scope, $timeout, $location, $http) {
+	.controller('OptinCtrl', function(debug, baseurl, $scope, $timeout, $location, $http) {
 
 		$scope.goToResult = function() {
 			$location.url('/resultat');

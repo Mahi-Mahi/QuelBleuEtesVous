@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('PlayersCtrl', function($scope, dataService) {
+	.controller('PlayersCtrl', function(debug, baseurl, $scope, dataService) {
 
 		$scope.slider = {
 			players: dataService.data.players.players,

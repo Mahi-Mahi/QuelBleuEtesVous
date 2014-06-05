@@ -1,9 +1,11 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('HomeCtrl', function(debug, $scope, $timeout, $location) {
+	.controller('HomeCtrl', function(debug, baseurl, $scope, $timeout, $location) {
 
-	 debug = false;
+		debug = true;
+
+		$scope.baseurl = baseurl;
 
 		$scope.rand = Math.ceil(Math.random() * 4);
 

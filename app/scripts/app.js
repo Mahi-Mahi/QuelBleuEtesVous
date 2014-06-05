@@ -9,9 +9,9 @@ angular
 		'ngAnimate',
 		'angular-flexslider'
 	])
-	.config(function($routeProvider) {
+	.config(function(baseurl, $routeProvider) {
 		$routeProvider
-			.when('/', {
+			.when(baseurl + '/', {
 				templateUrl: 'views/home.html',
 				controller: 'HomeCtrl'
 			})
@@ -47,6 +47,6 @@ angular
 				}
 			})
 			.otherwise({
-				redirectTo: '/'
+				redirectTo: baseurl + '/'
 			});
 	});

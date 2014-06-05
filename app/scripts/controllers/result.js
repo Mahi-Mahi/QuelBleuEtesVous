@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('ResultCtrl', function(debug, $rootScope, $scope, $location, dataService) {
+	.controller('ResultCtrl', function(debug, baseurl, $rootScope, $scope, $location, dataService) {
+
+		$scope.baseurl = baseurl;
 
 		if (!$rootScope.userAnswers) {
 			$location.path('/');

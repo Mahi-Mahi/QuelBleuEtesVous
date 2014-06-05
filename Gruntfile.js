@@ -428,7 +428,10 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('createConfig', function(target) {
-    grunt.file.write("./app/scripts/services/config.js", '"use strict";' + "\n" + 'angular.module("quelBleuEtesVousApp").constant("debug", ' + ((target === 'dist') ? 'false' : 'true') + ');');
+    grunt.file.write("./app/scripts/services/config.js", '"use strict";' + "\n" + 'angular.module("quelBleuEtesVousApp")' +
+      '.constant("debug", ' + ((target === 'dist') ? 'false' : 'true') + ')' +
+      '.constant("baseurl", "/quizlesbleus2014")' +
+      ';');
   });
 
   grunt.registerTask('serve', function(target) {
