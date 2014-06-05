@@ -1,0 +1,19 @@
+{
+    "name": "vd42-flexslider",
+    "version": "2.2.2",
+    "description": "An awesome, fully responsive jQuery slider plugin",
+    "homepage": "http://www.woothemes.com/flexslider/",
+    "author": "WooThemes <https://github.com/woothemes>",
+    "license": "GPLv2",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/VD42/FlexSlider.git"
+    },
+    "keywords": [
+        "reveal"
+    ],
+    "main": "./jquery.flexslider.js",
+    "dependencies": {
+        "jquery": ">= 1.4.2"
+    }
+}

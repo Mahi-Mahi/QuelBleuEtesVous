@@ -8,7 +8,9 @@
 			<div class="media">
 				<div class="result-sidebar">
 					<img ng-src="/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
-					<div class="share-facebook"><a ng-href="{{shareLink}}" class="facebook" ng-share-popup>Annoncez-le sur <strong>Facebook</strong></a></div>
+					<div class="share-facebook">
+						<a ng-href="{{shareLink}}" class="facebook" ng-share-popup>Annoncez-le sur <strong>Facebook</strong></a>
+					</div>
 				</div>
 				<div class="media result-body">
 					<div data-ng-bind-html="nearest.bio"></div>

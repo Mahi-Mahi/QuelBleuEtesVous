@@ -37,9 +37,15 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.nearest = nearest;
 
-		var shareText = "Je suis " + nearest.name + ", et vous ?";
+		// var shareText = "Je suis " + nearest.name + ", et vous ?";
 
-		$scope.shareLink = 'https://www.facebook.com/sharer/sharer.php?t=' + encodeURIComponent(shareText) + '&amp;u=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join(''));
+		var shareUrl = [document.location.protocol, '//', document.location.host, document.location.pathname].join('') + 'resultat/' + nearest.slug;
+
+		$scope.shareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl);
+
+		$scope.shareLink = 'https://www.facebook.com/dialog/share?app_id=574648085990160&display=popup&href=' + encodeURIComponent(shareUrl) + '&redirect_uri=' + encodeURIComponent(shareUrl);
+
+		$scope.shareUrl = shareUrl;
 
 		if (debug) {
 			// $scope.nearest = dataService.data.players.players[2];

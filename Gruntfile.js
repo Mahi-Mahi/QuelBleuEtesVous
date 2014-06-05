@@ -24,7 +24,8 @@ module.exports = function(grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+      dist: 'dist',
+      baseurl: '/quizlesbleus2014'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -161,18 +162,19 @@ module.exports = function(grunt) {
         generatedImagesDir: '.tmp/images/generated',
         imagesDir: '<%= yeoman.app %>/images',
         javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
+        fontsDir: '<%= yeoman.app %>/fonts',
         importPath: '<%= yeoman.app %>/bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
+        httpImagesPath: '<%= yeoman.baseurl %>/images',
+        httpGeneratedImagesPath: '<%= yeoman.baseurl %>/images/generated',
+        httpFontsPath: '<%= yeoman.baseurl %>/fonts',
         relativeAssets: false,
         assetCacheBuster: false,
         raw: 'Sass::Script::Number.precision = 10\n'
       },
       dist: {
         options: {
-          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+          generatedImagesDir: '<%= yeoman.dist %>/images/generated',
+          debugInfo: false
         }
       },
       server: {
@@ -190,7 +192,7 @@ module.exports = function(grunt) {
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*'
+            '<%= yeoman.dist %>/fonts/*'
           ]
         }
       }
@@ -412,16 +414,41 @@ module.exports = function(grunt) {
       debug: {
         options: {
           snapshotPath: 'dist/',
-          sitePath: 'http://127.0.0.1:9000/',
+          sitePath: 'http://quelbleuetesvous.localhost/',
           msWaitForPages: 1000,
+          fileNamePrefix: '',
+          sanitize: function(requestUri) {
+            //returns 'index.html' if the url is '/', otherwise a prefix
+            if (/\/$/.test(requestUri)) {
+              return 'index.html';
+            } else {
+              return requestUri.replace(/\//g, '/').replace(/quizlesbleus2014\/#\//g, '/');
+            }
+          },
+          //if you would rather not keep the script tags in the html snapshots
+          //set `removeScripts` to true. It's false by default
+          removeScripts: false,
+          //set `removeLinkTags` to true. It's false by default
+          removeLinkTags: false,
+          //set `removeMetaTags` to true. It's false by default
+          removeMetaTags: false,
+          //Replace arbitrary parts of the html
+          replaceStrings: [{
+            'this': 'will get replaced by this'
+          }, {
+            '/old/path/': '/new/path'
+          }],
+          // allow to add a custom attribute to the body
+          bodyAttr: 'data-prerendered',
+          // a list of cookies to be put into the phantomjs cookies jar for the visited page
+          cookies: [
+            // {"path": "/", "domain": "localhost", "name": "lang", "value": "en-gb"}
+          ],
+          //here goes the list of all urls that should be fetched
           urls: [
-            '/',
-            '/resultat/blaise-matuidi'
+            '/quizlesbleus2014/#/resultat/blaise-matuidi'
           ]
         }
-      },
-      prod: {
-        options: {}
       }
     }
 

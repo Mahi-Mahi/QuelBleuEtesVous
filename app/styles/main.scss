@@ -3,25 +3,26 @@
 
 @font-face {
  font-family: 'Interstate';
-  src: url('../fonts/Interstate-Light.eot'); 
-  src: url('../fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'), 
-       url('../fonts/Interstate-Light.woff') format('woff'), 
-       url('../fonts/Interstate-Light.ttf')  format('truetype'), 
-       url('../fonts/Interstate-Light.svg#b3f1eaab67ba33d7f766bdc7b12fbe90') format('svg'); 
+  src: font-url('Interstate-Light.eot');
+  src: font-url('Interstate-Light.eot?#iefix') format('embedded-opentype'),
+       font-url('Interstate-Light.woff') format('woff'),
+       font-url('Interstate-Light.ttf')  format('truetype'),
+       font-url('Interstate-Light.svg#b3f1eaab67ba33d7f766bdc7b12fbe90') format('svg');
   font-style:   normal;
   font-weight:  200;
 }
 
 @font-face {
   font-family: 'InterstateBold';
-  src: url('../fonts/Interstate-Bold.eot'); 
-  src: url('../fonts/Interstate-Bold.eot?#iefix') format('embedded-opentype'), 
-       url('../fonts/Interstate-Bold.woff') format('woff'), 
-       url('../fonts/Interstate-Bold.ttf')  format('truetype'), 
-       url('../fonts/Interstate-Bold.svg#ae7901b26c7bc0ae18e1b2162d35ce34') format('svg'); 
+  src: font-url('Interstate-Bold.eot');
+  src: font-url('Interstate-Bold.eot?#iefix') format('embedded-opentype'),
+       font-url('Interstate-Bold.woff') format('woff'),
+       font-url('Interstate-Bold.ttf')  format('truetype'),
+       font-url('Interstate-Bold.svg#ae7901b26c7bc0ae18e1b2162d35ce34') format('svg');
   font-style:   normal;
   font-weight:  700;
 }
+
 
 // STRUCTURE
 * {
@@ -344,7 +345,7 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 	padding:0;
 	left:0;
 	top:0;
-	z-index: 1;	
+	z-index: 1;
 }
 
 #field {
@@ -473,7 +474,7 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 		display: block;
 		height: auto;
 		vertical-align: top;
-	}	
+	}
 }
 
 .progress {
