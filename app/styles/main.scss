@@ -135,8 +135,8 @@
 
 	// HEADER
 	.topnav-france-info {
-		background:#231f20;
-		margin: 0 0 20px 0;
+		background:#2e2e2d;
+		margin: 0;
 		padding:10px 0;
 		text-align: center;
 		li {
@@ -150,6 +150,37 @@
 
 	.header {
 		text-align: center;
+	}
+
+	.tagline-france-info {
+		background:#231F20;
+		margin:0 0 20px 0;
+		padding:5px 0;
+		ul {
+			text-align: right;
+		}
+		li {
+			display: inline-block;
+			font-size: em(10px);
+			line-height:13px;
+			margin: 0;
+			padding:10px 15px 0 0;
+			vertical-align: top;
+		}
+		a {
+			display: block;
+			margin: 0;
+			padding:0 0 0 20px;
+		}
+		.facebook {
+			background:image-url("bg-header-facebook.png") left top no-repeat;
+		}
+		.twitter {
+			background:image-url("bg-header-twitter.png") left top no-repeat;
+		}
+		.infos {
+			background:image-url("bg-header-infos.png") left top no-repeat;
+		}
 	}
 
 	.entry-title {
@@ -298,7 +329,7 @@
 	.container, .footer {
 		display: block;
 		margin: 0 auto;
-		padding:0;
+		padding:20px 0 0 0;
 		position: relative;
 		z-index:1;
 		width:940px;
@@ -307,12 +338,7 @@
 		}
 	}
 
-	.container {
-		background:#252932;
-	}
-
 	.footer {
-		padding:20px 0 0 0;
 		position:relative;
 		z-index:0;
 	}
@@ -359,6 +385,15 @@
 		}
 		.googleplus {
 			background-image:image-url("footer/icon-google-plus.png");
+		}
+	}
+
+	.footer-legal {
+		p {
+			font-size:em(12px);
+		}
+		img {
+			margin:0 5px 0 0;
 		}
 	}
 
@@ -426,6 +461,7 @@
 			padding:0;
 			height: 42px;
 			text-align: center;
+			letter-spacing:-2px;
 			width:45px;
 		}
 	}
@@ -433,6 +469,7 @@
 	.question-footer {
 		a {
 			@include transition(all .25s ease-in);
+			background:image-url("bg-bt-question.png") 98% 50% no-repeat;
 			border:1px solid #fff;
 			color:#fff;
 			cursor:pointer;
@@ -459,7 +496,7 @@
 			border:1px solid #fff;
 			cursor:pointer;
 			display: inline-block;
-			height:100px;
+			height:140px;
 			margin:0 0 14px 14px;
 			padding:10px;
 			text-align: center;
@@ -481,7 +518,7 @@
 		}
 		p {
 			display: table-cell;
-			height: 80px;
+			height: 120px;
 			margin: 0;
 			padding: 0;
 			vertical-align: middle;
