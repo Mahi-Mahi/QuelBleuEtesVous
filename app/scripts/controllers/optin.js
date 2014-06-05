@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('OptinCtrl', function(debug, baseurl, $scope, $timeout, $location, $http) {
 
-		debug = true;
+		debug = false;
 
 		$scope.goToResult = function() {
 			$location.url('/resultat');

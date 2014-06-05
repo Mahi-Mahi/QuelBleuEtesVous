@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(debug, baseurl, $rootScope, $scope, $location, $timeout, dataService) {
 
-		debug = true;
+		debug = false;
 
 		$scope.baseurl = baseurl;
 
@@ -178,19 +178,22 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.nextQuestion = function() {
 
+			$scope.currentQuestion++;
+
 			if ($scope.selectedAnswer) {
 				$rootScope.userAnswers.push($scope.selectedAnswer);
 			}
 
 			$scope.selectedAnswer = null;
 
-			$scope.currentQuestion++;
 			if ($scope.currentQuestion >= $scope.questions.length) {
 				$location.url('/optin');
 				return;
 			}
 
-			$scope.showQuestion = true;
+			$timeout(function() {
+				$scope.showQuestion = true;
+			}, 500);
 
 			fakeAnswer();
 
