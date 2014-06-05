@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayersCtrl', function(prod, config, $scope, dataService) {
 
-		var debug = false && prod;
+		var debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
 

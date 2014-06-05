@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('ResultCtrl', function(prod, config, $rootScope, $scope, $location, dataService, $routeParams) {
 
-		var debug = false && prod;
+		var debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
 

@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, dataService) {
 
-		$scope.debug = false && prod;
+		$scope.debug = true && !prod;
 
 		$scope.baseurl = config.baseurl;
 

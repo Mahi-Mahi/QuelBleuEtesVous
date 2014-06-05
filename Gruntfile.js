@@ -482,7 +482,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('createConfig', function(target) {
     grunt.file.write("./app/scripts/services/config.js", '"use strict";' + "\n" + 'angular.module("quelBleuEtesVousApp")' +
-      '.constant("prod", ' + ((target === 'dist') ? 'false' : 'true') + ')' +
+      '.constant("prod", ' + ((target === 'dist') ? 'true' : 'false') + ')' +
       ';');
   });
 

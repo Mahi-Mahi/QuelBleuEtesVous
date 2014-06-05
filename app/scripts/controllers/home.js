@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('HomeCtrl', function(prod, config, $scope, $timeout, $location) {
 
-		var debug = false && prod;
+		var debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
 
