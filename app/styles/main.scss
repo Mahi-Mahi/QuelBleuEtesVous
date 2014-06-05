@@ -756,7 +756,7 @@
 			padding:10px;
 			text-align: left;
 			vertical-align: top;
-			width:48%;
+			width:50%;
 			a {
 				@include transition(all .25s ease-in);
 				border:1px solid #fff;
@@ -766,14 +766,23 @@
 				float: left;
 				height: 29px;
 				line-height: 29px;
-				padding:0 10px;
+				padding:0 10px 0 30px;
 				text-transform: uppercase;
 				&:hover {
 					background-color:#bfd186;
 				}
 			}
-			&:last-child a {
+			.bt-replay {
+				background:image-url("bt-replay.png") 10px 7px no-repeat;
+			}
+			.bt-see-all {
 				float: right;
+				background:image-url("see-all-players.png") 10px 7px no-repeat;
+				padding:0 10px 0 40px;
+			}
+			.bt-back-to-results {
+				float: right;
+				background:image-url("bt-back-to-results.png") 10px 7px no-repeat;
 			}
 			&:hover {
 				color:$highlight-color;
