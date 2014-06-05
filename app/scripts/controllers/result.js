@@ -41,6 +41,9 @@ angular.module('quelBleuEtesVousApp')
 			});
 			// console.log(sumCoord1, sumCoord2);
 			// console.log(nearest, minDistance);
+
+			ga('send', 'event', 'result', nearest.slug);
+
 		}
 
 		if (!nearest) {
@@ -52,6 +55,10 @@ angular.module('quelBleuEtesVousApp')
 
 		jQuery('head meta[property="og:title"]').remove();
 		jQuery("head").append('<meta property="og:title" content="Je suis ' + nearest.name + '. Et vous ? - ' + config.seoTitle + '" />');
+		jQuery('head meta[property="og:description"]').remove();
+		jQuery("head").append('<meta property="og:description" content="Je suis ' + nearest.name + '. Et vous ? - ' + config.seoTitle + '" />');
+		jQuery('head meta[property="og:image"]').remove();
+		jQuery("head").append('<meta property="og:image" content="' + config.baseurl + '/images/players/large/' + nearest.slug + '.png" />');
 
 		// var shareText = "Je suis " + nearest.name + ", et vous ?";
 

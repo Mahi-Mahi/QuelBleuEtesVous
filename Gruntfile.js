@@ -426,7 +426,7 @@ module.exports = function(grunt) {
             if (/\/$/.test(requestUri)) {
               return 'index.html';
             } else {
-              return requestUri.replace(/quizlesbleus2014\/#\//g, '/').replace(/\/\//g, '/').replace(/\/1/g, '/index.html');
+              return requestUri.replace(/quizlesbleus2014\/#\//g, '/').replace(/\/\//g, '/').replace(/\/1/g, '/index');
             }
           },
           //if you would rather not keep the script tags in the html snapshots

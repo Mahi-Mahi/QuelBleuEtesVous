@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, dataService) {
 
-		var debug = false && prod;
+		var debug = true && prod;
 
 		$scope.baseurl = config.baseurl;
 
@@ -172,6 +172,9 @@ angular.module('quelBleuEtesVousApp')
 		};
 
 		$scope.setAnswer = function() {
+
+			ga('send', 'event', 'answer', $scope.currentQuestion + '. ' + $scope.questions[$scope.currentQuestion].slug, $scope.selectedAnswer.title);
+
 			$scope.showQuestion = false;
 			$scope.animateField();
 		};
