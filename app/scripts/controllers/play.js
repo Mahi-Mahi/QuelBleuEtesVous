@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('PlayCtrl', function(debug, baseurl, $rootScope, $scope, $location, $timeout, dataService) {
+	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, dataService) {
 
-		debug = false;
+		var debug = false && prod;
 
-		$scope.baseurl = baseurl;
+		$scope.baseurl = config.baseurl;
 
 		$scope.players = [{
 			id: "player-ref",

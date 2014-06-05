@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('PlayersCtrl', function(debug, baseurl, $scope, dataService) {
+	.controller('PlayersCtrl', function(prod, config, $scope, dataService) {
+
+		var debug = false && prod;
+
+		$scope.baseurl = config.baseurl;
 
 		$scope.slider = {
 			players: dataService.data.players.players,

@@ -1,2 +1,2 @@
 "use strict";
-angular.module("quelBleuEtesVousApp").constant("debug", true).constant("baseurl", "/quizlesbleus2014");
+angular.module("quelBleuEtesVousApp").constant("prod", true);

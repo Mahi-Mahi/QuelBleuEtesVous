@@ -1,9 +1,11 @@
 'use strict';
 
 angular.module('quelBleuEtesVousApp')
-	.controller('OptinCtrl', function(debug, baseurl, $scope, $timeout, $location, $http) {
+	.controller('OptinCtrl', function(prod, config, $scope, $timeout, $location, $http) {
 
-		debug = false;
+		var debug = false && prod;
+
+		$scope.baseurl = config.baseurl;
 
 		$scope.goToResult = function() {
 			$location.url('/resultat');
@@ -15,7 +17,7 @@ angular.module('quelBleuEtesVousApp')
 			}, 100);
 		}
 
-		$scope.optinUrl = '/backend/optin.php';
+		$scope.optinUrl = config.optin_url;
 		$scope.optin = function() {
 
 			$http.post($scope.optinUrl, {

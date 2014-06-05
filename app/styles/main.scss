@@ -3,26 +3,25 @@
 
 @font-face {
  font-family: 'Interstate';
-  src: font-url('Interstate-Light.eot');
-  src: font-url('Interstate-Light.eot?#iefix') format('embedded-opentype'),
-       font-url('Interstate-Light.woff') format('woff'),
-       font-url('Interstate-Light.ttf')  format('truetype'),
-       font-url('Interstate-Light.svg#b3f1eaab67ba33d7f766bdc7b12fbe90') format('svg');
+  src: font-url('/quizlesbleus2014/fonts/Interstate-Light.eot');
+  src: font-url('/quizlesbleus2014/fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),
+       font-url('/quizlesbleus2014/fonts/Interstate-Light.woff') format('woff'),
+       font-url('/quizlesbleus2014/fonts/Interstate-Light.ttf')  format('truetype'),
+       font-url('/quizlesbleus2014/fonts/Interstate-Light.svg#b3f1eaab67ba33d7f766bdc7b12fbe90') format('svg');
   font-style:   normal;
   font-weight:  200;
 }
 
 @font-face {
   font-family: 'InterstateBold';
-  src: font-url('Interstate-Bold.eot');
-  src: font-url('Interstate-Bold.eot?#iefix') format('embedded-opentype'),
-       font-url('Interstate-Bold.woff') format('woff'),
-       font-url('Interstate-Bold.ttf')  format('truetype'),
-       font-url('Interstate-Bold.svg#ae7901b26c7bc0ae18e1b2162d35ce34') format('svg');
+  src: font-url('/quizlesbleus2014/fonts/Interstate-Bold.eot');
+  src: font-url('/quizlesbleus2014/fonts/Interstate-Bold.eot?#iefix') format('embedded-opentype'),
+       font-url('/quizlesbleus2014/fonts/Interstate-Bold.woff') format('woff'),
+       font-url('/quizlesbleus2014/fonts/Interstate-Bold.ttf')  format('truetype'),
+       font-url('/quizlesbleus2014/fonts/Interstate-Bold.svg#ae7901b26c7bc0ae18e1b2162d35ce34') format('svg');
   font-style:   normal;
   font-weight:  700;
 }
-
 
 // STRUCTURE
 * {

@@ -8,6 +8,15 @@
     <title>Quel bleu êtes-vous ?</title>
     <meta name="description" content="Quel bleu êtes-vous ? - Quizz de la coupe du monde 2014">
     <meta name="viewport" content="width=device-width">
+
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FranceInfo - Quel bleu êtes-vous ?" />
+    <meta property="og:description" content="FranceInfo - Quel bleu êtes-vous ?" />
+    <meta property="og:url" content="http://nvx.franceinfo.fr/quizlesbleus2014/  " />
+    <meta property="og:site_name" content="FranceInfo - Quel bleu êtes-vous ?" />
+
+
     <base href="/quizlesbleus2014/">
     <script>
     if ( !document.location.pathname.match(/quizlesbleus2014/)) {
@@ -24,11 +33,7 @@
   </head>
   <body ng-app="quelBleuEtesVousApp">
 
-    <div class="header" ng-include="'views/_header.html'"></div>
-
     <div class="container" ng-view=""></div>
-
-    <footer class="footer" ng-include="'views/_footer.html'"></footer>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -62,6 +67,7 @@
         <script src="scripts/controllers/players.js"></script>
         <script src="scripts/directives/svg.js"></script>
         <script src="scripts/directives/share.js"></script>
+        <script src="scripts/services/app_config.js"></script>
         <!-- endbuild -->
 </body>
 </html>

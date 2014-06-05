@@ -9,9 +9,9 @@ angular
 		'ngAnimate',
 		'angular-flexslider'
 	])
-	.config(function(baseurl, $routeProvider) {
+	.config(function(config, $routeProvider) {
 		$routeProvider
-			.when(baseurl + '/', {
+			.when(config.baseurl + '/', {
 				templateUrl: 'views/home.html',
 				controller: 'HomeCtrl'
 			})
@@ -25,6 +25,24 @@ angular
 				}
 			})
 			.when('/resultat', {
+				templateUrl: 'views/result.html',
+				controller: 'ResultCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('players');
+					}
+				}
+			})
+			.when('/resultat/:player', {
+				templateUrl: 'views/result.html',
+				controller: 'ResultCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('players');
+					}
+				}
+			})
+			.when('/resultat/:player/:static', {
 				templateUrl: 'views/result.html',
 				controller: 'ResultCtrl',
 				resolve: {
@@ -47,6 +65,6 @@ angular
 				}
 			})
 			.otherwise({
-				redirectTo: baseurl + '/'
+				redirectTo: config.baseurl + '/'
 			});
 	});

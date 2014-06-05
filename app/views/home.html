@@ -1,12 +1,15 @@
+<div class="header" ng-include="'views/_header.html'"></div>
 
 <header class="header">
 	<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
 </header>
 <div class="home-body">
-	<img ng-src="/images/home/player-{{rand}}.png">
+	<img ng-src="{{baseurl}}/images/home/player-{{rand}}.png">
 	<div class="home-body--illustration home-body--illustration-{{rand}}"></div>
 </div>
 <div class="bt-play">
 	<a href="{{baseurl}}/#/jouer">Jouer</a>
 </div>
+
+<footer class="footer" ng-include="'views/_footer.html'"></footer>
 

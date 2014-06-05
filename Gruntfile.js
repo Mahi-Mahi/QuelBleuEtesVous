@@ -168,13 +168,17 @@ module.exports = function(grunt) {
         httpGeneratedImagesPath: '<%= yeoman.baseurl %>/images/generated',
         httpFontsPath: '<%= yeoman.baseurl %>/fonts',
         relativeAssets: false,
-        assetCacheBuster: false,
+        assetCacheBuster: true,
         raw: 'Sass::Script::Number.precision = 10\n'
       },
       dist: {
         options: {
           generatedImagesDir: '<%= yeoman.dist %>/images/generated',
-          debugInfo: false
+          httpImagesPath: '<%= yeoman.baseurl %>/images',
+          httpGeneratedImagesPath: '<%= yeoman.baseurl %>/images/generated',
+          httpFontsPath: '<%= yeoman.baseurl %>/fonts',
+          debugInfo: false,
+          outputStyle: 'expanded'
         }
       },
       server: {
@@ -191,8 +195,8 @@ module.exports = function(grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/fonts/*'
+            // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            // '<%= yeoman.dist %>/fonts/*'
           ]
         }
       }
@@ -413,8 +417,8 @@ module.exports = function(grunt) {
     htmlSnapshot: {
       debug: {
         options: {
-          snapshotPath: 'dist/',
-          sitePath: 'http://quelbleuetesvous.localhost/',
+          snapshotPath: 'dist',
+          sitePath: 'http://quelbleuetesvous-dist.localhost/',
           msWaitForPages: 1000,
           fileNamePrefix: '',
           sanitize: function(requestUri) {
@@ -422,12 +426,12 @@ module.exports = function(grunt) {
             if (/\/$/.test(requestUri)) {
               return 'index.html';
             } else {
-              return requestUri.replace(/\//g, '/').replace(/quizlesbleus2014\/#\//g, '/');
+              return requestUri.replace(/quizlesbleus2014\/#\//g, '/').replace(/\/\//g, '/').replace(/\/1/g, '/index.html');
             }
           },
           //if you would rather not keep the script tags in the html snapshots
           //set `removeScripts` to true. It's false by default
-          removeScripts: false,
+          removeScripts: true,
           //set `removeLinkTags` to true. It's false by default
           removeLinkTags: false,
           //set `removeMetaTags` to true. It's false by default
@@ -446,7 +450,29 @@ module.exports = function(grunt) {
           ],
           //here goes the list of all urls that should be fetched
           urls: [
-            '/quizlesbleus2014/#/resultat/blaise-matuidi'
+            '<%= yeoman.baseurl %>/#/resultat/hugo-lloris/1',
+            '<%= yeoman.baseurl %>/#/resultat/bacary-sagna/1',
+            '<%= yeoman.baseurl %>/#/resultat/mathieu-debuchy/1',
+            '<%= yeoman.baseurl %>/#/resultat/raphael-varane/1',
+            '<%= yeoman.baseurl %>/#/resultat/mamadou-sakho/1',
+            '<%= yeoman.baseurl %>/#/resultat/laurent-koscielny/1',
+            '<%= yeoman.baseurl %>/#/resultat/patrice-evra/1',
+            '<%= yeoman.baseurl %>/#/resultat/yohan-cabaye/1',
+            '<%= yeoman.baseurl %>/#/resultat/paul-pogba/1',
+            '<%= yeoman.baseurl %>/#/resultat/blaise-matuidi/1',
+            '<%= yeoman.baseurl %>/#/resultat/moussa-sissoko/1',
+            '<%= yeoman.baseurl %>/#/resultat/antoine-griezmann/1',
+            '<%= yeoman.baseurl %>/#/resultat/mathieu-valbuena/1',
+            '<%= yeoman.baseurl %>/#/resultat/franck-ribery/1',
+            '<%= yeoman.baseurl %>/#/resultat/loic-remy/1',
+            '<%= yeoman.baseurl %>/#/resultat/karim-benzema/1',
+            '<%= yeoman.baseurl %>/#/resultat/olivier-giroud/1',
+            '<%= yeoman.baseurl %>/#/resultat/mickael-landreau/1',
+            '<%= yeoman.baseurl %>/#/resultat/lucas-digne/1',
+            '<%= yeoman.baseurl %>/#/resultat/eliaquim-mangala/1',
+            '<%= yeoman.baseurl %>/#/resultat/rio-mavuba/1',
+            '<%= yeoman.baseurl %>/#/resultat/clement-grenier/1',
+            '<%= yeoman.baseurl %>/#/resultat/stephane-ruffier/1'
           ]
         }
       }
@@ -456,8 +482,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('createConfig', function(target) {
     grunt.file.write("./app/scripts/services/config.js", '"use strict";' + "\n" + 'angular.module("quelBleuEtesVousApp")' +
-      '.constant("debug", ' + ((target === 'dist') ? 'false' : 'true') + ')' +
-      '.constant("baseurl", "/quizlesbleus2014")' +
+      '.constant("prod", ' + ((target === 'dist') ? 'false' : 'true') + ')' +
       ';');
   });
 
@@ -505,6 +530,7 @@ module.exports = function(grunt) {
     'rev',
     'usemin',
     'htmlmin',
+    'htmlSnapshot',
     'rsync:staging',
     // 'commit',
     'createConfig:dev'
