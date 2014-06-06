@@ -8,7 +8,7 @@
 	<div class="main main-result">
 		<div class="main-inner">
 			<div class="result-block">
-				<h2 class="result-title"><span ng-if="!static">Vous êtes </span><strong>{{nearest.name}}</strong></h2>
+				<h2 class="result-title"><span ng-if="!static">Vous êtes </span> <strong>{{nearest.name}}</strong></h2>
 				<div class="media">
 					<div class="result-sidebar">
 						<img ng-src="{{baseurl}}/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
@@ -33,4 +33,8 @@
 
 	<div class="footer" ng-include="'views/_footer.html'"></div>
 
+</div>
+<div class="footer-legal">
+	<p>Radio France décline toute responsabilité quant au contenu des sites proposés en liens</p>
+	<p><img src="images/logo-ojd.png" alt="OJD" />La fréquentation de ce site est certifiée par l'OJD</p>
 </div>
