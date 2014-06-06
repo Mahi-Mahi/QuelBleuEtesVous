@@ -19,8 +19,6 @@ angular.module('quelBleuEtesVousApp')
 			});
 		}
 
-		console.log("RESULTS");
-
 		if ($rootScope.userAnswers) {
 
 			var sumCoord1 = 0,
@@ -30,7 +28,6 @@ angular.module('quelBleuEtesVousApp')
 
 			angular.forEach($rootScope.userAnswers, function(answer) {
 				// console.log(answer.coord1, answer.coord2);
-				console.log(answer.slug + '. ' + answer.title + ' (' + answer.coord1 + ' / ' + answer.coord2 + ')');
 				sumCoord1 += answer.coord1;
 				sumCoord2 += answer.coord2;
 			});
@@ -40,13 +37,9 @@ angular.module('quelBleuEtesVousApp')
 				coord2: sumCoord2 / dataService.data.questions.constants.coord2
 			};
 
-			console.log(user);
-
 			var minDistance = 999;
 			angular.forEach(dataService.data.players.players, function(player) {
 				var distance = Math.sqrt(Math.pow(player.coord1 - user.coord1, 2) + Math.pow(player.coord2 - user.coord2, 2));
-
-				console.log(minDistance + " <> " + distance);
 
 				if (minDistance === 999 || distance < minDistance) {
 					minDistance = distance;
@@ -55,7 +48,7 @@ angular.module('quelBleuEtesVousApp')
 
 			});
 
-			console.log(nearest.slug, minDistance);
+			// console.log(nearest.slug, minDistance);
 
 			ga('send', 'event', 'result', nearest.slug);
 

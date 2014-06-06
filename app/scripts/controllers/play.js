@@ -175,7 +175,7 @@ angular.module('quelBleuEtesVousApp')
 			$timeout(function() {
 				$scope.state = '';
 				$scope.nextQuestion();
-			}, $scope.debug || skipAnimation ? 50 : 1000);
+			}, $scope.debug || skipAnimation ? 50 : 800);
 		};
 
 		$scope.selectAnswer = function(answer) {
