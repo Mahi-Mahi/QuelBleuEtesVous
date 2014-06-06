@@ -95,13 +95,14 @@ html[xmlns] .slides {display: block;}
 		height: auto;
 		margin: 0 auto;
 		overflow: inherit;
-		width:320px;
+		width:auto;
   	}
 }
 .flex-control-thumbs li {
 	width: 20%; margin: 0;
 	@media (max-width: $break-desktop) {
 		width:auto;
+		min-width:20%;
   	}
 }
 .flex-control-thumbs img { display: block; opacity:1; cursor: pointer;}

@@ -822,7 +822,6 @@ article, header, footer {
     background: image-url("bg-progress-list.png") left center repeat-x;
     float: left;
     height: 24px;
-    overflow: hidden;
     position: relative;
     z-index: 1;
     padding: 0 18px 0 0;
@@ -852,6 +851,9 @@ article, header, footer {
         background: image-url("bg-progress-item-active.png") center center no-repeat;
         text-indent: 0;
         width: 25px;
+    }
+    li:last-child.active {
+    	right:-11px;
     }
     .question-header & {
         display: none;
