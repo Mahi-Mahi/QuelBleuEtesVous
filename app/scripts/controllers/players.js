@@ -13,6 +13,7 @@ angular.module('quelBleuEtesVousApp')
 			players: dataService.data.players.players,
 			opened: false,
 			before: function() {
+				console.log("before");
 				this.opened = true;
 				// jQuery('.flex-viewport').show();
 				jQuery('.container').addClass('opened');
@@ -30,7 +31,10 @@ angular.module('quelBleuEtesVousApp')
 				animation: 'slide',
 				controlNav: 'thumbnails',
 				directionNav: true,
-				slideshow: false
+				slideshow: false,
+				before: $scope.slider.before,
+				close: $scope.slider.close
+
 			});
 
 			jQuery('.flex-control-thumbs').on('click', 'li', function() {

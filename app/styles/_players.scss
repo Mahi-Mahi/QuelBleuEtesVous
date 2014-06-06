@@ -22,7 +22,7 @@
 	position: absolute !important;
 	z-index: 5;
 	.opened & {
-		display: block;		
+		display: block;
 	}
 }
 
@@ -42,5 +42,9 @@
 		background:image-url("see-all-players.png") 10px 10px no-repeat;
 		font-size:18px;
 		padding-left:42px;
+		display: none;
+		.opened & {
+			display: block;
+		}
 	}
 }
