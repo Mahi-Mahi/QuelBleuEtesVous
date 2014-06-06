@@ -461,7 +461,7 @@ module.exports = function(grunt) {
             '<%= yeoman.baseurl %>/#/resultat/moussa-sissoko/1',
             '<%= yeoman.baseurl %>/#/resultat/antoine-griezmann/1',
             '<%= yeoman.baseurl %>/#/resultat/mathieu-valbuena/1',
-            '<%= yeoman.baseurl %>/#/resultat/franck-ribery/1',
+            // '<%= yeoman.baseurl %>/#/resultat/franck-ribery/1',
             '<%= yeoman.baseurl %>/#/resultat/loic-remy/1',
             '<%= yeoman.baseurl %>/#/resultat/karim-benzema/1',
             '<%= yeoman.baseurl %>/#/resultat/olivier-giroud/1',
@@ -469,7 +469,7 @@ module.exports = function(grunt) {
             '<%= yeoman.baseurl %>/#/resultat/lucas-digne/1',
             '<%= yeoman.baseurl %>/#/resultat/eliaquim-mangala/1',
             '<%= yeoman.baseurl %>/#/resultat/rio-mavuba/1',
-            '<%= yeoman.baseurl %>/#/resultat/clement-grenier/1',
+            // '<%= yeoman.baseurl %>/#/resultat/clement-grenier/1',
             '<%= yeoman.baseurl %>/#/resultat/stephane-ruffier/1'
           ]
         }

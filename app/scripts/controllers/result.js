@@ -61,6 +61,11 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.nearest = nearest;
 
+		// var shareUrl = [document.location.protocol, '//', document.location.host, document.location.pathname].join('') + 'resultat/' + nearest.slug;
+		var shareUrl = 'http://nvx.franceinfo.fr/quizlesbleus2014/resultat/' + nearest.slug;
+
+		jQuery('head meta[property="og:url"]').remove();
+		jQuery("head").append('<meta property="og:url" content="' + shareUrl + '" />');
 		jQuery('head meta[property="og:title"]').remove();
 		jQuery("head").append('<meta property="og:title" content="Quel Bleu êtes-vous ? Je suis ' + nearest.name + ' ! " />');
 		jQuery('head meta[property="og:description"]').remove();
@@ -69,8 +74,6 @@ angular.module('quelBleuEtesVousApp')
 		jQuery("head").append('<meta property="og:image" content="' + config.baseurl + '/images/players/large/' + nearest.slug + '.png" />');
 
 		// var shareText = "Je suis " + nearest.name + ", et vous ?";
-
-		var shareUrl = [document.location.protocol, '//', document.location.host, document.location.pathname].join('') + 'resultat/' + nearest.slug;
 
 		$scope.shareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl);
 
