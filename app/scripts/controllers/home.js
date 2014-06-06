@@ -26,7 +26,8 @@ angular.module('quelBleuEtesVousApp')
 				slideshowSpeed: 3000,
 				minItems: 1,
 				maxItems: 1,
-				pauseOnHover: true
+				pauseOnHover: true,
+				animationSpeed: 1200
 			});
 		}, 1);
 	});
