@@ -23,6 +23,14 @@ angular.module('quelBleuEtesVousApp')
 		};
 
 		$timeout(function() {
+
+			jQuery(".flexslider").flexslider({
+				animation: 'slide',
+				controlNav: 'thumbnails',
+				directionNav: true,
+				slideshow: false
+			});
+
 			jQuery('.flex-control-thumbs').on('click', 'li', function() {
 				$scope.slider.opened = true;
 				$scope.$apply();

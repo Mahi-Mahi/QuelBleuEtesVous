@@ -1118,6 +1118,10 @@ article, header, footer {
 
 .main-inner-play.ready svg {
     display: block;
+    border: red 1px solid;
+    @media (max-width: $break-desktop) {
+        visibility: hidden;
+    }
 }
 
 // #question {display: none;}

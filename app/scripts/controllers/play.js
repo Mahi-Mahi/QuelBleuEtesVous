@@ -9,6 +9,11 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.baseurl = config.baseurl;
 
+		var IE8 = jQuery('html.lt-ie9').length;
+		var smallScreen = window.innerWidth < 940;
+
+		var skipAnimation = IE8 || smallScreen;
+
 		$scope.players = [{
 			id: "player-ref",
 			x: 350,
@@ -166,7 +171,7 @@ angular.module('quelBleuEtesVousApp')
 			$timeout(function() {
 				$scope.state = '';
 				$scope.nextQuestion();
-			}, $scope.debug ? 50 : 1000);
+			}, $scope.debug || skipAnimation ? 50 : 1000);
 		};
 
 		$scope.selectAnswer = function(answer) {
@@ -201,7 +206,7 @@ angular.module('quelBleuEtesVousApp')
 
 			$timeout(function() {
 				$scope.showQuestion = true;
-			}, 500);
+			}, skipAnimation ? 50 : 500);
 
 			fakeAnswer();
 
@@ -226,7 +231,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$timeout(function() {
 			$scope.animateField();
-		}, $scope.debug ? 50 : 1000);
+		}, ($scope.debug || skipAnimation) ? 50 : 1000);
 
 		fakeAnswer();
 

@@ -180,8 +180,7 @@ module.exports = function(grunt) {
           httpImagesPath: '<%= yeoman.baseurl %>/images',
           httpGeneratedImagesPath: '<%= yeoman.baseurl %>/images/generated',
           httpFontsPath: '<%= yeoman.baseurl %>/fonts',
-          debugInfo: false,
-          outputStyle: 'expanded'
+          outputStyle: 'compressed'
         }
       },
       server: {
