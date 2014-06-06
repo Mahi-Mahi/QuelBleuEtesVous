@@ -154,6 +154,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.questions = dataService.data.questions.questions;
 
+		$scope.nextQuestionLink = "Question Suivante";
 		$scope.showQuestion = false;
 
 		$interval(function() {
@@ -191,6 +192,8 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.nextQuestion = function() {
 
+			$scope.nextQuestionLink = $scope.currentQuestion > 10 ? "Question Suivante" : " Voir le résultat";
+
 			$scope.currentQuestion++;
 
 			if ($scope.selectedAnswer) {
@@ -215,6 +218,10 @@ angular.module('quelBleuEtesVousApp')
 		function fakeAnswer() {
 			if ($scope.debug) {
 				$timeout(function() {
+					console.log($scope.currentQuestion);
+					if ($scope.currentQuestion > 10) {
+						return;
+					}
 					if ($scope.questions[$scope.currentQuestion]) {
 						var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
 						$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[rand];

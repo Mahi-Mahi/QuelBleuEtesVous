@@ -15,10 +15,12 @@ angular.module('quelBleuEtesVousApp')
 			before: function() {
 				this.opened = true;
 				// jQuery('.flex-viewport').show();
+				jQuery('.container').addClass('opened');
 			},
 			close: function() {
 				this.opened = false;
 				// jQuery('.flex-viewport').hide();
+				jQuery('.container').removeClass('opened');
 			}
 		};
 
@@ -32,6 +34,7 @@ angular.module('quelBleuEtesVousApp')
 			});
 
 			jQuery('.flex-control-thumbs').on('click', 'li', function() {
+				console.log("click");
 				$scope.slider.opened = true;
 				$scope.$apply();
 			});

@@ -47,7 +47,7 @@
 
 				<g class="lines">
 
-					<path ng-repeat="line in lines" id="line-{{line.id}}" myclass="line {{line.class}} {{(((line.id-1) <= currentQuestion) ? 'show' : '')}} {{(((line.id-2) == currentQuestion) ? 'anim' : '')}}" fill="none" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="{{line.d}}" ></path>
+					<path ng-repeat="line in lines" id="line-{{line.id}}" myclass="line {{line.class}} {{(((line.id-0) <= currentQuestion) ? 'show' : '')}} {{(((line.id-1) == currentQuestion) ? 'anim' : '')}}" fill="none" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="{{line.d}}" ></path>
 
 				</g>
 
@@ -89,7 +89,7 @@
 				<ul class="progress">
 					<li ng-repeat="question in questions" class="{{currentQuestion==$index && 'active' || '' }}">{{$index+1}}</li>
 				</ul>
-				<a ng-if="selectedAnswer" ng-click="setAnswer()">Question Suivante</a>
+				<a ng-if="selectedAnswer" ng-click="setAnswer()">{{nextQuestionLink}}</a>
 				<!-- <label for="debug" class="debug">debug <input type="checkbox" name="debug" id="debug" ng-model="debug"></label> -->
 				</footer>
 			</div>
