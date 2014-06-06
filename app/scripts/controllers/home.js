@@ -22,8 +22,10 @@ angular.module('quelBleuEtesVousApp')
 				controlNav: false,
 				directionNav: false,
 				slideshow: true,
-				slideshowSpeed: 3000
+				slideshowSpeed: 3000,
+				minItems: 1,
+				maxItems: 1
 			});
 		}, 1);
-
 	});
+

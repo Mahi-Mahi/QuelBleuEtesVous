@@ -9,7 +9,10 @@ angular.module('quelBleuEtesVousApp')
 
 				var attrs = {
 					inline: true,
-					href: '#credits'
+					href: '#credits',
+					height:'480',
+					width:'760',
+					close:''
 				};
 
 				jQuery.colorbox(attrs);
