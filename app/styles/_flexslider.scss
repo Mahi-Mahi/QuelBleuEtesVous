@@ -101,7 +101,7 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs li {
 	width: 20%; margin: 0;
 	@media (max-width: $break-desktop) {
-		width:50%;
+		width:auto;
   	}
 }
 .flex-control-thumbs img { display: block; opacity:1; cursor: pointer;}
