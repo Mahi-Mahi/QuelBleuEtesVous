@@ -19,30 +19,43 @@ angular.module('quelBleuEtesVousApp')
 			});
 		}
 
+		console.log("RESULTS");
+
 		if ($rootScope.userAnswers) {
 
 			var sumCoord1 = 0,
 				sumCoord2 = 0;
+
+			console.log(dataService.data.questions.constants);
+
 			angular.forEach($rootScope.userAnswers, function(answer) {
+				// console.log(answer.coord1, answer.coord2);
+				console.log(answer.slug + '. ' + answer.title + ' (' + answer.coord1 + ' / ' + answer.coord2 + ')');
 				sumCoord1 += answer.coord1;
 				sumCoord2 += answer.coord2;
 			});
 
 			var user = {
-				coord1: sumCoord1 * dataService.data.questions.constants.coord1,
-				coord2: sumCoord2 * dataService.data.questions.constants.coord2
+				coord1: sumCoord1 / dataService.data.questions.constants.coord1,
+				coord2: sumCoord2 / dataService.data.questions.constants.coord2
 			};
 
-			var minDistance = null;
+			console.log(user);
+
+			var minDistance = 999;
 			angular.forEach(dataService.data.players.players, function(player) {
 				var distance = Math.sqrt(Math.pow(player.coord1 - user.coord1, 2) + Math.pow(player.coord2 - user.coord2, 2));
-				if (minDistance === null || distance < minDistance) {
+
+				console.log(minDistance + " <> " + distance);
+
+				if (minDistance === 999 || distance < minDistance) {
 					minDistance = distance;
 					nearest = player;
 				}
+
 			});
-			// console.log(sumCoord1, sumCoord2);
-			// console.log(nearest, minDistance);
+
+			console.log(nearest.slug, minDistance);
 
 			ga('send', 'event', 'result', nearest.slug);
 

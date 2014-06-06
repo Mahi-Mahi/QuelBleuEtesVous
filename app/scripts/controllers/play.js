@@ -5,9 +5,12 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, $interval, dataService, $routeParams) {
 
-		$scope.debug = (false && !prod) || ($routeParams.debug === 'debug');
+		$scope.debug = (false && !prod) || ($routeParams.debug);
 
 		$scope.baseurl = config.baseurl;
+
+		dataService.load('answers');
+		dataService.load('players');
 
 		var IE8 = jQuery('html.lt-ie9').length;
 		var smallScreen = window.innerWidth < 940;
@@ -147,7 +150,7 @@ angular.module('quelBleuEtesVousApp')
 		// 	path: "M350,188C100,100,100,100,320,220"
 		// }];
 
-		$rootScope.userAnswers = $rootScope.userAnswers || [];
+		$rootScope.userAnswers = [];
 
 		$scope.currentQuestion = -1;
 		$scope.state = '';
@@ -211,25 +214,45 @@ angular.module('quelBleuEtesVousApp')
 				$scope.showQuestion = true;
 			}, skipAnimation ? 50 : 500);
 
-			fakeAnswer();
+			$timeout(function() {
+				fakeAnswer();
+			}, 150);
 
 		};
 
 		function fakeAnswer() {
 			if ($scope.debug) {
 				$timeout(function() {
-					console.log($scope.currentQuestion);
-					if ($scope.currentQuestion > 10) {
+					if ($scope.currentQuestion > 12) {
 						return;
 					}
 					if ($scope.questions[$scope.currentQuestion]) {
-						var rand = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
-						$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[rand];
+						var answer = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
+						$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[answer];
+
+						if (dataService.data.answers.answers[$routeParams.debug]) {
+							// console.log("question #" + $scope.currentQuestion + " :" + $scope.questions[$scope.currentQuestion].slug);
+							answer = dataService.data.answers.answers[$routeParams.debug][$scope.questions[$scope.currentQuestion].slug];
+							angular.forEach($scope.questions[$scope.currentQuestion].answers, function(value) {
+								if (value.slug === answer) {
+									$scope.selectedAnswer = value;
+								}
+
+							});
+							console.log($scope.selectedAnswer.slug + '. ' + $scope.selectedAnswer.title + ' (' + $scope.selectedAnswer.coord1 + '/' + $scope.selectedAnswer.coord2);
+						}
 						$scope.setAnswer();
 					}
-				}, 50);
+				}, 150);
 			}
 
+		}
+
+		if ($scope.debug) {
+			$timeout(function() {
+				console.log(dataService.data.answers.answers[$routeParams.debug]);
+				fakeAnswer();
+			}, 500);
 		}
 
 		$timeout(function() {
@@ -239,7 +262,5 @@ angular.module('quelBleuEtesVousApp')
 		$timeout(function() {
 			$scope.animateField();
 		}, ($scope.debug || skipAnimation) ? 50 : 1000);
-
-		fakeAnswer();
 
 	});
