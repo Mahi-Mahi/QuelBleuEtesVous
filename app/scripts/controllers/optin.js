@@ -17,7 +17,7 @@ angular.module('quelBleuEtesVousApp')
 			}, 100);
 		}
 
-		$scope.optinUrl = config.optinUrl;
+		$scope.optinUrl = config.baseUrl + config.optinUrl;
 		$scope.optin = function() {
 
 			$http.post($scope.optinUrl, {
