@@ -75,7 +75,7 @@
 			"coord1": -0.236672562223995,
 			"coord2": 0.5847971315677
 		}, {
-			"title": "There Will Be Blood : embùches, coups de sang, ça s'en va et ça revient.",
+			"title": "There Will Be Blood : embûches, coups de sang, ça s'en va et ça revient.",
 			"slug": "d",
 			"coord1": 0.612237424264157,
 			"coord2": 0.396068190914016
@@ -127,7 +127,7 @@
 			"coord1": -0.69838084494192,
 			"coord2": 0.23562333605002
 		}, {
-			"title": "Pas né de la dernière pluie (ou : Qui peut endure bien peut dure)",
+			"title": "Pas né de la dernière pluie",
 			"slug": "d",
 			"coord1": -0.431187927784264,
 			"coord2": -0.0885256225423301
@@ -313,29 +313,29 @@
 		"display": "list",
 		"answers": [
 			{
-			"title": "au Macumba, là où on danse tous les soirs",
+			"title": "Au Macumba, là où on danse tous les soirs",
 			"slug": "b",
 			"coord1": 0.5896925173645,
 			"coord2": 0.0963936262611076
 		}, 
 		{
-			"title": "au square, avec les poussettes et la dinette",
+			"title": "Au square, avec les poussettes et la dinette",
 			"slug": "d",
 			"coord1": -0.154830825069565,
 			"coord2": -0.812893046631033
 		}, 
 		{
-			"title": "devant des jeux-vidéo, il faut bien que quelqu'un sauve le monde",
+			"title": "Devant des jeux-vidéo, il faut bien que quelqu'un sauve le monde",
 			"slug": "a",
 			"coord1": 0.28265217450572,
 			"coord2": 0.347587608133005
 		}, {
-			"title": "au théâtre, au cinéma, au musée, n'importe quoi qui rende moins bête",
+			"title": "Au théâtre, au cinéma, au musée, n'importe quoi qui rende moins bête",
 			"slug": "e",
 			"coord1": -1.10059790025936,
 			"coord2": 1.5435786154558
 		}, {
-			"title": "au restaurant, parce que la viande fait la chair et le vin fait l'homme",
+			"title": "Au restaurant, parce que la viande fait la chair et le vin fait l'homme",
 			"slug": "c",
 			"coord1": -0.142106951932725,
 			"coord2": -0.783441098328954
