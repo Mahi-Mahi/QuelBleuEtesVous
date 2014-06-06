@@ -1,4 +1,5 @@
 'use strict';
+/* global jQuery */
 
 angular.module('quelBleuEtesVousApp')
 	.controller('HomeCtrl', function(prod, config, $scope, $timeout, $location) {

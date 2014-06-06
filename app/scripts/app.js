@@ -24,6 +24,15 @@ angular
 					}
 				}
 			})
+			.when('/jouer/:debug', {
+				templateUrl: 'views/play.html',
+				controller: 'PlayCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('questions');
+					}
+				}
+			})
 			.when('/resultat', {
 				templateUrl: 'views/result.html',
 				controller: 'ResultCtrl',

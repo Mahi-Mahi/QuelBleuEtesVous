@@ -1,1119 +1,1122 @@
-<<<<<<< HEAD
 @import "_elements";
+
 @charset "UTF-8";
 
 @font-face {
- font-family: 'Interstate';
-  src: font-url('/quizlesbleus2014/fonts/Interstate-Light.eot');
-  src: font-url('/quizlesbleus2014/fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),
-       font-url('/quizlesbleus2014/fonts/Interstate-Light.woff') format('woff'),
-       font-url('/quizlesbleus2014/fonts/Interstate-Light.ttf')  format('truetype'),
-       font-url('/quizlesbleus2014/fonts/Interstate-Light.svg#b3f1eaab67ba33d7f766bdc7b12fbe90') format('svg');
-  font-style:   normal;
-  font-weight:  200;
+    font-family: 'Interstate';
+    src: font-url("/quizlesbleus2014/fonts/Interstate-Light.eot");
+    src: font-url("/quizlesbleus2014/fonts/Interstate-Light.eot?#iefix") format("embedded-opentype"), font-url("/quizlesbleus2014/fonts/Interstate-Light.woff") format("woff"), font-url("/quizlesbleus2014/fonts/Interstate-Light.ttf") format("truetype"), font-url("/quizlesbleus2014/fonts/Interstate-Light.svg#b3f1eaab67ba33d7f766bdc7b12fbe90") format("svg");
+    font-style: normal;
+    font-weight: 200;
 }
 
 
 @font-face {
-  font-family: 'InterstateBold';
-  src: font-url('/quizlesbleus2014/fonts/Interstate-Bold.eot');
-  src: font-url('/quizlesbleus2014/fonts/Interstate-Bold.eot?#iefix') format('embedded-opentype'),
-       font-url('/quizlesbleus2014/fonts/Interstate-Bold.woff') format('woff'),
-       font-url('/quizlesbleus2014/fonts/Interstate-Bold.ttf')  format('truetype'),
-       font-url('/quizlesbleus2014/fonts/Interstate-Bold.svg#ae7901b26c7bc0ae18e1b2162d35ce34') format('svg');
-  font-style:   normal;
-  font-weight:  700;
+    font-family: 'InterstateBold';
+    src: font-url("/quizlesbleus2014/fonts/Interstate-Bold.eot");
+    src: font-url("/quizlesbleus2014/fonts/Interstate-Bold.eot?#iefix") format("embedded-opentype"), font-url("/quizlesbleus2014/fonts/Interstate-Bold.woff") format("woff"), font-url("/quizlesbleus2014/fonts/Interstate-Bold.ttf") format("truetype"), font-url("/quizlesbleus2014/fonts/Interstate-Bold.svg#ae7901b26c7bc0ae18e1b2162d35ce34") format("svg");
+    font-style: normal;
+    font-weight: 700;
 }
+
 
 // STRUCTURE
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-html, button, input, select, textarea { font-family:'Interstate', serif; color:$default-color; outline:none; }
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html, button, input, select, textarea {
+    font-family: 'Interstate', serif;
+    color: $default-color;
+    outline: none;
+}
+
 body {
-	background:#252932;
-	font-family:'Interstate', serif;
-	margin:0;
-	padding:0;
-	font-size:1em;
+    background: #252932;
+    font-family: 'Interstate', serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
 }
 
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
-hr { border:0; border-top-width:1px; border-color:#fff; border-style:solid; clear:both; height:0; display:block; margin:0; }
+hr {
+    border: 0;
+    border-top-width: 1px;
+    border-color: #fff;
+    border-style: solid;
+    clear: both;
+    height: 0;
+    display: block;
+    margin: 0;
+}
 
-a { color: $default-link-color; text-decoration: none; }
-a:hover, a:focus { color: $default-link-color; }
-a:hover { text-decoration: none; }
-a:focus, input:focus, textarea:focus, button:focus { outline: thin dotted; }
+a {
+    color: $default-link-color;
+    text-decoration: none;
+}
 
-::-webkit-scrollbar{width:10px;height:10px}
-::-webkit-scrollbar-track-piece{background-color:#67851b;-webkit-border-radius:0;}
-::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#fff;}
-::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#fff;}
+a:hover, a:focus {
+    color: $default-link-color;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #67851b;
+    -webkit-border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #fff;
+}
 
 ::-moz-selection {
     background: $background-color;
-    color:#fff;
+    color: #fff;
     text-shadow: none;
 }
 
 ::selection {
     background: $background-color;
-    color:#fff;
+    color: #fff;
     text-shadow: none;
 }
 
 .clear_focus {
-	box-shadow: none;
-	-webkit-appearance: none;
-	border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 .disable-hover, .disable-hover * {
-  pointer-events: none !important;
+    pointer-events: none !important;
 }
 
 input[type="text"]:focus,
- input[type="email"]:focus,
-  input[type="url"]:focus,
-   input[type="password"]:focus,
-	textarea:focus, .touch select:focus {
-		box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
-		border-color: #cecece;
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus, .touch select:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    border-color: #cecece;
 }
 
 .touch input,
-	.touch textarea {
-	box-shadow: none;
-	-webkit-appearance: none;
-	border-radius: 0;
+.touch textarea {
+    box-shadow: none;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
-.left { float:left; }
-.right { float:right; }
-.aligncenter { text-align:center; }
-.alignleft { float:left; margin:0 20px 10px 0; }
-.alignright { float:right; margin:0 0 10px 20px; }
-.floatleft { float:left; }
-.floatright { float:right; }
-img.alignleft, img.alignright, img.aligncenter { display:block; }
-img.aligncenter { margin-left:auto; margin-right:auto; }
+.left {
+    float: left;
+}
 
-b, strong { font-weight: bold; }
-ul, ol { list-style-type:none; margin:0; padding: 0; }
-img { border: 0; vertical-align: middle; }
+.right {
+    float: right;
+}
 
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-label { cursor: pointer; }
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; }
-button { background:none; border:none; margin:0; padding:0; }
-.oldie select, .oldie textarea { vertical-align: middle; }
-button, input { line-height: normal; }
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
-.oldie button, .oldie input { overflow: visible; vertical-align: middle; }
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
-.unstyled { list-style-type:none; margin:0; padding:0; }
-.clearfix { zoom:1; }
-.clearfix:before, .clearfix:after { content:""; display:table; }
-.clearfix:after { clear:both; }
-.media { overflow:hidden; zoom:1; }
-.img-responsive { display: block; max-width: 100%; width: auto; height: auto; -ms-interpolation-mode: bicubic; }
-article, header, footer { display: block; margin: 0; padding: 0; }
+.aligncenter {
+    text-align: center;
+}
 
-@import 'animation';
-@import 'players';
-@import 'flexslider';
+.alignleft {
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 10px 20px;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+img.alignleft, img.alignright, img.aligncenter {
+    display: block;
+}
+
+img.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.oldie select, .oldie textarea {
+    vertical-align: middle;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+.oldie button, .oldie input {
+    overflow: visible;
+    vertical-align: middle;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+.unstyled {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.media {
+    overflow: hidden;
+    zoom: 1;
+    @media (max-width: $break-desktop) {
+        overflow: inherit;
+    }
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+article, header, footer {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+@import "animation";
+@import "players";
+@import "flexslider";
 
 // HEADER
+.topnav-france-info {
+    background: #2e2e2d;
+    margin: 0;
+    padding: 14px 0 10px 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        font-size: em(14px);
+        margin: 0;
+        padding: 0 5px;
+        vertical-align: top;
+    }
+    @media (max-width: $break-desktop) {
+        display: none;
+    }
+}
 
 .header {
-	text-align: center;
+    text-align: center;
+}
+
+.tagline-france-info {
+    background: #231F20;
+    margin: 0 0 20px 0;
+    padding: 5px 0;
+    ul {
+        text-align: right;
+    }
+    li {
+        display: inline-block;
+        font-size: em(10px);
+        line-height: 13px;
+        margin: 0;
+        padding: 10px 15px 0 0;
+        vertical-align: top;
+    }
+    a {
+        display: block;
+        margin: 0;
+        padding: 0 0 0 20px;
+    }
+    .facebook {
+        background: image-url("bg-header-facebook.png") left top no-repeat;
+    }
+    .twitter {
+        background: image-url("bg-header-twitter.png") left top no-repeat;
+    }
+    .infos {
+        background: image-url("bg-header-infos.png") left top no-repeat;
+    }
 }
 
 .entry-title {
-	border-bottom:1px solid #fff;
-	border-top:1px solid #fff;
-	color:#fff;
-	display: inline-block;
-	font:normal em(77px) 'InterstateBold', serif;
-	margin: 0;
-	padding:10px 0;
-	text-align: center;
-	text-transform: uppercase;
-	vertical-align: top;
-	strong {
-		display: block;
-		font-size: em(102px,77px);
-=======
-	@import "_elements";
-	@charset "UTF-8";
-
-	@font-face {
-	 font-family: 'Interstate';
-	  src: font-url('/quizlesbleus2014/fonts/Interstate-Light.eot');
-	  src: font-url('/quizlesbleus2014/fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),
-	       font-url('/quizlesbleus2014/fonts/Interstate-Light.woff') format('woff'),
-	       font-url('/quizlesbleus2014/fonts/Interstate-Light.ttf')  format('truetype'),
-	       font-url('/quizlesbleus2014/fonts/Interstate-Light.svg#b3f1eaab67ba33d7f766bdc7b12fbe90') format('svg');
-	  font-style:   normal;
-	  font-weight:  200;
-	}
-
-	@font-face {
-	  font-family: 'InterstateBold';
-	  src: font-url('/quizlesbleus2014/fonts/Interstate-Bold.eot');
-	  src: font-url('/quizlesbleus2014/fonts/Interstate-Bold.eot?#iefix') format('embedded-opentype'),
-	       font-url('/quizlesbleus2014/fonts/Interstate-Bold.woff') format('woff'),
-	       font-url('/quizlesbleus2014/fonts/Interstate-Bold.ttf')  format('truetype'),
-	       font-url('/quizlesbleus2014/fonts/Interstate-Bold.svg#ae7901b26c7bc0ae18e1b2162d35ce34') format('svg');
-	  font-style:   normal;
-	  font-weight:  700;
-	}
-
-	// STRUCTURE
-	* {
-	  -webkit-box-sizing: border-box;
-	  -moz-box-sizing: border-box;
-	  box-sizing: border-box;
-	}
-	*:before,
-	*:after {
-	  -webkit-box-sizing: border-box;
-	  -moz-box-sizing: border-box;
-	  box-sizing: border-box;
-	}
-	html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-	html, button, input, select, textarea { font-family:'Interstate', serif; color:$default-color; outline:none; }
-	body {
-		background:#252932;
-		font-family:'Interstate', serif;
-		margin:0;
-		padding:0;
-		font-size:1em;
-	}
-
-	.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-
-	hr { border:0; border-top-width:1px; border-color:#fff; border-style:solid; clear:both; height:0; display:block; margin:0; }
-
-	a { color: $default-link-color; text-decoration: none; }
-	a:hover, a:focus { color: $default-link-color; }
-	a:hover { text-decoration: none; }
-	a:focus, input:focus, textarea:focus, button:focus { outline: none; }
-
-	::-webkit-scrollbar{width:8px;height:8px}
-	::-webkit-scrollbar-track-piece{background-color:#67851b;-webkit-border-radius:0;}
-	::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#fff;}
-	::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#fff;}
-
-	::-moz-selection {
-	    background: $background-color;
-	    color:#fff;
-	    text-shadow: none;
-	}
-
-	::selection {
-	    background: $background-color;
-	    color:#fff;
-	    text-shadow: none;
-	}
-
-	.clear_focus {
-		box-shadow: none;
-		-webkit-appearance: none;
-		border-radius: 0;
-	}
-
-	.disable-hover, .disable-hover * {
-	  pointer-events: none !important;
-	}
-
-	input[type="text"]:focus,
-	 input[type="email"]:focus,
-	  input[type="url"]:focus,
-	   input[type="password"]:focus,
-		textarea:focus, .touch select:focus {
-			box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
-			border-color: #cecece;
-	}
-
-	.touch input,
-		.touch textarea {
-		box-shadow: none;
-		-webkit-appearance: none;
-		border-radius: 0;
-	}
-
-	.left { float:left; }
-	.right { float:right; }
-	.aligncenter { text-align:center; }
-	.alignleft { float:left; margin:0 20px 10px 0; }
-	.alignright { float:right; margin:0 0 10px 20px; }
-	.floatleft { float:left; }
-	.floatright { float:right; }
-	img.alignleft, img.alignright, img.aligncenter { display:block; }
-	img.aligncenter { margin-left:auto; margin-right:auto; }
-
-	b, strong { font-weight: bold; }
-	ul, ol { list-style-type:none; margin:0; padding: 0; }
-	img { border: 0; vertical-align: middle; }
-
-	form { margin: 0; }
-	fieldset { border: 0; margin: 0; padding: 0; }
-	label { cursor: pointer; }
-	button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; }
-	button { background:none; border:none; margin:0; padding:0; }
-	.oldie select, .oldie textarea { vertical-align: middle; }
-	button, input { line-height: normal; }
-	button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
-	.oldie button, .oldie input { overflow: visible; vertical-align: middle; }
-	textarea { overflow: auto; vertical-align: top; resize: vertical; }
-	.unstyled { list-style-type:none; margin:0; padding:0; }
-	.clearfix { zoom:1; }
-	.clearfix:before, .clearfix:after { content:""; display:table; }
-	.clearfix:after { clear:both; }
-	.media {
-		overflow:hidden; zoom:1;
-		@media (max-width: $break-desktop) {
-			overflow:inherit;
-		}
-	}
-	.img-responsive { display: block; max-width: 100%; width: auto; height: auto; -ms-interpolation-mode: bicubic; }
-	article, header, footer { display: block; margin: 0; padding: 0; }
-
-	@import 'animation';
-	@import 'players';
-	@import 'flexslider';
-
-	// HEADER
-	.topnav-france-info {
-		background:#2e2e2d;
->>>>>>> FETCH_HEAD
-		margin: 0;
-		padding:14px 0 10px 0;
-		text-align: center;
-		li {
-			display: inline-block;
-			font-size: em(14px);
-			margin: 0;
-			padding:0 5px;
-			vertical-align: top;
-		}
-		@media (max-width: $break-desktop) {
-			display: none;
-	  	}
-	}
-
-	.header {
-		text-align: center;
-	}
-
-	.tagline-france-info {
-		background:#231F20;
-		margin:0 0 20px 0;
-		padding:5px 0;
-		ul {
-			text-align: right;
-		}
-		li {
-			display: inline-block;
-			font-size: em(10px);
-			line-height:13px;
-			margin: 0;
-			padding:10px 15px 0 0;
-			vertical-align: top;
-		}
-		a {
-			display: block;
-			margin: 0;
-			padding:0 0 0 20px;
-		}
-		.facebook {
-			background:image-url("bg-header-facebook.png") left top no-repeat;
-		}
-		.twitter {
-			background:image-url("bg-header-twitter.png") left top no-repeat;
-		}
-		.infos {
-			background:image-url("bg-header-infos.png") left top no-repeat;
-		}
-	}
-
-	.entry-title {
-		border-bottom:1px solid #fff;
-		border-top:1px solid #fff;
-		color:#fff;
-		display: inline-block;
-		font:normal em(77px) 'InterstateBold', serif;
-		margin: 0;
-		padding:10px 0;
-		text-align: center;
-		text-transform: uppercase;
-		vertical-align: top;
-		@media (max-width: $break-desktop) {
-			font-size: em(51px);
-	  	}
-		strong {
-			display: block;
-			font-size: em(102px,77px);
-			margin: 0;
-			padding: 0;
-			@media (max-width: $break-desktop) {
-				font-size: em(38px,51px);
-		  	}
-		}
-		.header-single & {
-			font-size: em(51px);
-			margin:0 0 20px 0;
-			strong {
-				font-size: em(38px,51px);
-			}
-		}
-	}
-
-	// HOME
-
-	.home-body--illustration {
-		background-position:left top;
-		background-repeat:no-repeat;
-		@include transition(all .5s ease-in);
-		position:absolute;
-		bottom:50px;
-		left:50%;
-		margin:0;
-		width:150px;
-		z-index:3;
-		-webkit-transform: scale(0);
-		-moz-transform: scale(0);
-		-o-transform: scale(0);
-		transform: scale(0);
-	}
-
-	.home-body--illustration-1 {
-		background-image:image-url("home/player-1-accessoire.png");
-		height: 160px;
-		width: 144px;
-	}
-
-	.home-body--illustration-2 {
-		background-image:image-url("home/player-2-accessoire.png");
-		height: 164px;
-		width: 134px;
-	}
-
-	.home-body--illustration-3 {
-		background-image:image-url("home/player-3-accessoire.png");
-		height: 133px;
-		width: 104px;
-	}
-
-	.home-body--illustration-4 {
-		background-image:image-url("home/player-4-accessoire.png");
-		height: 136px;
-		width: 136px;
-	}
-
-	.home-body--illustration-5 {
-		background-image:image-url("home/player-5-accessoire.png");
-		height: 93px;
-		width: 154px;
-	}
-
-	.home-body--illustration-6 {
-		background-image:image-url("home/player-6-accessoire.png");
-		height: 102px;
-		width: 95px;
-	}
-
-	.home-body--illustration-7 {
-		background-image:image-url("home/player-7-accessoire.png");
-		height: 150px;
-		width: 90px;
-	}
-
-	.home-body--illustration-8 {
-		background-image:image-url("home/player-8-accessoire.png");
-		height: 141px;
-		width: 119px;
-	}
-
-	.home-body {
-		display: block;
-		margin: 0;
-		padding:40px 0 20px 0;
-		position:relative;
-		z-index:2;
-		img {
-			display: block;
-			margin: 0 auto;
-			padding:0;
-		}
-		&:hover .home-body--illustration {
-			-webkit-transform: scale(1);
-			-moz-transform: scale(1);
-			-o-transform: scale(1);
-			transform: scale(1);
-		}
-	}
-
-	.bt-play {
-		display:block;
-		margin:0 ;
-		padding:0;
-		text-align: center;
-		a {
-			border:1px solid #fff;
-			display: inline-block;
-			font:normal em(34px) 'InterstateBold', serif;
-			margin: 0;
-			padding: 10px;
-			text-transform: uppercase;
-			vertical-align: top;
-		}
-	}
-
-	.bt-form {
-		border:1px solid #fff;
-		display: inline-block;
-		font:normal em(20px) 'Interstate', serif;
-		line-height: 1;
-		margin: 0;
-		padding: 10px;
-		vertical-align: top;
-		strong {
-			font-family:'InterstateBold', serif;
-		}
-		&:hover {
-			color:#235800;
-		}
-		@media (max-width: $break-desktop) {
-			margin:1em 0 0 0;
-			width: 100%;
-	  	}
-	}
-
-	.container, .footer {
-		display: block;
-		margin: 0 auto;
-		padding:20px 0 0 0;
-		position: relative;
-		z-index:1;
-		width:940px;
-		@media (max-width: $break-desktop) {
-			margin-right: auto;
-			margin-left: auto;
-			padding-left: 10px;
-			padding-right: 10px;
-			min-width:320px;
-			width:auto;
-	  	}
-		.main-inner & {
-			width:auto;
-		}
-	}
-
-	.footer {
-		position:relative;
-		z-index:0;
-	}
-
-	.footer-left {
-		position:absolute;
-		left:0;
-		top:20px;
-	}
-
-	.footer-right {
-		position:absolute;
-		right:0;
-		top:0;
-	}
-
-	.footer-main {
-		display: inline-block;
-		text-align: center;
-		vertical-align: top;
-		width:100%;
-		a {
-			background-position:left top;
-			background-repeat:no-repeat;
-			display: inline-block;
-			font:normal em(9px) 'InterstateBold', serif;
-			line-height: 18px;
-			height: 18px;
-			margin:0 17px 0 0;
-			padding:0 0 0 23px;
-			text-transform: uppercase;
-			vertical-align: top;
-		}
-		p {
-			display: block;
-			margin: 0;
-			padding: 0;
-		}
-		.facebook {
-			background-image:image-url("footer/icon-facebook.png");
-		}
-		.twitter {
-			background-image:image-url("footer/icon-twitter.png");
-		}
-		.googleplus {
-			background-image:image-url("footer/icon-google-plus.png");
-		}
-	}
-
-	.footer-legal {
-		p {
-			font-size:em(12px);
-		}
-		img {
-			margin:0 5px 0 0;
-		}
-	}
-
-	.legal {
-		a {
-			color:#6AB1B8;
-		}
-	}
-
-	.main {
-		border:1px solid #fff;
-		width: 765px;
-		height: 480px;
-		background: #7CA105;
-		position: relative;
-		margin:0 auto;
-		padding:0;
-		left:0;
-		top:0;
-		z-index: 1;
-		@media (max-width: $break-desktop) {
-			height:auto;
-			width:100%;
-	  	}
-	}
-
-	#field {
-
-	}
-
-	.main-inner {
-		border:10px solid #252932;
-		height:478px;
-		margin:0;
-		padding:0;
-		#question & {
-			padding:20px;
-		}
-		@media (max-width: $break-desktop) {
-			height:auto;
-			width:100%;
-	  	}
-	}
-
-	// QUESTION
-
-	#question {
-		background:#7EA405;
-		position: absolute;
-		margin:0;
-		height: 100%;
-		top: 0;
-		left: 0;
-		z-index: 5;
-		width:100%;
-	}
-
-	.question-header {
-		clear:both;
-		@media (max-width: $break-desktop) {
-			padding: 1em 0 0 0;
-	  	}
-		span, h2 {
-			display: inline-block;
-			font:normal em(22px) 'InterstateBold', serif;
-			line-height: 42px;
-			min-height: 42px;
-			margin: 0 0 20px 0;
-			padding: 0;
-			vertical-align: top;
-		}
-		span {
-			background:image-url("bg-title-question.png") left top no-repeat;
-			font-size: em(28px);
-			margin:0 10px 0 0;
-			padding:0;
-			height: 42px;
-			text-align: center;
-			letter-spacing:-2px;
-			width:45px;
-			@media (max-width: $break-desktop) {
-				display: none;
-		  	}
-		}
-	}
-
-	.question-footer {
-		a {
-			@include transition(all .25s ease-in);
-			background:image-url("bg-bt-question.png") 98% 50% no-repeat;
-			border:1px solid #fff;
-			color:#fff;
-			cursor:pointer;
-			display: block;
-			float: right;
-			height: 29px;
-			line-height: 29px;
-			padding:0 35px 0 10px;
-			text-transform: uppercase;
-			&:hover {
-				background-color:#bfd186;
-			}
-			@media (max-width: $break-desktop) {
-				float: none;
-		  	}
-		}
-	}
-
-	.answers {
-		@include inline-block-list();
-		height: 330px;
-		margin:0 0 0 -14px;
-		@media (max-width: $break-desktop) {
-			height:auto;
-			margin:0;
-	  	}
-		li {
-			@include transition(all .25s ease-in);
-			@include inline-block-item();
-			border:1px solid #fff;
-			cursor:pointer;
-			display: inline-block;
-			height:140px;
-			margin:0 0 14px 14px;
-			padding:10px;
-			text-align: center;
-			vertical-align: middle;
-			width:48%;
-			&:hover {
-				color:$highlight-color;
-			}
-			@media (max-width: $break-desktop) {
-				height:auto;
-				margin-left:0;
-				width: 100%;
-		  	}
-		}
-		.active {
-			background:#bfd186;
-		}
-		div {
-			display:table;
-			margin: 0;
-			padding: 0;
-			table-layout:fixed;
-			width:100%;
-		}
-		p {
-			display: table-cell;
-			height: 120px;
-			margin: 0;
-			padding: 0;
-			vertical-align: middle;
-			@media (max-width: $break-desktop) {
-				height:auto;
-		  	}
-		}
-	}
-
-	.list {
-		margin:0;
-		padding:25px 0 0 0;
-		li {
-			display: block;
-			height:auto;
-			margin:0 0 14px 0;
-			padding:10px;
-			text-align: center;
-			width:100%;
-		}
-		div {
-			display:table;
-			table-layout:fixed;
-			width:100%;
-		}
-		p {
-			display: block;
-			height: auto;
-			vertical-align: top;
-		}
-	}
-
-	.progress {
-		background:image-url("bg-progress-list.png") left center repeat-x;
-		float: left;
-		height: 24px;
-		overflow: hidden;
-		position:relative;
-		z-index:1;
-		padding: 0 18px 0 0;
-		li {
-			background:image-url("bg-progress-item.png") center center no-repeat;
-			display: block;
-			float: left;
-			height: 24px;
-			line-height: 24px;
-			margin: 0;
-			padding: 0;
-			text-align: center;
-			text-indent: -999em;
-			width: 25px;
-			&:first-child {
-				background-position:left center;
-				width:18px;
-			}
-			&:last-child {
-				background-position:right center;
-				position:absolute;
-				right:-1px;
-				width:18px;
-			}
-		}
-		li.active {
-			background:image-url("bg-progress-item-active.png") center center no-repeat;
-			text-indent: 0;
-			width: 25px;
-		}
-		.question-header & {
-			display: none;
-			@media (max-width: $break-desktop) {
-				display: block;
-		  	}
-		}
-		.question-footer & {
-			display: block;
-			@media (max-width: $break-desktop) {
-				display: none;
-		  	}
-		}
-	}
-
-	.player {
-		.stripe, .opacity, .shadow {
-			display: none;
-		}
-		.color1 {
-			fill: #06524D;
-		}
-		.color2 {
-			fill: #03638F;
-		}
-
-		&.goalkeeper {
-			.color1 {
-				fill: #F7941D;
-			}
-			.color2 {
-				fill: #E8D84D;
-			}
-		}
-
-		&.referee {
-			.stripe, .opacity, .shadow {
-				display: block;
-			}
-			.color1 {
-				fill: #333132;
-			}
-			.color2 {
-				fill: #333132;
-			}
-		}
-
-		&.goal {
-			display: none;
-		}
-	}
-
-
-
-	.line {
-	  stroke-dasharray: 1000;
-	  stroke-dashoffset: 1000;
-	  display: none;
-	  &.show {
-		stroke-dasharray: 0;
-		stroke-dashoffset: 0;
-	  	display: block;
-	  }
-	}
-
-	.play_anim .line.anim {
-		display: block;
-		animation: dash 3s linear alternate infinite;
-	}
-
-	// RESULTS
-
-	.result-block {
-		display: block;
-		height: 100%;
-		margin: 0 auto;
-		padding:40px 0 0 0;
-		width:540px;
-		@media (max-width: $break-desktop) {
-			clear: both;
-			float: none;
-			height:auto;
-			padding:0 20px 20px 20px;
-			width:100%;
-	  	}
-		img {
-			clear:both;
-			display: block;
-			position:relative;
-			z-index:3;
-			@media (max-width: $break-desktop) {
-				margin:0 auto;
-		  	}
-		}
-		.facebook {
-			background:#191C21;
-			border-radius:0 0 8px 8px;
-			display: block;
-			font-size: em(15px);
-			margin: 0;
-			padding:10px 10px 5px 10px;
-			strong {
-				display: block;
-				font:normal em(25px,15px) 'InterstateBold', serif;
-				margin: 0;
-				padding: 0;
-			}
-		}
-		.slides & {
-			width:100%;
-		}
-	}
-
-	.result-block--inner {
-		padding:0 100px;
-		@media (max-width: $break-desktop) {
-			padding:0;
-	  	}
-	}
-
-	.result-sidebar {
-		display: block;
-		float: left;
-		margin:0;
-		padding:0 25px 0 0;
-		position:relative;
-		height: 340px;
-		@media (max-width: $break-desktop) {
-			clear: both;
-			float: none;
-			height:auto;
-			padding:0 0 1em 0;
-			width:100%;
-	  	}
-	}
-
-
-	.share-facebook {
-		display: block;
-		margin: 0 0 0 -75px;
-		padding: 0;
-		position: absolute;
-		z-index: 2;
-		width: 130px;
-		left: 50%;
-		bottom: 25px;
-	}
-
-	.result-title {
-		color:#fff;
-		display: block;
-		font-size:em(37px);
-		margin: 0;
-<<<<<<< HEAD
-		padding: 50px 0;
-=======
-		padding: 0 0 40px 0;
-		text-align: center;
-		text-transform: uppercase;
-		white-space: nowrap;
-		@media (max-width: $break-desktop) {
-			font-size:em(22px);
-			padding:0 0 20px 0;
-			text-transform: none;
-			white-space: normal;
-	  	}
-		strong {
-			color:#000;
-			font:normal 1em 'InterstateBold', serif;
-		}
->>>>>>> FETCH_HEAD
-	}
-
-	.players-title {
-		color:#fff;
-		display: block;
-		font-size:em(26px);
-		margin: 0;
-		padding: 0 0 20px 0;
-		text-align: center;
-		text-transform: uppercase;
-		.opened & {
-			display: none;
-		}
-	}
-
-	.result-body {
-		font-size: em(13px);
-		height:290px;
-		line-height: 1.3;
-		overflow:auto;
-		@media (max-width: $break-desktop) {
-			clear: both;
-			font-size: em(16px);
-			height:auto;
-			overflow:inherit;
-			width: 100%;
-	  	}
-		.slides & {
-			padding:5px 25px 5px 0;
-		}
-	}
-
-	.main-result {
-		margin: 0 auto 40px auto;
-		@media (max-width: $break-desktop) {
-			padding:0 0 20px 0;
-	  	}
-	}
-
-	.main-empty-field {
-		background:image-url("bg-empty-field.jpg") 50% 10px no-repeat;
-		height: 480px;
-	}
-
-	.main-footer {
-		bottom:-50px;
-		padding:10px 0 0 0;
-		position:absolute;
-		width: 100%;
-		li {
-			@include transition(all .25s ease-in);
-			cursor:pointer;
-			float:left;
-			margin:0;
-			padding:10px;
-			text-align: left;
-			vertical-align: top;
-			width:50%;
-			a {
-				@include transition(all .25s ease-in);
-				border:1px solid #fff;
-				color:#fff;
-				cursor:pointer;
-				display: block;
-				float: left;
-				height: 29px;
-				line-height: 29px;
-				padding:0 10px 0 30px;
-				text-transform: uppercase;
-				&:hover {
-					background-color:#bfd186;
-				}
-			}
-			.bt-replay {
-				background:image-url("bt-replay.png") 10px 7px no-repeat;
-			}
-			.bt-see-all {
-				float: right;
-				background:image-url("see-all-players.png") 10px 7px no-repeat;
-				padding:0 10px 0 40px;
-			}
-			.bt-back-to-results {
-				float: right;
-				background:image-url("bt-back-to-results.png") 10px 7px no-repeat;
-			}
-			&:hover {
-				color:$highlight-color;
-			}
-		}
-	}
-
-	// OPTIN
-
-	.main-optin {
-		padding:35px 60px 0 60px;
-		text-align: center;
-		@media (max-width: $break-desktop) {
-			padding:35px 20px 0 20px;
-	  	}
-		form {
-			padding:0 0 60px 0;
-			@media (max-width: $break-desktop) {
-				padding:0 0 1em 0;
-		  	}
-		}
-		h2 {
-			display: block;
-			font:normal em(42px) 'InterstateBold', serif;
-			margin: 0;
-			padding: 0;
-		}
-		p {
-			display: block;
-			font:normal em(22px) 'Interstate', serif;
-			line-height:1.6;
-			margin: 0;
-			padding: 50px 0;		
-		}
-		input {
-			@include placeholder($color: #235800);
-			background:#fff;
-			border:none;
-			color:#235800;
-			display: inline-block;
-			font:normal em(22px) 'InterstateBold', serif;
-			height:42px;
-			margin:0 10px 0 0;
-			padding:0 10px;
-			vertical-align: top;
-			width:320px;
-			@media (max-width: $break-desktop) {
-				width: 100%;
-		  	}
-		}
-	}
-
-	@keyframes dash {
-	  from {
-	    stroke-dashoffset: 1000;
-	  }
-	  to {
-	    stroke-dashoffset: 0;
-	  }
-	}
-
-
-	.debug {
-		float: right;
-		margin-right: 10px;
-		margin-top: 8px;
-	}
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font: normal em(77px) "InterstateBold", serif;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    @media (max-width: $break-desktop) {
+        font-size: em(51px);
+    }
+    strong {
+        display: block;
+        font-size: em(102px, 77px);
+        margin: 0;
+        padding: 0;
+        @media (max-width: $break-desktop) {
+            font-size: em(38px, 51px);
+        }
+    }
+    .header-single & {
+        font-size: em(51px);
+        margin: 0 0 20px 0;
+        strong {
+            font-size: em(38px, 51px);
+        }
+    }
+}
+
+// HOME
+
+.home-body--illustration {
+    background-position: left top;
+    background-repeat: no-repeat;
+    @include transition(all 0.5s ease-in);
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin: 0;
+    width: 150px;
+    z-index: 3;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.home-body--illustration-1 {
+    background-image: image-url("home/player-1-accessoire.png");
+    height: 160px;
+    width: 144px;
+}
+
+.home-body--illustration-2 {
+    background-image: image-url("home/player-2-accessoire.png");
+    height: 164px;
+    width: 134px;
+}
+
+.home-body--illustration-3 {
+    background-image: image-url("home/player-3-accessoire.png");
+    height: 133px;
+    width: 104px;
+}
+
+.home-body--illustration-4 {
+    background-image: image-url("home/player-4-accessoire.png");
+    height: 136px;
+    width: 136px;
+}
+
+.home-body--illustration-5 {
+    background-image: image-url("home/player-5-accessoire.png");
+    height: 93px;
+    width: 154px;
+}
+
+.home-body--illustration-6 {
+    background-image: image-url("home/player-6-accessoire.png");
+    height: 102px;
+    width: 95px;
+}
+
+.home-body--illustration-7 {
+    background-image: image-url("home/player-7-accessoire.png");
+    height: 150px;
+    width: 90px;
+}
+
+.home-body--illustration-8 {
+    background-image: image-url("home/player-8-accessoire.png");
+    height: 141px;
+    width: 119px;
+}
+
+.home-body {
+    display: block;
+    margin: 0;
+    padding: 40px 0 20px 0;
+    position: relative;
+    z-index: 2;
+    img {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+    &:hover .home-body--illustration {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.bt-play {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    a {
+        border: 1px solid #fff;
+        display: inline-block;
+        font: normal em(34px) "InterstateBold", serif;
+        margin: 0;
+        padding: 10px;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+}
+
+.bt-form {
+    border: 1px solid #fff;
+    display: inline-block;
+    font: normal em(20px) "Interstate", serif;
+    line-height: 1;
+    margin: 0;
+    padding: 10px;
+    vertical-align: top;
+    strong {
+        font-family: 'InterstateBold', serif;
+    }
+    &:hover {
+        color: #235800;
+    }
+    @media (max-width: $break-desktop) {
+        margin: 1em 0 0 0;
+        width: 100%;
+    }
+}
+
+.container, .footer {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    position: relative;
+    z-index: 1;
+    width: 940px;
+    @media (max-width: $break-desktop) {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: 320px;
+        width: auto;
+    }
+    .main-inner & {
+        width: auto;
+    }
+}
+
+.footer {
+    position: relative;
+    z-index: 0;
+}
+
+.footer-left {
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.footer-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer-main {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    a {
+        background-position: left top;
+        background-repeat: no-repeat;
+        display: inline-block;
+        font: normal em(9px) "InterstateBold", serif;
+        line-height: 18px;
+        height: 18px;
+        margin: 0 17px 0 0;
+        padding: 0 0 0 23px;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+    p {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .facebook {
+        background-image: image-url("footer/icon-facebook.png");
+    }
+    .twitter {
+        background-image: image-url("footer/icon-twitter.png");
+    }
+    .googleplus {
+        background-image: image-url("footer/icon-google-plus.png");
+    }
+}
+
+.footer-legal {
+    p {
+        font-size: em(12px);
+    }
+    img {
+        margin: 0 5px 0 0;
+    }
+}
+
+.legal {
+    a {
+        color: #6AB1B8;
+    }
+}
+
+.main {
+    border: 1px solid #fff;
+    width: 765px;
+    height: 480px;
+    background: #7CA105;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    @media (max-width: $break-desktop) {
+        height: auto;
+        width: 100%;
+    }
+}
+
+#field {}
+
+.main-inner {
+    border: 10px solid #252932;
+    height: 478px;
+    margin: 0;
+    padding: 0;
+    #question & {
+        padding: 20px;
+    }
+    @media (max-width: $break-desktop) {
+        height: auto;
+        width: 100%;
+    }
+}
+
+// QUESTION
+
+#question {
+    background: #7EA405;
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+.question-header {
+    clear: both;
+    @media (max-width: $break-desktop) {
+        padding: 1em 0 0 0;
+    }
+    span, h2 {
+        display: inline-block;
+        font: normal em(22px) "InterstateBold", serif;
+        line-height: 42px;
+        min-height: 42px;
+        margin: 0 0 20px 0;
+        padding: 0;
+        vertical-align: top;
+    }
+    span {
+        background: image-url("bg-title-question.png") left top no-repeat;
+        font-size: em(28px);
+        margin: 0 10px 0 0;
+        padding: 0;
+        height: 42px;
+        text-align: center;
+        letter-spacing: -2px;
+        width: 45px;
+        @media (max-width: $break-desktop) {
+            display: none;
+        }
+    }
+}
+
+.question-footer {
+    a {
+        @include transition(all 0.25s ease-in);
+        background: image-url("bg-bt-question.png") 98% 50% no-repeat;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 29px;
+        line-height: 29px;
+        padding: 0 35px 0 10px;
+        text-transform: uppercase;
+        &:hover {
+            background-color: #bfd186;
+        }
+        @media (max-width: $break-desktop) {
+            float: none;
+        }
+    }
+}
+
+.answers {
+    @include inline-block-list;
+    height: 330px;
+    margin: 0 0 0 -14px;
+    @media (max-width: $break-desktop) {
+        height: auto;
+        margin: 0;
+    }
+    li {
+        @include transition(all 0.25s ease-in);
+        @include inline-block-item;
+        border: 1px solid #fff;
+        cursor: pointer;
+        display: inline-block;
+        height: 140px;
+        margin: 0 0 14px 14px;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+        width: 48%;
+        &:hover {
+            color: $highlight-color;
+        }
+        @media (max-width: $break-desktop) {
+            height: auto;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    .active {
+        background: #bfd186;
+    }
+    div {
+        display: table;
+        margin: 0;
+        padding: 0;
+        table-layout: fixed;
+        width: 100%;
+    }
+    p {
+        display: table-cell;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        @media (max-width: $break-desktop) {
+            height: auto;
+        }
+    }
+}
+
+.list {
+    margin: 0;
+    padding: 25px 0 0 0;
+    li {
+        display: block;
+        height: auto;
+        margin: 0 0 14px 0;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    div {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    p {
+        display: block;
+        height: auto;
+        vertical-align: top;
+    }
+}
+
+.progress {
+    background: image-url("bg-progress-list.png") left center repeat-x;
+    float: left;
+    height: 24px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding: 0 18px 0 0;
+    li {
+        background: image-url("bg-progress-item.png") center center no-repeat;
+        display: block;
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        text-indent: -999em;
+        width: 25px;
+        &:first-child {
+            background-position: left center;
+            width: 18px;
+        }
+        &:last-child {
+            background-position: right center;
+            position: absolute;
+            right: -1px;
+            width: 18px;
+        }
+    }
+    li.active {
+        background: image-url("bg-progress-item-active.png") center center no-repeat;
+        text-indent: 0;
+        width: 25px;
+    }
+    .question-header & {
+        display: none;
+        @media (max-width: $break-desktop) {
+            display: block;
+        }
+    }
+    .question-footer & {
+        display: block;
+        @media (max-width: $break-desktop) {
+            display: none;
+        }
+    }
+}
+
+.player {
+    .stripe, .opacity, .shadow {
+        display: none;
+    }
+    .color1 {
+        fill: #06524D;
+    }
+    .color2 {
+        fill: #03638F;
+    }
+    &.goalkeeper {
+        .color1 {
+            fill: #F7941D;
+        }
+        .color2 {
+            fill: #E8D84D;
+        }
+    }
+    &.referee {
+        .stripe, .opacity, .shadow {
+            display: block;
+        }
+        .color1 {
+            fill: #333132;
+        }
+        .color2 {
+            fill: #333132;
+        }
+    }
+    &.goal {
+        display: none;
+    }
+}
+
+.line {
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    display: none;
+    &.show {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        display: block;
+    }
+}
+
+.play_anim .line.anim {
+    display: block;
+    animation: dash 3s linear alternate infinite;
+}
+
+// RESULTS
+
+.result-block {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+    width: 540px;
+    @media (max-width: $break-desktop) {
+        clear: both;
+        float: none;
+        height: auto;
+        padding: 0 20px 20px 20px;
+        width: 100%;
+    }
+    img {
+        clear: both;
+        display: block;
+        position: relative;
+        z-index: 3;
+        @media (max-width: $break-desktop) {
+            margin: 0 auto;
+        }
+    }
+    .facebook {
+        background: #191C21;
+        border-radius: 0 0 8px 8px;
+        display: block;
+        font-size: em(15px);
+        margin: 0;
+        padding: 10px 10px 5px 10px;
+        strong {
+            display: block;
+            font: normal em(25px, 15px) "InterstateBold", serif;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .slides & {
+        width: 100%;
+    }
+}
+
+.result-block--inner {
+    padding: 0 100px;
+    @media (max-width: $break-desktop) {
+        padding: 0;
+    }
+}
+
+.result-sidebar {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 25px 0 0;
+    position: relative;
+    height: 340px;
+    @media (max-width: $break-desktop) {
+        clear: both;
+        float: none;
+        height: auto;
+        padding: 0 0 1em 0;
+        width: 100%;
+    }
+}
+
+.share-facebook {
+    display: block;
+    margin: 0 0 0 -75px;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+    width: 130px;
+    left: 50%;
+    bottom: 25px;
+}
+
+.result-title {
+    color: #fff;
+    display: block;
+    font-size: em(37px);
+    margin: 0;
+    padding: 0 0 40px 0;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    @media (max-width: $break-desktop) {
+        font-size: em(22px);
+        padding: 0 0 20px 0;
+        text-transform: none;
+        white-space: normal;
+    }
+    strong {
+        color: #000;
+        font: normal 1em 'InterstateBold', serif;
+    }
+}
+
+.players-title {
+    color: #fff;
+    display: block;
+    font-size: em(26px);
+    margin: 0;
+    padding: 0 0 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    .opened & {
+        display: none;
+    }
+}
+
+.result-body {
+    font-size: em(13px);
+    height: 290px;
+    line-height: 1.3;
+    overflow: auto;
+    @media (max-width: $break-desktop) {
+        clear: both;
+        font-size: em(16px);
+        height: auto;
+        overflow: inherit;
+        width: 100%;
+    }
+    .slides & {
+        padding: 5px 25px 5px 0;
+    }
+}
+
+.main-result {
+    margin: 0 auto 40px auto;
+    @media (max-width: $break-desktop) {
+        padding: 0 0 20px 0;
+    }
+}
+
+.main-empty-field {
+    background: image-url("bg-empty-field.jpg") 50% 10px no-repeat;
+    height: 480px;
+}
+
+.main-footer {
+    bottom: -50px;
+    padding: 10px 0 0 0;
+    position: absolute;
+    width: 100%;
+    li {
+        @include transition(all 0.25s ease-in);
+        cursor: pointer;
+        float: left;
+        margin: 0;
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        width: 50%;
+        a {
+            @include transition(all 0.25s ease-in);
+            border: 1px solid #fff;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            float: left;
+            height: 29px;
+            line-height: 29px;
+            padding: 0 10px 0 30px;
+            text-transform: uppercase;
+            &:hover {
+                background-color: #bfd186;
+            }
+        }
+        .bt-replay {
+            background: image-url("bt-replay.png") 10px 7px no-repeat;
+        }
+        .bt-see-all {
+            float: right;
+            background: image-url("see-all-players.png") 10px 7px no-repeat;
+            padding: 0 10px 0 40px;
+        }
+        .bt-back-to-results {
+            float: right;
+            background: image-url("bt-back-to-results.png") 10px 7px no-repeat;
+        }
+        &:hover {
+            color: $highlight-color;
+        }
+    }
+}
+
+// OPTIN
+
+.main-optin {
+    padding: 35px 60px 0 60px;
+    text-align: center;
+    @media (max-width: $break-desktop) {
+        padding: 35px 20px 0 20px;
+    }
+    form {
+        padding: 0 0 60px 0;
+        @media (max-width: $break-desktop) {
+            padding: 0 0 1em 0;
+        }
+    }
+    h2 {
+        display: block;
+        font: normal em(42px) "InterstateBold", serif;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        display: block;
+        font: normal em(22px) "Interstate", serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 50px 0;
+    }
+    input {
+        @include placeholder($color: #235800);
+        background: #fff;
+        border: none;
+        color: #235800;
+        display: inline-block;
+        font: normal em(22px) "InterstateBold", serif;
+        height: 42px;
+        margin: 0 10px 0 0;
+        padding: 0 10px;
+        vertical-align: top;
+        width: 320px;
+        @media (max-width: $break-desktop) {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+.debug {
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.main-inner-play svg {
+    display: none;
+}
+
+.main-inner-play.ready svg {
+    display: block;
+}
+
+// #question {display: none;}

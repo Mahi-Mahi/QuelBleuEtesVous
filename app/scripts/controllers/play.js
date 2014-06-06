@@ -1,10 +1,11 @@
 'use strict';
 /* global ga */
+/* global jQuery */
 
 angular.module('quelBleuEtesVousApp')
-	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, dataService) {
+	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, $interval, dataService, $routeParams) {
 
-		$scope.debug = true && !prod;
+		$scope.debug = (false && !prod) || ($routeParams.debug === 'debug');
 
 		$scope.baseurl = config.baseurl;
 
@@ -150,11 +151,14 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.showQuestion = false;
 
-		$scope.initField = function() {
-			$timeout(function() {
-				$scope.animateField();
-			}, $scope.debug ? 50 : 1000);
-		};
+		$interval(function() {
+			jQuery("svg .players g").each(function(idx, item) {
+				jQuery(item).attr('class', jQuery(item).attr('myclass'));
+			});
+			jQuery("svg .lines path").each(function(idx, item) {
+				jQuery(item).attr('class', jQuery(item).attr('myclass'));
+			});
+		}, 50);
 
 		$scope.animateField = function() {
 			$scope.state = 'play_anim';
@@ -216,7 +220,13 @@ angular.module('quelBleuEtesVousApp')
 
 		}
 
-		$scope.initField();
+		$timeout(function() {
+			jQuery('.main-inner-play').addClass('ready');
+		}, 50);
+
+		$timeout(function() {
+			$scope.animateField();
+		}, $scope.debug ? 50 : 1000);
 
 		fakeAnswer();
 
