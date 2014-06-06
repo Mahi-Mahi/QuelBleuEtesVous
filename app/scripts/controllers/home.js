@@ -15,4 +15,10 @@ angular.module('quelBleuEtesVousApp')
 			}, 100);
 		}
 
+		$timeout(function() {
+			jQuery(".flexslider").flexslider({
+				animation: 'slide'
+			});
+		}, 500);
+
 	});

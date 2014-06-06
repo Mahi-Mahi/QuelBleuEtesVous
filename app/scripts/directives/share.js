@@ -18,11 +18,13 @@ angular.module('quelBleuEtesVousApp')
 	})
 	.directive('ngShareTwitter', function() {
 		return function(scope, elem) {
-			elem.attr('href', 'https://twitter.com/intent/tweet?&hashtag=&via=radiofrance&text=&url=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
+			var shareText = 'Quel Bleu êtes-vous ? Faites le test !';
+			elem.attr('href', 'https://twitter.com/intent/tweet?&hashtags=edf,CM2014&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
 		};
 	})
 	.directive('ngShareFacebook', function() {
 		return function(scope, elem) {
-			elem.attr('href', 'https://www.facebook.com/sharer/sharer.php?t=&amp;u=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
+			var shareText = 'Quel Bleu êtes-vous ? Faites le test !';
+			elem.attr('href', 'https://www.facebook.com/sharer/sharer.php?t=' + encodeURIComponent(shareText) + '&amp;u=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
 		};
 	});

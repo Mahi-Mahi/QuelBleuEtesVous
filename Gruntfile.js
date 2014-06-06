@@ -198,6 +198,8 @@ module.exports = function(grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
+            // '<%= yeoman.dist %>/images/{,*/}bg-*.{png,jpg,jpeg,gif,webp,svg}',
+            // '<%= yeoman.dist %>/images/footer/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             // '<%= yeoman.dist %>/fonts/*'
           ]
@@ -441,7 +443,9 @@ module.exports = function(grunt) {
           removeMetaTags: false,
           //Replace arbitrary parts of the html
           replaceStrings: [{
-            'this': 'will get replaced by this'
+            '</body>': function() {
+              return grunt.file.read('tracker.js.html') + '</body>';
+            }
           }, {
             '/old/path/': '/new/path'
           }],

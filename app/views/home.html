@@ -4,8 +4,21 @@
 	<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
 </header>
 <div class="home-body">
+
 	<img ng-src="{{baseurl}}/images/home/player-{{rand}}.png">
 	<div class="home-body--illustration home-body--illustration-{{rand}}"></div>
+
+	<div class="opened flexslider" style="display:none;">
+		<!-- <flex-slider slide="idx in [1,2,3,4,5,6,7,8]" animation="slide" slideshow="true" direction-nav="true" control-nav="true" slideshow-speed="500" init-delay="500"> -->
+		<ul>
+			<li ng-repeat="idx in [1,2,3,4,5,6,7,8]">
+				<img ng-src="{{baseurl}}/images/home/player-{{idx}}.png">
+				<div class="home-body--illustration home-body--illustration-{{idx}}"></div>
+			</li>
+		</ul>
+		<!-- </flex-slider> -->
+	</div>
+
 </div>
 <div class="bt-play">
 	<a href="{{baseurl}}/#/jouer">Jouer</a>

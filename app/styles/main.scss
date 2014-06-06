@@ -12,6 +12,7 @@
   font-weight:  200;
 }
 
+
 @font-face {
   font-family: 'InterstateBold';
   src: font-url('/quizlesbleus2014/fonts/Interstate-Bold.eot');
@@ -740,7 +741,7 @@ article, header, footer { display: block; margin: 0; padding: 0; }
 		font:normal em(22px) 'Interstate', serif;
 		line-height:1.6;
 		margin: 0;
-		padding: 50px 0;		
+		padding: 50px 0;
 	}
 	input {
 		@include placeholder($color: #235800);

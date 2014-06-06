@@ -56,9 +56,9 @@ angular.module('quelBleuEtesVousApp')
 		$scope.nearest = nearest;
 
 		jQuery('head meta[property="og:title"]').remove();
-		jQuery("head").append('<meta property="og:title" content="Je suis ' + nearest.name + '. Et vous ? - ' + config.seoTitle + '" />');
+		jQuery("head").append('<meta property="og:title" content="Quel Bleu êtes-vous ? Je suis ' + nearest.name + ' ! " />');
 		jQuery('head meta[property="og:description"]').remove();
-		jQuery("head").append('<meta property="og:description" content="Je suis ' + nearest.name + '. Et vous ? - ' + config.seoTitle + '" />');
+		jQuery("head").append('<meta property="og:description" content="Quel Bleu êtes-vous ? Je suis ' + nearest.name + ' ! " />');
 		jQuery('head meta[property="og:image"]').remove();
 		jQuery("head").append('<meta property="og:image" content="' + config.baseurl + '/images/players/large/' + nearest.slug + '.png" />');
 
