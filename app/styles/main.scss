@@ -312,7 +312,7 @@ article, header, footer {
         display: inline-block;
         font-size: em(14px);
         margin: 0;
-        padding: 0 5px;
+        padding: 0 10px;
         vertical-align: top;
     }
     @media (max-width: $break-desktop) {
@@ -407,13 +407,9 @@ article, header, footer {
 	display: block;
 	position:relative;
 	z-index:1;
-	width: 940px;
 	a {
 		display: block;
 	}
-    @media (max-width: $break-desktop) {
-       width:320px;
-    }
 }
 
 .home-body--illustration {
@@ -618,7 +614,10 @@ article, header, footer {
 .footer-legal {
     p {
         font-size: em(12px);
-    }
+	    @media (max-width: $break-desktop) {
+			text-align: center;
+	    }
+	}
     img {
         margin: 0 5px 0 0;
     }
@@ -711,6 +710,12 @@ article, header, footer {
         width: 45px;
         @media (max-width: $break-desktop) {
             display: none;
+        }
+    }
+    h2 {
+        @media (max-width: $break-desktop) {
+            clear:both;
+            display: block;
         }
     }
 }
@@ -851,6 +856,7 @@ article, header, footer {
     .question-header & {
         display: none;
         @media (max-width: $break-desktop) {
+        	margin:0 0 0 10%;
             display: block;
         }
     }

@@ -18,7 +18,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$timeout(function() {
 			jQuery(".flexslider").flexslider({
-				animation: 'slide',
+				animation: 'fade',
 				controlNav: false,
 				directionNav: false,
 				slideshow: true,
