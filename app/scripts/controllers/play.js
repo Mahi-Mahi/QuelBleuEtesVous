@@ -195,7 +195,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.nextQuestion = function() {
 
-			$scope.nextQuestionLink = ($scope.currentQuestion < 11) ? "Question Suivante" : " Voir le résultat";
+			$scope.nextQuestionLink = ($scope.currentQuestion < 10) ? "Question Suivante" : " Voir le résultat";
 
 			$scope.currentQuestion++;
 
@@ -222,28 +222,27 @@ angular.module('quelBleuEtesVousApp')
 
 		function fakeAnswer() {
 			if ($scope.debug) {
-				$timeout(function() {
-					if ($scope.currentQuestion > 12) {
-						return;
-					}
-					if ($scope.questions[$scope.currentQuestion]) {
-						var answer = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
-						$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[answer];
 
-						if (dataService.data.answers.answers[$routeParams.debug]) {
-							// console.log("question #" + $scope.currentQuestion + " :" + $scope.questions[$scope.currentQuestion].slug);
-							answer = dataService.data.answers.answers[$routeParams.debug][$scope.questions[$scope.currentQuestion].slug];
-							angular.forEach($scope.questions[$scope.currentQuestion].answers, function(value) {
-								if (value.slug === answer) {
-									$scope.selectedAnswer = value;
-								}
+				if ($scope.currentQuestion > 10) {
+					return;
+				}
+				if ($scope.questions[$scope.currentQuestion]) {
+					var answer = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
+					$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[answer];
 
-							});
-							console.log($scope.selectedAnswer.slug + '. ' + $scope.selectedAnswer.title + ' (' + $scope.selectedAnswer.coord1 + '/' + $scope.selectedAnswer.coord2);
-						}
-						$scope.setAnswer();
+					if (dataService.data.answers.answers[$routeParams.debug]) {
+						// console.log("question #" + $scope.currentQuestion + " :" + $scope.questions[$scope.currentQuestion].slug);
+						answer = dataService.data.answers.answers[$routeParams.debug][$scope.questions[$scope.currentQuestion].slug];
+						angular.forEach($scope.questions[$scope.currentQuestion].answers, function(value) {
+							if (value.slug === answer) {
+								$scope.selectedAnswer = value;
+							}
+
+						});
+						console.log($scope.selectedAnswer.slug + '. ' + $scope.selectedAnswer.title + ' (' + $scope.selectedAnswer.coord1 + '/' + $scope.selectedAnswer.coord2);
 					}
-				}, 150);
+					$scope.setAnswer();
+				}
 			}
 
 		}

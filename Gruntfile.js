@@ -436,7 +436,8 @@ module.exports = function(grunt) {
           replaceStrings: [{
             '</body>': function() {
               return grunt.file.read('tracker.js.html') + '</body>';
-            }
+            },
+            '<base href="/quizlesbleus2014/">': ''
           }, {
             '/old/path/': '/new/path'
           }],

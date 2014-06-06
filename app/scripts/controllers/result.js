@@ -3,7 +3,7 @@
 /* global ga */
 
 angular.module('quelBleuEtesVousApp')
-	.controller('ResultCtrl', function(prod, config, $rootScope, $scope, $location, dataService, $routeParams) {
+	.controller('ResultCtrl', function(prod, config, $rootScope, $scope, $location, dataService, $routeParams, $timeout) {
 
 		var debug = false && !prod;
 
@@ -68,8 +68,8 @@ angular.module('quelBleuEtesVousApp')
 		jQuery("head").append('<meta property="og:url" content="' + shareUrl + '" />');
 		jQuery('head meta[property="og:title"]').remove();
 		jQuery("head").append('<meta property="og:title" content="Quel Bleu êtes-vous ? Je suis ' + nearest.name + ' ! " />');
-		jQuery('head meta[property="og:description"]').remove();
-		jQuery("head").append('<meta property="og:description" content="Quel Bleu êtes-vous ? Je suis ' + nearest.name + ' ! " />');
+		// jQuery('head meta[property="og:description"]').remove();
+		// jQuery("head").append('<meta property="og:description" content="Quel Bleu êtes-vous ? Je suis ' + nearest.name + ' ! " />');
 		jQuery('head meta[property="og:image"]').remove();
 		jQuery("head").append('<meta property="og:image" content="' + config.baseurl + '/images/players/large/' + nearest.slug + '.png" />');
 
@@ -82,6 +82,15 @@ angular.module('quelBleuEtesVousApp')
 		$scope.shareUrl = shareUrl;
 
 		$scope.static = $routeParams.static;
+
+		$timeout(function() {
+			var shareText;
+			shareText = "Je suis " + nearest.name + " ! Et vous, quel Bleu êtes-vous ? ";
+			jQuery('.footer-main .facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?t=' + encodeURIComponent(shareText) + '&amp;u=' + encodeURIComponent(shareUrl));
+			jQuery('.footer-main .googleplus').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
+			shareText = "Quel Bleu êtes-vous ? Je suis " + nearest.name + " ! ";
+			jQuery('.footer-main .twitter').attr('href', 'https://twitter.com/intent/tweet?&hashtags=' + (nearest.name.split(/ /)[0]) + '&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl));
+		}, 50);
 
 		if (debug) {
 			// $scope.nearest = dataService.data.players.players[2];
