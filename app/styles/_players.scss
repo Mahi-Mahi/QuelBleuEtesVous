@@ -32,6 +32,9 @@
 	position:absolute;
 	left:25px;
 	z-index:10;
+	@media (max-width: $break-desktop) {
+		position: static;
+  	}
 	.opened & {
 		display: block;
 	}

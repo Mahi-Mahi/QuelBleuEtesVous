@@ -354,6 +354,19 @@ article, header, footer {
     .infos {
         background: image-url("bg-header-infos.png") left top no-repeat;
     }
+    @media (max-width: $break-desktop) {
+	    .right {
+	    	display: none;
+	    }
+	    .left {
+			display: block;
+			width: 100%;
+			img {
+				display: block;
+				margin:0 auto;
+			}
+	    }
+    }
 }
 
 .entry-title {
@@ -368,7 +381,7 @@ article, header, footer {
     text-transform: uppercase;
     vertical-align: top;
     @media (max-width: $break-desktop) {
-        font-size: em(51px);
+        font-size: em(28px);
     }
     strong {
         display: block;
@@ -376,14 +389,14 @@ article, header, footer {
         margin: 0;
         padding: 0;
         @media (max-width: $break-desktop) {
-            font-size: em(51px, 38px);
+            font-size: em(40px, 28px);
         }
     }
     .header-single & {
         font-size: em(38px);
         margin: 0 0 20px 0;
         strong {
-            font-size: em(51px, 38px);
+            font-size: em(23px, 38px);
         }
     }
 }
@@ -554,6 +567,21 @@ article, header, footer {
     top: 0;
 }
 
+.footer-left, .footer-right {
+    @media (max-width: $break-desktop) {
+    	clear:both;
+		position:static;
+		display: block;
+		width: 100%;
+    }
+    img {
+      @media (max-width: $break-desktop) {
+		display: block;
+		margin:20px auto;
+      } 	
+    }
+}
+
 .footer-main {
     display: inline-block;
     text-align: center;
@@ -614,12 +642,17 @@ article, header, footer {
     top: 0;
     z-index: 1;
     @media (max-width: $break-desktop) {
+    	border:none;
         height: auto;
         width: 100%;
     }
 }
 
-#field {}
+#field {
+	@media (max-width: $break-desktop) {
+  		display: none;
+    }
+}
 
 .main-inner {
     border: 10px solid #252932;
@@ -630,7 +663,9 @@ article, header, footer {
         padding: 20px;
     }
     @media (max-width: $break-desktop) {
+    	border:none;
         height: auto;
+        padding:10px;
         width: 100%;
     }
 }
@@ -646,6 +681,9 @@ article, header, footer {
     left: 0;
     z-index: 5;
     width: 100%;
+    @media (max-width: $break-desktop) {
+        position:static;
+    }
 }
 
 .question-header {
@@ -695,6 +733,7 @@ article, header, footer {
         }
         @media (max-width: $break-desktop) {
             float: none;
+            text-align: center;
         }
     }
 }
@@ -886,7 +925,7 @@ article, header, footer {
         clear: both;
         float: none;
         height: auto;
-        padding: 0 20px 20px 20px;
+        padding: 20px;
         width: 100%;
     }
     img {
@@ -913,6 +952,7 @@ article, header, footer {
         }
     }
     .slides & {
+    	padding:70px 0 0 0;
         width: 100%;
     }
 }
@@ -949,6 +989,12 @@ article, header, footer {
     width: 130px;
     left: 50%;
     bottom: 25px;
+    @media (max-width: $break-desktop) {
+    	bottom:0;
+		position: static;
+		left: 0;
+		margin: -25px auto 0 auto;
+    }
 }
 
 .result-title {
@@ -999,19 +1045,28 @@ article, header, footer {
     }
     .slides & {
         padding: 5px 25px 5px 0;
+	    @media (max-width: $break-desktop) {
+			padding: 5px 15px;
+	    }
     }
 }
 
 .main-result {
     margin: 0 auto 40px auto;
     @media (max-width: $break-desktop) {
-        padding: 0 0 20px 0;
+    	margin: 0 auto;
+        padding: 0;
     }
 }
 
 .main-empty-field {
     background: image-url("bg-empty-field.jpg") 50% 10px no-repeat;
     height: 480px;
+    @media (max-width: $break-desktop) {
+    	background: #7CA105;
+    	height: auto;
+		padding: 10px 0;
+    }
 }
 
 .main-footer {
@@ -1019,6 +1074,9 @@ article, header, footer {
     padding: 10px 0 0 0;
     position: absolute;
     width: 100%;
+    @media (max-width: $break-desktop) {
+		padding: 10px 0;
+    }
     li {
         @include transition(all 0.25s ease-in);
         cursor: pointer;
@@ -1028,6 +1086,12 @@ article, header, footer {
         text-align: left;
         vertical-align: top;
         width: 50%;
+	    @media (max-width: $break-desktop) {
+			display: block;
+			float: none;
+			margin:0;
+			width: 100%;
+	    }
         a {
             @include transition(all 0.25s ease-in);
             border: 1px solid #fff;
@@ -1042,6 +1106,12 @@ article, header, footer {
             &:hover {
                 background-color: #bfd186;
             }
+		    @media (max-width: $break-desktop) {
+				float: none;
+				margin: 0 auto 20px auto;
+				width: 66%;
+				text-align: center;
+		    }
         }
         .bt-replay {
             background: image-url("bt-replay.png") 10px 7px no-repeat;
@@ -1050,14 +1120,34 @@ article, header, footer {
             float: right;
             background: image-url("see-all-players.png") 10px 7px no-repeat;
             padding: 0 10px 0 40px;
+		    @media (max-width: $break-desktop) {
+				float: none;
+				height: auto;
+				margin: 0 auto 20px auto;
+				width: 66%;
+				text-align: center;
+		    }
         }
         .bt-back-to-results {
             float: right;
             background: image-url("bt-back-to-results.png") 10px 7px no-repeat;
+		    @media (max-width: $break-desktop) {
+				float: none;
+				height: auto;
+				margin: 0 auto 20px auto;
+				width: 66%;
+				text-align: center;
+		    }
         }
         &:hover {
             color: $highlight-color;
         }
+    }
+    @media (max-width: $break-desktop) {
+		position: static;
+		bottom: 0;
+		padding: 0;
+		display: block;
     }
 }
 
@@ -1067,7 +1157,7 @@ article, header, footer {
     padding: 35px 60px 0 60px;
     text-align: center;
     @media (max-width: $break-desktop) {
-        padding: 35px 20px 0 20px;
+        padding: 35px 20px 20px 20px;
     }
     form {
         padding: 0 0 60px 0;
@@ -1128,13 +1218,11 @@ article, header, footer {
 
 .main-inner-play.ready svg {
     display: block;
-    border: red 1px solid;
     @media (max-width: $break-desktop) {
+    	display: none;
         visibility: hidden;
     }
 }
-
-// #question {display: none;}
 
 // CREDITS
 
