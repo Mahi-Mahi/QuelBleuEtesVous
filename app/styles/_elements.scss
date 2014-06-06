@@ -13,7 +13,10 @@ $default-link-color:#fff;
 $highlight-color:#235800;
 
 /// BACKGROUND COLOR 
-$background-color:#7FA505 ;
+$background-color:#7FA505;
+
+// POINT BREAK
+$break-desktop: 940px;
 
 // OPACITY
 @mixin opacity($value) {

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>Quel bleu êtes-vous ?</title>
     <meta name="description" content="Quel bleu êtes-vous ? - Quizz de la coupe du monde 2014">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="article" />
@@ -39,9 +39,30 @@
 
   </head>
   <body ng-app="quelBleuEtesVousApp">
-
+    <nav class="topnav-france-info">    
+       <ul class="unstyled">
+         <li><a target="_blank" href="http://www.radiofrance.fr/">radiofrance.fr</a></li>
+         <li><a target="_blank" href="http://www.franceinter.fr/">france inter</a></li>
+         <li><a target="_blank" href="http://www.franceinfo.fr/">france info</a></li>
+         <li><a target="_blank" href="http://www.francebleu.fr/">france bleu</a></li>
+         <li><a target="_blank" href="http://www.franceculture.fr/">france culture</a></li>
+         <li><a target="_blank" href="http://www.francemusique.fr/">france musique</a></li>
+         <li><a target="_blank" href="http://www.fipradio.fr/">fip</a></li>
+         <li><a target="_blank" href="http://www.lemouv.fr/">le mouv’</a></li>
+         <li><a target="_blank" href="http://concerts.radiofrance.fr/">les orchestres</a></li>
+       </ul>
+    </nav>
+    <div class="tagline-france-info clearfix">
+        <div class="left"><a href="http://www.franceinfo.fr" target="_blank"><img src="images/logo-header-france-infos.png" alt="France Info" /></a></div>
+        <div class="right">
+            <ul>
+                <li><a href="#" class="facebook">Facebook</a></li>
+                <li><a href="#" class="twitter">Twitter</a></li>
+                <li><a href="#" class="infos">Crédits</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="container" ng-view=""></div>
-
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>

@@ -12,6 +12,9 @@
 	left:0;
 	top:0;
 	z-index:3;
+	@media (max-width: $break-desktop) {
+		position: relative;
+  	}
 }
 
 .flex-viewport {
@@ -19,7 +22,6 @@
 	position: absolute !important;
 	z-index: 5;
 	.opened & {
-		background: #7CA105;
 		display: block;		
 	}
 }
@@ -28,8 +30,14 @@
 	cursor:pointer;
 	display: none;
 	position:absolute;
+	left:25px;
 	z-index:10;
 	.opened & {
 		display: block;
+	}
+	.bt-play a {
+		background:image-url("see-all-players.png") 10px 10px no-repeat;
+		font-size:18px;
+		padding-left:42px;
 	}
 }
