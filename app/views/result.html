@@ -1,33 +1,36 @@
-<div class="header" ng-include="'views/_header.html'"></div>
 
-<header class="header header-single">
-	<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
-</header>
-<div class="main main-result">
-	<div class="main-inner">
-		<div class="result-block">
-			<h2 class="result-title"><span ng-if="!static">Vous êtes </span><strong>{{nearest.name}}</strong></h2>
-			<div class="media">
-				<div class="result-sidebar">
-					<img ng-src="{{baseurl}}/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
-					<div class="share-facebook" ng-if="!static">
-						<a ng-href="{{shareLink}}" class="facebook" ng-share-popup>Annoncez-le sur <strong>Facebook</strong></a>
+<div ng-include="'views/_header.html'"></div>
+<div class="container">
+
+	<header class="header header-single">
+		<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
+	</header>
+	<div class="main main-result">
+		<div class="main-inner">
+			<div class="result-block">
+				<h2 class="result-title"><span ng-if="!static">Vous êtes </span><strong>{{nearest.name}}</strong></h2>
+				<div class="media">
+					<div class="result-sidebar">
+						<img ng-src="{{baseurl}}/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
+						<div class="share-facebook" ng-if="!static">
+							<a ng-href="{{shareLink}}" class="facebook" ng-share-popup>Annoncez-le sur <strong>Facebook</strong></a>
+						</div>
 					</div>
-				</div>
-				<div class="media result-body">
-					<div data-ng-bind-html="nearest.bio"></div>
-				</div>
-			</div><!-- .media -->
-		</div><!-- .result-block -->
-	</div><!-- .main-inner -->
-	<div class="main-footer clearfix">
-		<ul>
-			<li ng-if="static"><a href="#/jouer">jouer</a></li>
-			<li ng-if="!static"><a href="#/jouer" class="bt-replay">Rejouer</a></li>
-			<li><a href="#/tous-les-joueurs" class="bt-see-all">Voir tous les joueurs</a></li>
-		</ul>
-	</div>
-</div><!-- .main -->
+					<div class="media result-body">
+						<div data-ng-bind-html="nearest.bio"></div>
+					</div>
+				</div><!-- .media -->
+			</div><!-- .result-block -->
+		</div><!-- .main-inner -->
+		<div class="main-footer clearfix">
+			<ul>
+				<li ng-if="static"><a href="#/jouer">jouer</a></li>
+				<li ng-if="!static"><a href="#/jouer" class="bt-replay">Rejouer</a></li>
+				<li><a href="#/tous-les-joueurs" class="bt-see-all">Voir tous les joueurs</a></li>
+			</ul>
+		</div>
+	</div><!-- .main -->
 
-<footer class="footer" ng-include="'views/_footer.html'"></footer>
+	<footer class="footer" ng-include="'views/_footer.html'"></footer>
 
+</div>

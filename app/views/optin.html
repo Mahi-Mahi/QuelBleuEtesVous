@@ -1,22 +1,25 @@
-<div class="header" ng-include="'views/_header.html'"></div>
 
-<header class="header header-single">
-	<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
-</header>
-<div class="main main-result">
-	<div class="main-inner main-optin">
-		<h2 class="optin-title">Coup de sifflet final !</h2>
-		<p>Souhaitez-vous être tenu au courant des actualités <br />et des jeux de France Info ?</p>
-		<form>
-			<input type="text" name="email" placeholder="Mon adresse e-mail..." ng-model="email" />
-			<button ng-click="optin()" class="bt-form">
-				<strong>Oui merci,</strong> voir le résultat.
+<div ng-include="'views/_header.html'"></div>
+<div class="container">
+
+	<header class="header header-single">
+		<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
+	</header>
+	<div class="main main-result">
+		<div class="main-inner main-optin">
+			<h2 class="optin-title">Coup de sifflet final !</h2>
+			<p>Souhaitez-vous être tenu au courant des actualités <br />et des jeux de France Info ?</p>
+			<form>
+				<input type="text" name="email" placeholder="Mon adresse e-mail..." ng-model="email" />
+				<button ng-click="optin()" class="bt-form">
+					<strong>Oui merci,</strong> voir le résultat.
+				</button>
+			</form>
+			<button ng-click="goToResult()" class="bt-form">
+				<strong>Non merci,</strong> <br /> voir le résultat.
 			</button>
-		</form>
-		<button ng-click="goToResult()" class="bt-form">
-			<strong>Non merci,</strong> <br /> voir le résultat.
-		</button>
-	</div><!-- .main-inner -->
-</div><!-- .main -->
+		</div><!-- .main-inner -->
+	</div><!-- .main -->
 
-<footer class="footer" ng-include="'views/_footer.html'"></footer>
+	<footer class="footer" ng-include="'views/_footer.html'"></footer>
+</div>

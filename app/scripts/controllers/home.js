@@ -18,8 +18,12 @@ angular.module('quelBleuEtesVousApp')
 
 		$timeout(function() {
 			jQuery(".flexslider").flexslider({
-				animation: 'slide'
+				animation: 'slide',
+				controlNav: false,
+				directionNav: false,
+				slideshow: true,
+				slideshowSpeed: 3000
 			});
-		}, 500);
+		}, 1);
 
 	});

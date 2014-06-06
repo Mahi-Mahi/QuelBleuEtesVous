@@ -1,2 +1,2 @@
 "use strict";
-angular.module("quelBleuEtesVousApp").constant("prod", true);
+angular.module("quelBleuEtesVousApp").constant("prod", false);

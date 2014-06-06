@@ -1,28 +1,26 @@
-<div class="header" ng-include="'views/_header.html'"></div>
 
-<header class="header">
-	<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
-</header>
-<div class="home-body">
+<div ng-include="'views/_header.html'"></div>
+<div class="container">
 
-	<img ng-src="{{baseurl}}/images/home/player-{{rand}}.png">
-	<div class="home-body--illustration home-body--illustration-{{rand}}"></div>
+	<header class="header">
+		<h1 class="entry-title"><strong>Quel Bleu</strong> Êtes-Vous ?</h1>
+	</header>
+	<div class="home-body">
 
-	<div class="opened flexslider" style="display:none;">
-		<!-- <flex-slider slide="idx in [1,2,3,4,5,6,7,8]" animation="slide" slideshow="true" direction-nav="true" control-nav="true" slideshow-speed="500" init-delay="500"> -->
-		<ul>
-			<li ng-repeat="idx in [1,2,3,4,5,6,7,8]">
-				<img ng-src="{{baseurl}}/images/home/player-{{idx}}.png">
-				<div class="home-body--illustration home-body--illustration-{{idx}}"></div>
-			</li>
-		</ul>
-		<!-- </flex-slider> -->
+		<div class="flexslider opened">
+			<ul class="slides">
+				<li ng-repeat="idx in [1,2,3,4,5,6,7,8]">
+					<img ng-src="{{baseurl}}/images/home/player-{{idx}}.png">
+					<div class="home-body--illustration home-body--illustration-{{idx}}"></div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="bt-play">
+		<a href="{{baseurl}}/#/jouer">Jouer</a>
 	</div>
 
-</div>
-<div class="bt-play">
-	<a href="{{baseurl}}/#/jouer">Jouer</a>
-</div>
+	<footer class="footer" ng-include="'views/_footer.html'"></footer>
 
-<footer class="footer" ng-include="'views/_footer.html'"></footer>
-
+</div>
