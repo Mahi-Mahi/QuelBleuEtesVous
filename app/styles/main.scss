@@ -1121,3 +1121,17 @@ article, header, footer {
 }
 
 // #question {display: none;}
+
+// CREDITS
+
+.block-credit {
+	display: none;
+}
+
+#credits {
+	color:#000;
+	padding:20px;
+    strong {
+        font: normal 1em 'InterstateBold', serif;
+    }
+}
