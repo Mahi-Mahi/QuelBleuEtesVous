@@ -8,7 +8,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.baseurl = config.baseurl;
 
-		$scope.rand = Math.ceil(Math.random() * 8);
+		$scope.rand = Math.ceil(Math.random() * 7);
 
 		if (debug) {
 			$timeout(function() {
@@ -22,6 +22,7 @@ angular.module('quelBleuEtesVousApp')
 				controlNav: false,
 				directionNav: false,
 				slideshow: true,
+				pauseOnHover: true,
 				slideshowSpeed: 3000,
 				minItems: 1,
 				maxItems: 1,
@@ -29,4 +30,3 @@ angular.module('quelBleuEtesVousApp')
 			});
 		}, 1);
 	});
-

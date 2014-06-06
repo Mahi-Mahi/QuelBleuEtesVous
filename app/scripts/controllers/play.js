@@ -192,7 +192,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.nextQuestion = function() {
 
-			$scope.nextQuestionLink = $scope.currentQuestion > 10 ? "Question Suivante" : " Voir le résultat";
+			$scope.nextQuestionLink = ($scope.currentQuestion < 11) ? "Question Suivante" : " Voir le résultat";
 
 			$scope.currentQuestion++;
 

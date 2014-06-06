@@ -297,7 +297,7 @@ article, header, footer {
     padding: 0;
 }
 
-@import "animation";
+//@import "animation";
 @import "players";
 @import "flexslider";
 @import "colorbox";
@@ -574,7 +574,7 @@ article, header, footer {
       @media (max-width: $break-desktop) {
 		display: block;
 		margin:20px auto;
-      } 	
+      }
     }
 }
 

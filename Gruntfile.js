@@ -395,14 +395,6 @@ module.exports = function(grunt) {
           host: "root@vps.mahi-mahi.fr",
           syncDestIgnoreExcl: true
         }
-      },
-      prod: {
-        options: {
-          src: "../dist/",
-          dest: "/var/www/site",
-          host: "user@live-host",
-          syncDestIgnoreExcl: true
-        }
       }
     },
 
