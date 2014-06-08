@@ -552,6 +552,9 @@ article, header, footer {
 .footer-inner {
     position: relative;
     z-index: 0;
+     @media (max-width: $break-desktop) {
+		text-align: center;
+    }
 }
 
 .footer-left {
@@ -568,16 +571,23 @@ article, header, footer {
 
 .footer-left, .footer-right {
     @media (max-width: $break-desktop) {
-    	clear:both;
 		position:static;
-		display: block;
-		width: 100%;
+		display: inline-block;
+		padding:0 1em 0 0;
+		vertical-align: bottom;
     }
     img {
       @media (max-width: $break-desktop) {
 		display: block;
 		margin:20px auto;
       }
+    }
+}
+
+.footer-left img {
+    @media (max-width: $break-desktop) {
+		position: relative;
+		top:-8px;
     }
 }
 
@@ -749,6 +759,9 @@ article, header, footer {
             float: none;
             text-align: center;
         }
+    }
+    @media (max-width: $break-desktop) {
+        min-height:29px;
     }
 }
 
