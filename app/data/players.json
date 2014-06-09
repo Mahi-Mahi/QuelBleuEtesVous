@@ -129,12 +129,14 @@
 		"name": "Morgan Schneiderlin", 
 		"slug": "morgan-schneiderlin", 
 		"coord1": -0.407540368802745 , 
-		"coord2":-0.551717357353141
+		"coord2":-0.551717357353141, 
+		"bio": "C’est la belle histoire des 23 Bleus. Le gamin <strong>d’Alsace</strong> <strong>habitué de pizzas et de fast-food</strong> est parti à 18 ans à l’étranger, sur un coup detête, mais c’est à la fin qu’on récolte les raisins. A Southampton, il s'est endurci, a tout connu, <strong>et tout surmonté</strong>, jusqu’à faire revenir le club dans l’élite, en être un <strong>capitaine bis</strong>, et s’imposer comme un des meilleurs milieux en Angleterre. Capable de jouer pivot ou relayeur, chien fou ou plaque tournante, il est surnommé <strong>“Spiderman”,</strong> par ses supporters anglais. Il <strong>se démultiplie</strong> autant sur le terrain que peu dans la vie privée. Celui qui <strong>n’aime ni les spotlights ni les écarts de conduite</strong>et fuit Internet a réussi à intégrer la liste de Deschamps à force de régularité et d'<strong>humilité</strong> malgré <strong>le peu de reconnaissance en France.</strong>Aujourd’hui,<strong>il fait attention à sa ligne en mangeant Français</strong> et la France pourrait bientôt lui manger dans la main."
 	}, {
 		"name": "Rémy Cabella", 
 		"slug": "remy-cabella", 
-		"coord1": 0.76306834858761 , 
-		"coord2":-0.378550492759585
+		"coord1": 0.76306834858761, 
+		"coord2":-0.378550492759585,
+		"bio": "Un vrai paradoxe. <strong>Flambeur,</strong>irritant, mais <strong>respectueux</strong> et unanimement apprécié. Natif d’<strong>Ajaccio</strong>, Rémy Cabella est parti très tôt à Montpellier, où il est devenu un vrai “Pailladin”, avec toutes les valeurs que cela implique : <strong>l’amour du club</strong>, la hargne et la fidélité. <strong>La crête, le diamant à l’oreille, le bolide orange</strong>, c’est venu avec<strong>.</strong>Après tout,<strong>son idole se nomme Cristiano Ronaldo.</strong>Amoureux du beau geste, il ne sacrifiera jamais la technique à l’efficacité - à l’image de <strong>ces jeux-vidéo qu’il adore</strong> - quitte à se faire siffler par ses propres supporters. Les Bleus, il les espérait à peine, avant d’être attrapé in extremis à trois jours du départ pour le Brésil. Une histoire de chance, un peu, et surtout la conséquence d’un talent confirmé cette année, lors de sa <strong>troisième saison pleine</strong> dans l’élite. A lui maintenant de se faire un nom et <strong>un surnom.</strong>"
 	}
 	]
 }
