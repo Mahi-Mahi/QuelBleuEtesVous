@@ -181,20 +181,6 @@
 		"reve": "a", 
 		"tempslibre": "b"
 	 }, 
-	 "franck-ribery": { 
-		"famille": "a", 
-		"chef": "c", 
-		"film": "d", 
-		"enfance": "c", 
-		"autobio": "a", 
-		"vetements": "d", 
-		"plat": "d", 
-		"surnom": "c", 
-		"detail": "e", 
-		"argent": "c", 
-		"reve": "a", 
-		"tempslibre": "d"
-	 }, 
 	 "loic-remy": { 
 		"famille": "a", 
 		"chef": "b", 
@@ -293,20 +279,6 @@
 		"reve": "b", 
 		"tempslibre": "b"
 	 }, 
-	 "clement-grenier": { 
-		"famille": "b", 
-		"chef": "a", 
-		"film": "a", 
-		"enfance": "b", 
-		"autobio": "c", 
-		"vetements": "c", 
-		"plat": "e", 
-		"surnom": "d", 
-		"detail": "b", 
-		"argent": "c", 
-		"reve": "a", 
-		"tempslibre": "c"
-	 }, 
 	 "stephane-ruffier": { 
 		"famille": "c", 
 		"chef": "a", 
@@ -320,6 +292,34 @@
 		"argent": "d", 
 		"reve": "c", 
 		"tempslibre": "c"
+	 }, 
+	 "morgan-schneiderlin": { 
+		"famille": "c", 
+		"chef": "b", 
+		"film": "b", 
+		"enfance": "c", 
+		"autobio": "b", 
+		"vetements": "b", 
+		"plat": "a", 
+		"surnom": "c", 
+		"detail": "c", 
+		"argent": "a", 
+		"reve": "b", 
+		"tempslibre": "c"
+	 }, 
+	 "remy-cabella": { 
+		"famille": "c", 
+		"chef": "b", 
+		"film": "a", 
+		"enfance": "c", 
+		"autobio": "c", 
+		"vetements": "a", 
+		"plat": "a", 
+		"surnom": "b", 
+		"detail": "e", 
+		"argent": "d", 
+		"reve": "a", 
+		"tempslibre": "a"
 	 } 
 	 } 
  } 
