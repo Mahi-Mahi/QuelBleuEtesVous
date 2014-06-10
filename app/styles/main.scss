@@ -994,7 +994,7 @@ article, header, footer {
 }
 
 .result-block--inner {
-    padding: 0 100px;
+    padding: 0 40px 0 60px;
     @media (max-width: $break-desktop) {
         padding: 0;
     }
@@ -1067,7 +1067,7 @@ article, header, footer {
 }
 
 .result-body {
-    font-size: em(13px);
+    font-size: em(14px);
     height: 3300px;
     line-height: 1.3;
     overflow: auto;

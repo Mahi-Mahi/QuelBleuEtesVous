@@ -77,7 +77,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.shareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl);
 
-		$scope.shareLink = 'https://www.facebook.com/dialog/share?app_id=574648085990160&display=popup&href=' + encodeURIComponent(shareUrl) + '&redirect_uri=' + encodeURIComponent(shareUrl);
+		$scope.shareLink = 'https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=' + encodeURIComponent(shareUrl);
 
 		$scope.shareUrl = shareUrl;
 
