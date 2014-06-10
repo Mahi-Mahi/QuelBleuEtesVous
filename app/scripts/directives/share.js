@@ -13,20 +13,23 @@ angular.module('quelBleuEtesVousApp')
 	})
 	.directive('ngShareGoogle', function() {
 		return function(scope, elem) {
-			elem.attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
+			var shareUrl = 'http://nvx.franceinfo.fr/quizlesbleus2014/';
+			elem.attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
 		};
 	})
 	.directive('ngShareTwitter', function() {
 		return function(scope, elem) {
 			var shareText = 'Quel Bleu êtes-vous ? Faites le test !';
-			elem.attr('href', 'https://twitter.com/intent/tweet?&hashtags=edf,CM2014&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
+			var shareUrl = 'http://nvx.franceinfo.fr/quizlesbleus2014/';
+			elem.attr('href', 'https://twitter.com/intent/tweet?&hashtags=edf,CM2014&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl));
 		};
 	})
 	.directive('ngShareFacebook', function() {
 		return function(scope, elem) {
 			// var shareText = 'Quel Bleu êtes-vous ? Faites le test !';
+			var shareUrl = 'http://nvx.franceinfo.fr/quizlesbleus2014/';
 
-			elem.attr('href', 'https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
+			elem.attr('href', 'https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=' + encodeURIComponent(shareUrl));
 
 			// elem.attr('href', 'https://www.facebook.com/sharer/sharer.php?t=' + encodeURIComponent(shareText) + '&amp;u=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
 
