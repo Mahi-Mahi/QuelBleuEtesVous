@@ -1,0 +1,212 @@
+{
+	"constante": [{
+		"value": 8.24517346900903
+	}, {
+		"value": 6.99700678229312
+	}],
+	"coordinates": [{
+		"name": "C'est compliqué",
+		"coord1": 0.886359057602821,
+		"coord2": -0.211631004310643
+	}, {
+		"name": "Casé",
+		"coord1": 1.465613306889,
+		"coord2": -0.369804314873443
+	}, {
+		"name": "Célibataire",
+		"coord1": -0.0622664877902666,
+		"coord2": -0.774716034555278
+	}, {
+		"name": "Marié",
+		"coord1": -0.468585306550418,
+		"coord2": 0.617955807687796
+	}, {
+		"name": "Ca dépend",
+		"coord1": 0.324318836400986,
+		"coord2": 0.566703654834641
+	}, {
+		"name": "Chef, oui chef",
+		"coord1": -0.229088151732675,
+		"coord2": 0.144096076697313
+	}, {
+		"name": "Moi c'est Zlatan, t'es qui toi ?",
+		"coord1": 0.988800473519024,
+		"coord2": -0.271163805850231
+	}, {
+		"name": "Quelqu'un m'a parlé ?",
+		"coord1": -0.981917252679074,
+		"coord2": -1.53146497775497
+	}, {
+		"name": "Fast and Furious",
+		"coord1": 0.0281162117652867,
+		"coord2": -0.736148531966896
+	}, {
+		"name": "La vie est un long fleuve tranquille",
+		"coord1": -0.530904222810681,
+		"coord2": 0.479188611851839
+	}, {
+		"name": "Tanguy",
+		"coord1": 0.318502654285463,
+		"coord2": 1.04229925839303
+	}, {
+		"name": "There Will Be Blood",
+		"coord1": 0.507178380539216,
+		"coord2": -0.11840596048136
+	}, {
+		"name": "Dans ma rue",
+		"coord1": -0.531371191401034,
+		"coord2": 0.443943529503262
+	}, {
+		"name": "Famille heureuse",
+		"coord1": -0.115372102549423,
+		"coord2": 0.554332710673577
+	}, {
+		"name": "Jeune et con",
+		"coord1": 1.09743794697489,
+		"coord2": -0.515969722632884
+	}, {
+		"name": "La petite bourgeoisie",
+		"coord1": -0.381471391494783,
+		"coord2": -0.814906143948101
+	}, {
+		"name": "C'est dans les vieux pots qu'on fait les meilleures confitures",
+		"coord1": 0.49286428277385,
+		"coord2": 0.408341069250189
+	}, {
+		"name": "C'est en forgeant qu'on devient forgeron",
+		"coord1": -0.59080389698307,
+		"coord2": -0.544770910026177
+	}, {
+		"name": "La chance sourit aux débutants",
+		"coord1": 1.21619576533023,
+		"coord2": -0.135396808769027
+	}, {
+		"name": "Pas né de la dernière pluie",
+		"coord1": -0.456211028044099,
+		"coord2": 0.330468322715486
+	}, {
+		"name": "Dolce & Gabbana",
+		"coord1": -0.0204050494014906,
+		"coord2": 0.524428267069164
+	}, {
+		"name": "H & M",
+		"coord1": -0.430161096525091,
+		"coord2": -0.787513864769574
+	}, {
+		"name": "Ralph Lauren",
+		"coord1": -0.638593654906051,
+		"coord2": 0.286020012836819
+	}, {
+		"name": "Sergio Tacchini",
+		"coord1": 1.68917183578498,
+		"coord2": 0.430860312889378
+	}, {
+		"name": "C'est tout ce qu'il y a au menu ?",
+		"coord1": -0.289006242659545,
+		"coord2": -0.327568752665478
+	}, {
+		"name": "Confit",
+		"coord1": -0.0183664574536101,
+		"coord2": 0.876285741684161
+	}, {
+		"name": "Croque-monsieur",
+		"coord1": -0.0451032491696214,
+		"coord2": -0.367249922976248
+	}, {
+		"name": "Flamiche",
+		"coord1": -0.8318885490837,
+		"coord2": 0.194881463888944
+	}, {
+		"name": "Petit salé",
+		"coord1": 1.53071829516472,
+		"coord2": -0.265720348745761
+	}, {
+		"name": "Bouboule ou Poil de carotte",
+		"coord1": 0.859137162154886,
+		"coord2": 0.177133976446584
+	}, {
+		"name": "Gilles Dupont",
+		"coord1": -0.402909543456052,
+		"coord2": -0.704174267954601
+	}, {
+		"name": "Le magnifique ou El Matador",
+		"coord1": -0.385616399720025,
+		"coord2": -0.168006082130924
+	}, {
+		"name": "Momo ou Patoche",
+		"coord1": -0.886809191099313,
+		"coord2": 1.72392409262386
+	}, {
+		"name": "Bijou",
+		"coord1": -0.425111866462002,
+		"coord2": 0.0601400945665825
+	}, {
+		"name": "Coiffure",
+		"coord1": -0.440101121204383,
+		"coord2": 0.725893574703955
+	}, {
+		"name": "Rien",
+		"coord1": -0.650786490223991,
+		"coord2": -0.874817897228679
+	}, {
+		"name": "Tatouage",
+		"coord1": 0.246770276518806,
+		"coord2": 0.521714971897729
+	}, {
+		"name": "Voiture",
+		"coord1": 1.76106638272516,
+		"coord2": 0.056744308947579
+	}, {
+		"name": "hey, oh, ca me regarde",
+		"coord1": -0.109524792470348,
+		"coord2": -0.60881538436803
+	}, {
+		"name": "Mécène",
+		"coord1": -0.798776402089732,
+		"coord2": 0.374751352463345
+	}, {
+		"name": "Père de famille",
+		"coord1": -0.661387602829981,
+		"coord2": 0.219978136827717
+	}, {
+		"name": "Vrai flambeur",
+		"coord1": 1.36748039519179,
+		"coord2": 0.188881171414212
+	}, {
+		"name": "Acteur",
+		"coord1": 1.31538862080612,
+		"coord2": -0.0698922436061727
+	}, {
+		"name": "Bénévole",
+		"coord1": -0.830734346199617,
+		"coord2": 0.200452266095719
+	}, {
+		"name": "Militaire",
+		"coord1": 0.0350531732474011,
+		"coord2": 0.653556455903314
+	}, {
+		"name": "Scientifique",
+		"coord1": 0.345806989930409,
+		"coord2": -0.68978787400834
+	}, {
+		"name": "Jeux-vidéo",
+		"coord1": 0.509621055061649,
+		"coord2": -0.299003827257152
+	}, {
+		"name": "Macumba",
+		"coord1": 0.699966940946626,
+		"coord2": 0.253718052505451
+	}, {
+		"name": "Restaurant",
+		"coord1": -0.348786856262143,
+		"coord2": -0.0819283975766103
+	}, {
+		"name": "Square",
+		"coord1": -0.789924641223296,
+		"coord2": 1.33836927025279
+	}, {
+		"name": "Théâtre",
+		"coord1": -0.83744536674097,
+		"coord2": -1.40044232081064
+	}, ]
+}

@@ -216,16 +216,13 @@ angular.module('quelBleuEtesVousApp')
 
 			$timeout(function() {
 				fakeAnswer();
-			}, 150);
+			}, 250);
 
 		};
 
 		function fakeAnswer() {
 			if ($scope.debug) {
 
-				if ($scope.currentQuestion > 10) {
-					return;
-				}
 				if ($scope.questions[$scope.currentQuestion]) {
 					var answer = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);
 					$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[answer];
@@ -239,10 +236,11 @@ angular.module('quelBleuEtesVousApp')
 							}
 
 						});
-						console.log($scope.selectedAnswer.slug + '. ' + $scope.selectedAnswer.title + ' (' + $scope.selectedAnswer.coord1 + '/' + $scope.selectedAnswer.coord2);
+						console.log($scope.currentQuestion + ' / ' + $scope.selectedAnswer.slug + '. ' + $scope.selectedAnswer.title + ' (' + $scope.selectedAnswer.coord1 + '/' + $scope.selectedAnswer.coord2);
 					}
 					$scope.setAnswer();
 				}
+
 			}
 
 		}

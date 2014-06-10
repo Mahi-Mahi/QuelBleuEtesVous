@@ -1,286 +1,267 @@
 {
 	"constants": {
-		"coord1": 8.27033030364684,
-		"coord2": 6.91477506253345
+		"coord1": 8.24517346900903,
+		"coord2": 6.99700678229312
 	},
 	"questions": [{
 		"title": "Quelle est votre situation de famille ?",
 		"slug": "famille",
 		"display": "mosaic",
-		"answers": [
-			{
+		"answers": [{
 			"title": "Célibataire",
 			"slug": "c",
-			"coord1": -0.399721014058959,
-			"coord2": 0.541455485381235
-			}, 
-			{
+			"coord1": -0.0622664877902666,
+			"coord2": -0.774716034555278
+		}, {
 			"title": "Casé",
 			"slug": "b",
-			"coord1": 0.939781683395668,
-			"coord2": -0.0889756043824558
-			}, 
-			{
+			"coord1": 1.465613306889,
+			"coord2": -0.369804314873443
+		}, {
 			"title": "Marié",
 			"slug": "d",
-			"coord1": -0.432968221667239,
-			"coord2": -0.467367132095883
-			}, 
-			{
+			"coord1": -0.468585306550418,
+			"coord2": 0.617955807687796
+		}, {
 			"title": "C'est compliqué",
 			"slug": "a",
-			"coord1": 0.985477614611856,
-			"coord2": 0.67517195982398
-			}
-			]
+			"coord1": 0.886359057602821,
+			"coord2": -0.211631004310643
+		}]
 	}, {
 		"title": "Quel est votre rapport à la hiérarchie ?",
 		"slug": "chef",
 		"display": "mosaic",
-		"answers": [
-			{
+		"answers": [{
 			"title": "Chef, oui chef",
 			"slug": "b",
-			"coord1": -0.40752602519454,
-			"coord2": -0.271613418978893
+			"coord1": -0.229088151732675,
+			"coord2": 0.144096076697313
 		}, {
 			"title": "Ça dépend, ça dépasse",
 			"slug": "a",
-			"coord1": 0.320225332863628,
-			"coord2": -0.574872717457689
+			"coord1": 0.324318836400986,
+			"coord2": 0.566703654834641
 		}, {
 			"title": "Moi c'est Zlatan, t'es qui toi ?",
 			"slug": "c",
-			"coord1": 1.10656614705903,
-			"coord2": 0.643672596573737
+			"coord1": 0.988800473519024,
+			"coord2": -0.271163805850231
 		}, {
 			"title": "Quelqu'un m'a parlé ?",
 			"slug": "d",
-			"coord1": -1.24261968319628,
-			"coord2": 1.3990662350659
+			"coord1": -0.981917252679074,
+			"coord2": -1.53146497775497
 		}]
 	}, {
 		"title": "Si votre carrière était un film, quel serait-il ?",
 		"slug": "film",
 		"display": "mosaic",
-		"answers": [
-		{
+		"answers": [{
 			"title": "La vie est un long fleuve tranquille : un échelon après l'autre, sans vague ni remous.",
 			"slug": "b",
-			"coord1": -0.485567757812152,
-			"coord2": -0.914061451451017
+			"coord1": -0.530904222810681,
+			"coord2": 0.479188611851839
 		}, {
 			"title": "Fast and Furious : tout, tout de suite, maintenant, et plus vite que ça.",
 			"slug": "a",
-			"coord1": -0.236672562223995,
-			"coord2": 0.5847971315677
+			"coord1": 0.0281162117652867,
+			"coord2": -0.736148531966896
 		}, {
 			"title": "There Will Be Blood : embûches, coups de sang, ça s'en va et ça revient.",
 			"slug": "d",
-			"coord1": 0.612237424264157,
-			"coord2": 0.396068190914016
+			"coord1": 0.507178380539216,
+			"coord2": -0.11840596048136
 		}, {
 			"title": "Tanguy : réussir c'est important, surtout vers la fin.",
 			"slug": "c",
-			"coord1": 0.377787499693312,
-			"coord2": -0.523472496439865
+			"coord1": 0.318502654285463,
+			"coord2": 1.04229925839303
 		}]
 	}, {
 		"title": "Quelle est la B.O. de votre enfance ?",
 		"slug": "enfance",
 		"display": "mosaic",
-		"answers": [
-			{
+		"answers": [{
 			"title": "Saez - \"Jeune et con\"",
 			"slug": "c",
-			"coord1": 1.55699613096393,
-			"coord2": 0.635240474602717
+			"coord1": 1.09743794697489,
+			"coord2": -0.515969722632884
 		}, {
 			"title": "Doc Gynéco - \"Dans Ma Rue\"",
 			"slug": "a",
-			"coord1": -0.551879578737133,
-			"coord2": -0.376552277370474
+			"coord1": -0.531371191401034,
+			"coord2": 0.443943529503262
 		}, {
 			"title": "Négresses vertes - \"Famille heureuse\"",
 			"slug": "b",
-			"coord1": -0.0563597611382612,
-			"coord2": -0.676300887931896
+			"coord1": -0.115372102549423,
+			"coord2": 0.554332710673577
 		}, {
 			"title": "Discobitch - \"La petite bourgeoisie\"",
 			"slug": "d",
-			"coord1": -0.592269755985143,
-			"coord2": 1.08570149596571
+			"coord1": -0.381471391494783,
+			"coord2": -0.814906143948101
 		}]
 	}, {
 		"title": "Quel titre donneriez-vous à votre autobiographie ?",
 		"slug": "autobio",
 		"display": "mosaic",
-		"answers": [
-			{
+		"answers": [{
 			"title": "La chance sourit aux débutants",
 			"slug": "c",
-			"coord1": 0.867461418874294,
-			"coord2": -0.373195927709381
+			"coord1": 1.21619576533023,
+			"coord2": -0.135396808769027
 		}, {
 			"title": "C'est en forgeant qu'on devient forgeron",
 			"slug": "b",
-			"coord1": -0.69838084494192,
-			"coord2": 0.23562333605002
+			"coord1": -0.59080389698307,
+			"coord2": -0.544770910026177
 		}, {
 			"title": "Pas né de la dernière pluie",
 			"slug": "d",
-			"coord1": -0.431187927784264,
-			"coord2": -0.0885256225423301
+			"coord1": -0.456211028044099,
+			"coord2": 0.330468322715486
 		}, {
 			"title": "C'est dans les vieux pots qu'on fait les meilleures confitures",
 			"slug": "a",
-			"coord1": 0.623125814774031,
-			"coord2": 0.116453842055618
+			"coord1": 0.49286428277385,
+			"coord2": 0.408341069250189
 		}]
 	}, {
 		"title": "Quel style de vêtements vous sied le mieux ?",
 		"slug": "vetements",
 		"display": "mosaic",
-		"answers": [
-			{	
+		"answers": [{
 			"title": "Ralph Lauren : costume en toute circonstance, on ne rigole pas avec le style",
 			"slug": "c",
-			"coord1": -0.427540141058268,
-			"coord2": -0.459573940723224
-			}, 
-			{
+			"coord1": -0.638593654906051,
+			"coord2": 0.286020012836819
+		}, {
 			"title": "H & M : je m'habille, et c'est déjà pas mal",
 			"slug": "b",
-			"coord1": -0.631057691778118,
-			"coord2": 0.733828806603571
-			}, 
-			{
+			"coord1": -0.430161096525091,
+			"coord2": -0.787513864769574
+		}, {
 			"title": "Dolce & Gabbana : la panoplie idéale pour qu'on vous voie la nuit",
 			"slug": "a",
-			"coord1": -0.155628117251534,
-			"coord2": -0.474151629432774
-			}, {
+			"coord1": -0.0204050494014906,
+			"coord2": 0.524428267069164
+		}, {
 			"title": "Sergio Tacchini : jamais sans mon jogging",
 			"slug": "d",
-			"coord1": 1.55215705501082,
-			"coord2": -0.00171997094435628
+			"coord1": 1.68917183578498,
+			"coord2": 0.430860312889378
 		}]
 	}, {
 		"title": "Quel est votre plat régional préféré ?",
 		"slug": "plat",
 		"display": "list",
-		"answers": [
-			{
+		"answers": [{
 			"title": "Confit de canard, avé l'accent",
 			"slug": "b",
-			"coord1": -0.0497956306043382,
-			"coord2": -0.969267952503807
+			"coord1": -0.0183664574536101,
+			"coord2": 0.876285741684161
 		}, {
 			"title": "Croque monsieur, sur le périph'",
 			"slug": "c",
-			"coord1": -0.23980104889518,
-			"coord2": 0.309717107642417
+			"coord1": -0.0451032491696214,
+			"coord2": -0.367249922976248
 		}, {
 			"title": "Petit salé aux lentilles, ça suffit les quenelles",
 			"slug": "e",
-			"coord1": 1.20081364427537,
-			"coord2": 0.268353707009382
+			"coord1": 1.53071829516472,
+			"coord2": -0.265720348745761
 		}, {
 			"title": "Flamiche au maroilles, hein biloute",
 			"slug": "d",
-			"coord1": -0.0623496257273546,
-			"coord2": 0.126828044792673
+			"coord1": -0.8318885490837,
+			"coord2": 0.194881463888944
 		}, {
 			"title": "C'est tout ce qu'il y a au menu ?",
 			"slug": "a",
-			"coord1": -0.716517906949827,
-			"coord2": 0.351827527364079
+			"coord1": -0.289006242659545,
+			"coord2": -0.327568752665478
 		}]
 	}, {
 		"title": "A quoi votre surnom fait-il référence ?",
 		"slug": "surnom",
 		"display": "mosaic",
-		"answers": [
-			{
+		"answers": [{
 			"title": "Momo ou Patoche, en tout cas ça vient de votre nom",
 			"slug": "d",
-			"coord1": -0.182113014102386,
-			"coord2": -1.26086440911585
-		},{
+			"coord1": -0.886809191099313,
+			"coord2": 1.72392409262386
+		}, {
 			"title": "Bouboule ou Poil de carotte, sympa les potes",
 			"slug": "a",
-			"coord1": 0.686438644525832,
-			"coord2": 0.051435524210842
+			"coord1": 0.859137162154886,
+			"coord2": 0.177133976446584
 		}, {
 			"title": "Le magnifique ou El Matador, un vrai nom de héros",
 			"slug": "c",
-			"coord1": -0.0853429558232829,
-			"coord2": 0.148085198519488
+			"coord1": -0.385616399720025,
+			"coord2": -0.168006082130924
 		}, {
 			"title": "Gilles Dupont parce que vous vous appelez Gilles Dupont",
 			"slug": "b",
-			"coord1": -1.06560661682831,
-			"coord2": 0.546606861376229
+			"coord1": -0.402909543456052,
+			"coord2": -0.704174267954601
 		}]
 	}, {
 		"title": "Pour vous, quel est le détail qui tue ?",
 		"slug": "detail",
 		"display": "list",
-		"answers": [
-		{
+		"answers": [{
 			"title": "Une grosse voiture, ses ailerons, ses bas de caisse et sa sono à 150 db",
 			"slug": "e",
-			"coord1": 1.77757116243598,
-			"coord2": 0.304314260742093
-		}, 
-		{
+			"coord1": 1.76106638272516,
+			"coord2": 0.056744308947579
+		}, {
 			"title": "Un tatouage de gangster, pour tous vos frères qui sont tombés",
 			"slug": "d",
-			"coord1": 0.154537028130858,
-			"coord2": -0.438218863000103
+			"coord1": 0.246770276518806,
+			"coord2": 0.521714971897729
 		}, {
 			"title": "De l'or, du platine, du diamant, tout ce qui se compte en carats",
 			"slug": "a",
-			"coord1": -0.537852537750645,
-			"coord2": -0.0552173437955266
+			"coord1": -0.425111866462002,
+			"coord2": 0.0601400945665825
 		}, {
 			"title": "La coiffure, bien dégagée au dessus des oreilles, une crête fixation béton",
 			"slug": "b",
-			"coord1": -0.153731094051243,
-			"coord2": -0.789239301199205
+			"coord1": -0.440101121204383,
+			"coord2": 0.725893574703955
 		}, {
 			"title": "Rien ! Maman ne me le permettrait pas",
 			"slug": "c",
-			"coord1": -0.865414764117993,
-			"coord2": 0.906117707935642
-		} ]
+			"coord1": -0.650786490223991,
+			"coord2": -0.874817897228679
+		}]
 	}, {
 		"title": "Comment gérez-vous votre argent ?",
 		"slug": "argent",
 		"display": "mosaic",
-		"answers": [
-			{
+		"answers": [{
 			"title": "En bon père de famille",
 			"slug": "c",
-			"coord1": 0.0105363676583302,
-			"coord2": -0.0554233189209369
+			"coord1": -0.661387602829981,
+			"coord2": 0.219978136827717
 		}, {
 			"title": "Comme un vrai flambeur",
 			"slug": "d",
-			"coord1": 1.25734833048634,
-			"coord2": -0.0369694771927584
-		},
-		{
+			"coord1": 1.36748039519179,
+			"coord2": 0.188881171414212
+		}, {
 			"title": "En généreux mécène",
 			"slug": "b",
-			"coord1": -0.8487122035494,
-			"coord2": -0.512650924892766
-		},
-		{
+			"coord1": -0.798776402089732,
+			"coord2": 0.374751352463345
+		}, {
 			"title": "Hey, oh, ça me regarde",
 			"slug": "a",
-			"coord1": -0.20961443951421,
-			"coord2": 0.598882141474335
+			"coord1": -0.109524792470348,
+			"coord2": -0.60881538436803
 		}]
 	}, {
 		"title": "Enfant, quel métier rêviez-vous de faire ?",
@@ -289,56 +270,53 @@
 		"answers": [{
 			"title": "Acteur, vous aimez la lumière, quitte à la prendre aux autres",
 			"slug": "a",
-			"coord1": 1.23903035940437,
-			"coord2": 0.098305422817623
+			"coord1": 1.31538862080612,
+			"coord2": -0.0698922436061727
 		}, {
 			"title": "Militaire, par goût du combat, de l'ordre, de la rigueur, peut-etre un peu trop de rigueur",
 			"slug": "c",
-			"coord1": 0.00314814876139835,
-			"coord2": -0.709281134458935
+			"coord1": 0.0350531732474011,
+			"coord2": 0.653556455903314
 		}, {
 			"title": "Bénévole, vous œuvrez pour la société qui oublie parfois de vous le rendre",
 			"slug": "b",
-			"coord1": -0.843465878194932,
-			"coord2": -0.304116377364763
+			"coord1": -0.830734346199617,
+			"coord2": 0.200452266095719
 		}, {
 			"title": "Scientifique, expert, malin, mais seul dans son coin",
 			"slug": "d",
-			"coord1": 0.0899971055820018,
-			"coord2": 0.796421407110955
+			"coord1": 0.345806989930409,
+			"coord2": -0.68978787400834
 		}]
 	}, {
 		"title": "Où passez-vous votre temps libre ?",
 		"slug": "tempslibre",
 		"display": "list",
-		"answers": [
-			{
+		"answers": [{
 			"title": "Au Macumba, là où on danse tous les soirs",
 			"slug": "b",
-			"coord1": 0.5896925173645,
-			"coord2": 0.0963936262611076
-		}, 
-		{
+			"coord1": 0.699966940946626,
+			"coord2": 0.253718052505451
+		}, {
 			"title": "Au square, avec les poussettes et la dinette",
 			"slug": "d",
-			"coord1": -0.154830825069565,
-			"coord2": -0.812893046631033
-		}, 
-		{
-			"title": "Devant des jeux-vidéo, il faut bien que quelqu'un sauve le monde",
+			"coord1": -0.789924641223296,
+			"coord2": 1.33836927025279
+		}, {
+			"title": "Devant des jeux vidéo, il faut bien que quelqu'un sauve le monde",
 			"slug": "a",
-			"coord1": 0.28265217450572,
-			"coord2": 0.347587608133005
+			"coord1": 0.509621055061649,
+			"coord2": -0.299003827257152
 		}, {
 			"title": "Au théâtre, au cinéma, au musée, n'importe quoi qui rende moins bête",
 			"slug": "e",
-			"coord1": -1.10059790025936,
-			"coord2": 1.5435786154558
+			"coord1": -0.83744536674097,
+			"coord2": -1.40044232081064
 		}, {
 			"title": "Au restaurant, parce que la viande fait la chair et le vin fait l'homme",
 			"slug": "c",
-			"coord1": -0.142106951932725,
-			"coord2": -0.783441098328954
+			"coord1": -0.348786856262143,
+			"coord2": -0.0819283975766103
 		}]
 	}]
 }

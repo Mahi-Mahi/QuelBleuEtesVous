@@ -1037,12 +1037,11 @@ article, header, footer {
 .result-title {
     color: #fff;
     display: block;
-    font-size: em(37px);
+    font-size: 1.8em;
     margin: 0;
     padding: 0 0 40px 0;
     text-align: center;
     text-transform: uppercase;
-    white-space: nowrap;
     @media (max-width: $break-desktop) {
         font-size: em(22px);
         padding: 0 0 20px 0;
@@ -1111,6 +1110,7 @@ article, header, footer {
     padding: 10px 0 0 0;
     position: absolute;
     width: 100%;
+    z-index: 20;
     @media (max-width: $break-desktop) {
 		padding: 10px 0;
     }
