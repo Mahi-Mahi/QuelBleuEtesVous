@@ -38,6 +38,7 @@ angular.module('quelBleuEtesVousApp')
 
 			jQuery('.flex-control-thumbs').on('click', 'li', function() {
 				$scope.slider.opened = true;
+				window.scrollTo(0, 0);
 				$scope.$apply();
 			});
 		}, 500);
