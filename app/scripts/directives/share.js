@@ -24,7 +24,7 @@ angular.module('quelBleuEtesVousApp')
 	})
 	.directive('ngShareFacebook', function() {
 		return function(scope, elem) {
-			var shareText = 'Quel Bleu êtes-vous ? Faites le test !';
+			// var shareText = 'Quel Bleu êtes-vous ? Faites le test !';
 
 			elem.attr('href', 'https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=' + encodeURIComponent([document.location.protocol, '//', document.location.host, document.location.pathname].join('')));
 
