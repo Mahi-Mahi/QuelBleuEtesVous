@@ -12,10 +12,12 @@
 				<div class="media">
 					<div class="result-sidebar">
 						<img ng-src="{{baseurl}}/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
-						<div class="share-facebook" ng-if="!static">
+						<div class="share-result" ng-if="!static">
 							<span>Annoncez-le sur </span>
-							<a ng-href="{{shareLinkFacebook}}" class="facebook" ng-share-popup><strong>Facebook</strong></a>
-							<a ng-href="{{shareLinkTwitter}}" class="twitter" ng-share-popup><strong>Twitter</strong></a>
+							<ul>
+								<li><a ng-href="{{shareLinkFacebook}}" class="facebook" ng-share-popup><strong>Facebook</strong></a></li>
+								<li><a ng-href="{{shareLinkTwitter}}" class="twitter" ng-share-popup><strong>Twitter</strong></a></li>
+							</ul>
 						</div>
 					</div>
 					<div class="media result-body">
