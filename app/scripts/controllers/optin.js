@@ -3,7 +3,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('OptinCtrl', function(prod, config, $scope, $timeout, $location, $http) {
 
-		var debug = true && !prod;
+		var debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
 
