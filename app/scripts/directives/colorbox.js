@@ -11,7 +11,7 @@ angular.module('quelBleuEtesVousApp')
 					inline: true,
 					href: '#credits',
 					height:'480',
-					width:'760',
+					width:'75%',
 					close:''
 				};
 
