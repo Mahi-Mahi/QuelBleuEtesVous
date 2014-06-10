@@ -1,7 +1,7 @@
 <?php
 
 if ( file_exists('./config.php') )
-	require_once('./confic.php');
+	require_once('./config.php');
 
 $mysqli = mysqli_connect(
 						defined('DB_HOST')	?	constant('DB_HOST')		:	"localhost",
