@@ -48,3 +48,11 @@
 		}
 	}
 }
+
+.main-empty-field .flexslider > .slides > li {
+	visibility: hidden;
+}
+
+.main-empty-field .flexslider .flex-viewport .slides > li {
+	visibility: visible;
+}
