@@ -471,7 +471,9 @@ module.exports = function(grunt) {
             '<%= yeoman.baseurl %>/#/resultat/eliaquim-mangala/1',
             '<%= yeoman.baseurl %>/#/resultat/rio-mavuba/1',
             // '<%= yeoman.baseurl %>/#/resultat/clement-grenier/1',
-            '<%= yeoman.baseurl %>/#/resultat/stephane-ruffier/1'
+            '<%= yeoman.baseurl %>/#/resultat/stephane-ruffier/1',
+            '<%= yeoman.baseurl %>/#/resultat/remy-cabella/1',
+            '<%= yeoman.baseurl %>/#/resultat/morgan-schneiderlin/1'
           ]
         }
       }
