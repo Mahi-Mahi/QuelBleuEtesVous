@@ -13,7 +13,9 @@
 					<div class="result-sidebar">
 						<img ng-src="{{baseurl}}/images/players/large/{{nearest.slug}}.png" ng-if="nearest.slug">
 						<div class="share-facebook" ng-if="!static">
-							<a ng-href="{{shareLink}}" class="facebook" ng-share-popup>Annoncez-le sur <strong>Facebook</strong></a>
+							<span>Annoncez-le sur </span>
+							<a ng-href="{{shareLinkFacebook}}" class="facebook" ng-share-popup><strong>Facebook</strong></a>
+							<a ng-href="{{shareLinkTwitter}}" class="twitter" ng-share-popup><strong>Twitter</strong></a>
 						</div>
 					</div>
 					<div class="media result-body">
