@@ -1233,6 +1233,9 @@ article, header, footer {
         line-height: 1.6;
         margin: 0;
         padding: 50px 0;
+        @media (max-width: $break-desktop) {
+            padding: 20px 0;
+        }
     }
     input {
         @include placeholder($color: #235800);
