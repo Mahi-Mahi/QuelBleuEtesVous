@@ -33,7 +33,6 @@ angular.module('quelBleuEtesVousApp')
 				slideshow: false,
 				before: $scope.slider.before,
 				close: $scope.slider.close
-
 			});
 
 			jQuery('.flex-control-thumbs').on('click', 'li', function() {

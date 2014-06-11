@@ -7,6 +7,7 @@
 	}
 }
 
+/*
 .flexslider-container {
 	position:absolute;
 	left:0;
@@ -16,14 +17,37 @@
 		position: relative;
   	}
 }
+*/
+
+.flexslider-container {
+	@media (min-width: $break-desktop) {
+		overflow: hidden;
+		height: 421px;
+	}
+}
 
 .flex-viewport {
-	display: none;
-	position: absolute !important;
-	z-index: 5;
-	.opened & {
-		display: block;
+	@media (max-width: $break-desktop) {
+		display: none;
+		position: absolute !important;
 	}
+	@media (min-width: $break-desktop) {
+		height: 0;
+	}
+	z-index: 5;
+	transition: none !important;
+	.opened & {
+		@media (max-width: $break-desktop) {
+			display: block;
+		}
+		@media (min-width: $break-desktop) {
+			height: 421px;
+		}
+	}
+}
+
+.flex-direction-nav a {
+	top: 30% !important;
 }
 
 .bt-see-all-players {
