@@ -81,7 +81,7 @@ angular.module('quelBleuEtesVousApp')
 		$scope.shareLinkFacebook = 'https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=' + encodeURIComponent(shareUrl);
 
 		shareText = "Je suis " + nearest.name + " ! Et vous, quel Bleu êtes-vous ? ";
-		$scope.shareLinkTwitter = 'https://twitter.com/intent/tweet?&hashtags=' + (nearest.name.split(/ /)[0]) + '&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+		$scope.shareLinkTwitter = 'https://twitter.com/intent/tweet?&hashtags=' + (nearest.name.split(/ /)[1]) + '&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
 
 		$scope.shareUrl = shareUrl;
 
@@ -92,7 +92,7 @@ angular.module('quelBleuEtesVousApp')
 			jQuery('.footer-main .facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?t=' + encodeURIComponent(shareText) + '&amp;u=' + encodeURIComponent(shareUrl));
 			jQuery('.footer-main .googleplus').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
 			shareText = "Quel Bleu êtes-vous ? Je suis " + nearest.name + " ! ";
-			jQuery('.footer-main .twitter').attr('href', 'https://twitter.com/intent/tweet?&hashtags=' + (nearest.name.split(/ /)[0]) + '&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl));
+			jQuery('.footer-main .twitter').attr('href', 'https://twitter.com/intent/tweet?&hashtags=' + (nearest.name.split(/ /)[1]) + '&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl));
 		}, 50);
 
 		if (debug) {

@@ -93,26 +93,6 @@ a:focus, input:focus, textarea:focus, button:focus {
     outline: none;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track-piece {
-    background-color: #67851b;
-    -webkit-border-radius: 0;
-}
-
-::-webkit-scrollbar-thumb:vertical {
-    height: 50px;
-    background-color: #fff;
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-    width: 50px;
-    background-color: #fff;
-}
-
 ::-moz-selection {
     background: $background-color;
     color: #fff;
