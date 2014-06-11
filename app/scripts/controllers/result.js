@@ -3,7 +3,7 @@
 /* global ga */
 
 angular.module('quelBleuEtesVousApp')
-	.controller('ResultCtrl', function(prod, config, $rootScope, $scope, $location, dataService, $routeParams, $timeout) {
+	.controller('ResultCtrl', function(prod, config, $rootScope, $scope, $location, dataService, $routeParams, $timeout, $log) {
 
 		var debug = false && !prod;
 
@@ -24,10 +24,10 @@ angular.module('quelBleuEtesVousApp')
 			var sumCoord1 = 0,
 				sumCoord2 = 0;
 
-			console.log(dataService.data.questions.constants);
+			$log.log(dataService.data.questions.constants);
 
 			angular.forEach($rootScope.userAnswers, function(answer) {
-				// console.log(answer.coord1, answer.coord2);
+				// $log.log(answer.coord1, answer.coord2);
 				sumCoord1 += answer.coord1;
 				sumCoord2 += answer.coord2;
 			});
@@ -48,7 +48,7 @@ angular.module('quelBleuEtesVousApp')
 
 			});
 
-			// console.log(nearest.slug, minDistance);
+			$log.log(nearest.slug, minDistance);
 
 			ga('send', 'event', 'result', nearest.slug);
 

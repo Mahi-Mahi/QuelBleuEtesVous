@@ -3,7 +3,7 @@
 /* global jQuery */
 
 angular.module('quelBleuEtesVousApp')
-	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, $interval, dataService, $routeParams) {
+	.controller('PlayCtrl', function(prod, config, $rootScope, $scope, $location, $timeout, $interval, dataService, $routeParams, $log) {
 
 		$scope.debug = (false && !prod) || ($routeParams.debug);
 
@@ -228,7 +228,7 @@ angular.module('quelBleuEtesVousApp')
 					$scope.selectedAnswer = $scope.questions[$scope.currentQuestion].answers[answer];
 
 					if (dataService.data.answers.answers[$routeParams.debug]) {
-						// console.log("question #" + $scope.currentQuestion + " :" + $scope.questions[$scope.currentQuestion].slug);
+						// $log.log("question #" + $scope.currentQuestion + " :" + $scope.questions[$scope.currentQuestion].slug);
 						answer = dataService.data.answers.answers[$routeParams.debug][$scope.questions[$scope.currentQuestion].slug];
 						angular.forEach($scope.questions[$scope.currentQuestion].answers, function(value) {
 							if (value.slug === answer) {
@@ -236,7 +236,7 @@ angular.module('quelBleuEtesVousApp')
 							}
 
 						});
-						console.log($scope.currentQuestion + ' / ' + $scope.selectedAnswer.slug + '. ' + $scope.selectedAnswer.title + ' (' + $scope.selectedAnswer.coord1 + '/' + $scope.selectedAnswer.coord2);
+						$log.log($scope.currentQuestion + ' / ' + $scope.selectedAnswer.slug + '. ' + $scope.selectedAnswer.title + ' (' + $scope.selectedAnswer.coord1 + '/' + $scope.selectedAnswer.coord2);
 					}
 					$scope.setAnswer();
 				}
@@ -247,7 +247,7 @@ angular.module('quelBleuEtesVousApp')
 
 		if ($scope.debug) {
 			$timeout(function() {
-				console.log(dataService.data.answers.answers[$routeParams.debug]);
+				$log.log(dataService.data.answers.answers[$routeParams.debug]);
 				fakeAnswer();
 			}, 500);
 		}
