@@ -221,6 +221,7 @@ angular.module('quelBleuEtesVousApp')
 		};
 
 		function fakeAnswer() {
+
 			if ($scope.debug) {
 
 				if ($scope.questions[$scope.currentQuestion]) {

@@ -35,4 +35,11 @@ angular.module('quelBleuEtesVousApp')
 				elem.attr('transform', "translate(" + translate + ")");
 			});
 		};
+	})
+	.directive('ngD', function() {
+		return function(scope, elem, attrs) {
+			attrs.$observe('ngD', function(d) {
+				elem.attr('d', d);
+			});
+		};
 	});
