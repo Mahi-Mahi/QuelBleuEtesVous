@@ -175,7 +175,7 @@ angular.module('quelBleuEtesVousApp')
 			$timeout(function() {
 				$scope.state = '';
 				$scope.nextQuestion();
-			}, $scope.debug || skipAnimation ? 50 : 800);
+			}, $scope.debug || skipAnimation ? 150 : 800);
 		};
 
 		$scope.selectAnswer = function(answer) {
@@ -212,7 +212,7 @@ angular.module('quelBleuEtesVousApp')
 
 			$timeout(function() {
 				$scope.showQuestion = true;
-			}, skipAnimation ? 50 : 500);
+			}, skipAnimation ? 500 : 500);
 
 			$timeout(function() {
 				fakeAnswer();
@@ -258,6 +258,6 @@ angular.module('quelBleuEtesVousApp')
 
 		$timeout(function() {
 			$scope.animateField();
-		}, ($scope.debug || skipAnimation) ? 50 : 1000);
+		}, ($scope.debug || skipAnimation) ? 150 : 1000);
 
 	});
