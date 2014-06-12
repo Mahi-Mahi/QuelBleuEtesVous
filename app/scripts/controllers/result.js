@@ -88,11 +88,13 @@ angular.module('quelBleuEtesVousApp')
 		$scope.static = $routeParams.static;
 
 		$timeout(function() {
+			/*
 			shareText = "Je suis " + nearest.name + " ! Et vous, quel Bleu êtes-vous ? ";
 			jQuery('.footer-main .facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?t=' + encodeURIComponent(shareText) + '&amp;u=' + encodeURIComponent(shareUrl));
 			jQuery('.footer-main .googleplus').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
 			shareText = "Quel Bleu êtes-vous ? Je suis " + nearest.name + " ! ";
 			jQuery('.footer-main .twitter').attr('href', 'https://twitter.com/intent/tweet?&hashtags=' + (nearest.name.split(/ /)[1]) + '&via=franceinfo&text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl));
+			*/
 		}, 50);
 
 		if (debug) {
