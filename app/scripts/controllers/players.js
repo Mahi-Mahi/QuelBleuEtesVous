@@ -4,7 +4,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayersCtrl', function(prod, config, $scope, dataService, $timeout) {
 
-		var debug, alert;
+		var debug;
 		debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
