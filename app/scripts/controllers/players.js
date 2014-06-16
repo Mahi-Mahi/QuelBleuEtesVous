@@ -4,7 +4,7 @@
 angular.module('quelBleuEtesVousApp')
 	.controller('PlayersCtrl', function(prod, config, $scope, dataService, $timeout) {
 
-		var debug;
+		var debug, alert;
 		debug = false && !prod;
 
 		$scope.baseurl = config.baseurl;
@@ -14,12 +14,11 @@ angular.module('quelBleuEtesVousApp')
 			opened: false,
 			before: function() {
 				this.opened = true;
-				// jQuery('.flex-viewport').show();
+				window.scrollTo(0, 0);
 				jQuery('.container').addClass('opened');
 			},
 			close: function() {
 				this.opened = false;
-				// jQuery('.flex-viewport').hide();
 				jQuery('.container').removeClass('opened');
 			}
 		};
@@ -37,7 +36,6 @@ angular.module('quelBleuEtesVousApp')
 
 			jQuery('.flex-control-thumbs').on('click', 'li', function() {
 				$scope.slider.opened = true;
-				window.scrollTo(0, 0);
 				$scope.$apply();
 			});
 		}, 500);
