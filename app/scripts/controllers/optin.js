@@ -5,7 +5,7 @@ angular.module('quelBleuEtesVousApp')
 
 		var debug = false && !prod;
 
-		$log("optin");
+		$log.log("optin");
 
 		$scope.baseurl = config.baseurl;
 

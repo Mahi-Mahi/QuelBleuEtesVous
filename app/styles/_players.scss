@@ -80,3 +80,53 @@
 .main-empty-field .flexslider .flex-viewport .slides > li {
 	visibility: visible;
 }
+
+
+
+.player {
+    .stripe, .opacity, .shadow {
+        display: none;
+    }
+    .color1 {
+        fill: #06524D;
+    }
+    .color2 {
+        fill: #03638F;
+    }
+    &.goalkeeper {
+        .color1 {
+            fill: #F7941D;
+        }
+        .color2 {
+            fill: #E8D84D;
+        }
+    }
+    &.referee {
+        .stripe, .opacity, .shadow {
+            display: block;
+        }
+        .color1 {
+            fill: #333132;
+        }
+        .color2 {
+            fill: #333132;
+        }
+    }
+    &.goal {
+        display: none;
+    }
+    &.played {
+        .color1 {
+            fill: #3B3B3B;
+        }
+        .color2 {
+            fill: #4B4B4B;
+        }
+    }
+}
+
+
+
+#question {
+	// display: none;
+}

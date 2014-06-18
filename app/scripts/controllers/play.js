@@ -19,6 +19,7 @@ angular.module('quelBleuEtesVousApp')
 
 		$scope.players = [{
 			id: "player-ref",
+			idx: 0,
 			x: 350,
 			y: 188,
 			'class': "referee",
@@ -32,27 +33,34 @@ angular.module('quelBleuEtesVousApp')
 			}
 		}, {
 			id: "player-1",
+			idx: 1,
 			x: 320,
 			y: 220
 		}, {
 			id: "player-2",
+			idx: 2,
 			x: 440,
 			y: 360
 		}, {
 			id: "player-3",
+			idx: 3,
 			x: 140,
 			y: 380
 		}, {
 			id: "player-4",
+			idx: 4,
+
 			'class': "goalkeeper",
 			x: 40,
 			y: 210
 		}, {
 			id: "player-5",
+			idx: 5,
 			x: 190,
 			y: 200
 		}, {
 			id: "player-6",
+			idx: 6,
 			x: 110,
 			y: 50,
 			Ac: {
@@ -65,10 +73,12 @@ angular.module('quelBleuEtesVousApp')
 			}
 		}, {
 			id: "player-7",
+			idx: 7,
 			x: 430,
 			y: 80
 		}, {
 			id: "player-8",
+			idx: 8,
 			x: 300,
 			y: 100,
 			Ac: {
@@ -81,6 +91,7 @@ angular.module('quelBleuEtesVousApp')
 			}
 		}, {
 			id: "player-9",
+			idx: 9,
 			x: 590,
 			y: 50,
 			Ac: {
@@ -93,14 +104,17 @@ angular.module('quelBleuEtesVousApp')
 			}
 		}, {
 			id: "player-10",
+			idx: 10,
 			x: 620,
 			y: 370
 		}, {
 			id: "player-11",
+			idx: 11,
 			x: 530,
 			y: 190
 		}, {
 			id: "goal",
+			idx: 12,
 			'class': "goal",
 			x: 710,
 			y: 210
@@ -222,7 +236,7 @@ angular.module('quelBleuEtesVousApp')
 
 		function fakeAnswer() {
 
-			if ($scope.debug) {
+			if ($scope.debug && $scope.currentQuestion < 3) {
 
 				if ($scope.questions[$scope.currentQuestion]) {
 					var answer = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);

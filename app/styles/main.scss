@@ -878,40 +878,6 @@ article, header, footer {
     }
 }
 
-.player {
-    .stripe, .opacity, .shadow {
-        display: none;
-    }
-    .color1 {
-        fill: #06524D;
-    }
-    .color2 {
-        fill: #03638F;
-    }
-    &.goalkeeper {
-        .color1 {
-            fill: #F7941D;
-        }
-        .color2 {
-            fill: #E8D84D;
-        }
-    }
-    &.referee {
-        .stripe, .opacity, .shadow {
-            display: block;
-        }
-        .color1 {
-            fill: #333132;
-        }
-        .color2 {
-            fill: #333132;
-        }
-    }
-    &.goal {
-        display: none;
-    }
-}
-
 .line {
     stroke-width: 2;
     stroke-dasharray: 1000;
