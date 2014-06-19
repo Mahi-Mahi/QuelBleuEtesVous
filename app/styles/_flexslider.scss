@@ -111,7 +111,7 @@ html[xmlns] .slides {display: block;}
 .opened .flex-control-thumbs {
 	opacity:0;  -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease;
 	@media (max-width: $break-desktop) {
-		max-height: 1050px;
+		max-height: 1150px;
 		visibility: hidden;
   	}
 }
