@@ -236,7 +236,7 @@ angular.module('quelBleuEtesVousApp')
 
 		function fakeAnswer() {
 
-			if ($scope.debug && $scope.currentQuestion < 3) {
+			if ($scope.debug) {
 
 				if ($scope.questions[$scope.currentQuestion]) {
 					var answer = Math.floor(Math.random() * $scope.questions[$scope.currentQuestion].answers.length);

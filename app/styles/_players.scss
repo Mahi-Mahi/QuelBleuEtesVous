@@ -24,6 +24,10 @@
 		overflow: hidden;
 		height: 421px;
 	}
+	.lt-ie9 & {
+		overflow: hidden;
+		height: 421px;
+	}
 }
 
 .flex-viewport {
@@ -34,6 +38,9 @@
 	@media (min-width: $break-desktop) {
 		height: 0;
 	}
+	.lt-ie9 & {
+		height: 0;
+	}
 	z-index: 5;
 	transition: none !important;
 	.opened & {
@@ -41,6 +48,9 @@
 			display: block;
 		}
 		@media (min-width: $break-desktop) {
+			height: 421px;
+		}
+		.lt-ie9 & {
 			height: 421px;
 		}
 	}
