@@ -6,7 +6,7 @@ if ( file_exists('./config.php') )
 $mysqli = mysqli_connect(
 						defined('DB_HOST')	?	constant('DB_HOST')		:	"localhost",
 						defined('DB_USER')	?	constant('DB_USER') 	:	"root",
-						defined('DB_PWD')	?	constant('DB_PASSWORD')	:	"",
+						defined('DB_PWD')	?	constant('DB_PWD')		:	"",
 						defined('DB_NAME')	?	constant('DB_NAME')		:	"quelbleuetesvous"
 					);
 
