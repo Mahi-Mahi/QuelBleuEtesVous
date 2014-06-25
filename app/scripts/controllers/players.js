@@ -14,7 +14,6 @@ angular.module('quelBleuEtesVousApp')
 			opened: false,
 			before: function() {
 				this.opened = true;
-				window.scrollTo(0, 0);
 				jQuery('.container').addClass('opened');
 			},
 			close: function() {
